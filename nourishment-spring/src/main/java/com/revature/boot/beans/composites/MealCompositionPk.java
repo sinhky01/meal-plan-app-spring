@@ -6,21 +6,20 @@ import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 @Embeddable
-public class UserPrefComposite implements Serializable{
+public class MealCompositionPk implements Serializable{
 	
-	@Column(name="u_id")
-	private int u_id;
+	@Column(name="r_id")
+	private int r_id;
 	
 	@Column(name="i_id")
 	private int i_id;
-	
 
-	public int getU_id() {
-		return u_id;
+	public int getR_id() {
+		return r_id;
 	}
 
-	public void setU_id(int u_id) {
-		this.u_id = u_id;
+	public void setR_id(int r_id) {
+		this.r_id = r_id;
 	}
 
 	public int getI_id() {
@@ -31,14 +30,13 @@ public class UserPrefComposite implements Serializable{
 		this.i_id = i_id;
 	}
 
-	
-	public UserPrefComposite() {
+	public MealCompositionPk() {
 		
 	}
-
-	public UserPrefComposite(int u_id, int i_id) {
+	
+	public MealCompositionPk(int r_id, int i_id) {
 		super();
-		this.u_id = u_id;
+		this.r_id = r_id;
 		this.i_id = i_id;
 	}
 
@@ -47,7 +45,7 @@ public class UserPrefComposite implements Serializable{
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + i_id;
-		result = prime * result + u_id;
+		result = prime * result + r_id;
 		return result;
 	}
 
@@ -59,13 +57,14 @@ public class UserPrefComposite implements Serializable{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		UserPrefComposite other = (UserPrefComposite) obj;
+		MealCompositionPk other = (MealCompositionPk) obj;
 		if (i_id != other.i_id)
 			return false;
-		if (u_id != other.u_id)
+		if (r_id != other.r_id)
 			return false;
 		return true;
 	}
+	
 	
 	
 }
