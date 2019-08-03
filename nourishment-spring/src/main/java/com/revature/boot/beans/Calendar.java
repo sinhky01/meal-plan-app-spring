@@ -1,5 +1,7 @@
 package com.revature.boot.beans;
 
+import java.sql.Date;
+
 import javax.persistence.*;
 
 @Entity
