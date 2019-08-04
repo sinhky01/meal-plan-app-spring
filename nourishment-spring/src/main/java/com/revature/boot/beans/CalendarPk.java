@@ -1,7 +1,7 @@
 package com.revature.boot.beans;
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.util.Date;
 import java.util.Objects;
 
 import javax.persistence.Column;
@@ -15,7 +15,7 @@ public class CalendarPk implements Serializable {
 	 */
 	private static final long serialVersionUID = -2914077051235336327L;
 	
-	@Column(name = "dateTime")
+	@Column(name = "datetime")
 	private Date dateTime;
 	
 	@Column(name = "u_id")

@@ -1,6 +1,6 @@
 package com.revature.boot.beans;
 
-import java.sql.Date;
+import java.util.Date;
 
 import javax.persistence.*;
 
@@ -23,6 +23,7 @@ public class Calendar {
 	@JoinColumn(name = "r_id")
 	private int recipeId;
 	
+	@Temporal(TemporalType.DATE)
 	@Column(name = "datetime")
 	private Date date;
 	
@@ -30,20 +31,24 @@ public class Calendar {
 		
 	}
 	
-	public Calendar(CalendarPk id, int mealNum, int userId, int recipeId) {
+	
+	public Calendar(CalendarPk id, int mealNum, int userId, int recipeId, Date date) {
 		super();
 		this.id = id;
 		this.mealNum = mealNum;
 		this.userId = userId;
 		this.recipeId = recipeId;
+		this.date = date;
 	}
-	
-	public Calendar(int mealNum, int userId, int recipeId) {
+
+	public Calendar(int mealNum, int userId, int recipeId, Date date) {
 		super();
 		this.mealNum = mealNum;
 		this.userId = userId;
 		this.recipeId = recipeId;
+		this.date = date;
 	}
+
 
 	public CalendarPk getId() {
 		return id;
