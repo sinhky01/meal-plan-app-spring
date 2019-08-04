@@ -6,13 +6,13 @@ import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 @Embeddable
-public class UserHistoryComposite implements Serializable{
+public class UserPrefPk implements Serializable{
 	
 	@Column(name="u_id")
 	private int u_id;
 	
-	@Column(name = "r_id")
-	private int r_id;
+	@Column(name="i_id")
+	private int i_id;
 	
 
 	public int getU_id() {
@@ -23,29 +23,30 @@ public class UserHistoryComposite implements Serializable{
 		this.u_id = u_id;
 	}
 
-	public int getR_id() {
-		return r_id;
+	public int getI_id() {
+		return i_id;
 	}
 
-	public void setR_id(int r_id) {
-		this.r_id = r_id;
+	public void setI_id(int i_id) {
+		this.i_id = i_id;
 	}
 
-	public UserHistoryComposite() {
+	
+	public UserPrefPk() {
 		
 	}
 
-	public UserHistoryComposite(int u_id, int r_id) {
+	public UserPrefPk(int u_id, int i_id) {
 		super();
 		this.u_id = u_id;
-		this.r_id = r_id;
+		this.i_id = i_id;
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + r_id;
+		result = prime * result + i_id;
 		result = prime * result + u_id;
 		return result;
 	}
@@ -58,18 +59,13 @@ public class UserHistoryComposite implements Serializable{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		UserHistoryComposite other = (UserHistoryComposite) obj;
-		if (r_id != other.r_id)
+		UserPrefPk other = (UserPrefPk) obj;
+		if (i_id != other.i_id)
 			return false;
 		if (u_id != other.u_id)
 			return false;
 		return true;
 	}
-	
-	
-
-	
-	
 	
 	
 }
