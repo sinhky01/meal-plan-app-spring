@@ -1,6 +1,9 @@
 package com.revature.boot.controller;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 import javax.validation.Valid;
 
@@ -8,6 +11,7 @@ import org.jboss.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -40,4 +44,39 @@ public class CalendarController {
 		CalendarPk pk = new CalendarPk(datetime, userId);
 		return service.findByCompoundId(pk);
 	}
+	
+	@DeleteMapping("/meal/{userId}/{datetime}")
+	public ResponseEntity<Void> delete(@PathVariable int userId, @PathVariable Date datetime) {
+		CalendarPk pk = new CalendarPk(datetime, userId);
+		service.delete(pk);
+		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+	}
+	
+	@GetMapping("/{userId}")
+	public ResponseEntity<List<Calendar>> mealsByUser(@PathVariable int userId) {
+		return new ResponseEntity<List<Calendar>>(service.getByUserId(userId), HttpStatus.OK);
+	}
+	
+	@GetMapping("/mealtype/{mealNum}") 
+	public ResponseEntity<List<Calendar>> mealsByType(@PathVariable int mealNum) {
+		return new ResponseEntity<List<Calendar>>(service.getByMealType(mealNum), HttpStatus.OK);
+	}
+	
+	@GetMapping("/recipes/{recipeId}")
+	public ResponseEntity<List<Calendar>> mealsByRecipe(@PathVariable int recipeId) {
+		return new ResponseEntity<List<Calendar>>(service.getByRecipe(recipeId), HttpStatus.OK);
+	}
+	
+	@GetMapping("/{date}")
+	public ResponseEntity<List<Calendar>> mealsByDate(@PathVariable String date) {
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+		Date parsedDate = null;
+		try {
+			parsedDate = formatter.parse(date);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		return new ResponseEntity<List<Calendar>>(service.getByDate(parsedDate), HttpStatus.OK);
+	}
+	
 }
