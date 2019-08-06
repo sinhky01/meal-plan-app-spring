@@ -24,12 +24,12 @@ public class User {
 	@Column(name="pass")
 	private String password;
 	
-	@OneToMany(mappedBy = "")
+	@OneToMany(mappedBy = "prefid")
 	private List<UserPreferences> userPref;
 	
-	@OneToMany(mappedBy = "")
+	@OneToMany(mappedBy = "histid")
 	private List<UserHistory> userHist;
 	
-	@OneToMany(mappedBy = "")
+	@OneToMany(mappedBy = "calid")
 	private List<Calendar> user_data;
 }
