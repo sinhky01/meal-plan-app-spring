@@ -20,16 +20,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.revature.boot.service.MealCompositionService;
-import com.revature.boot.service.RecipeCharacteristicService;
+import com.revature.boot.service.CharacteristicService;
 
 @RestController
 @RequestMapping(value = "/api/v1/characteristic/")
-public class RecipeCharacteristicController {
+public class CharacteristicController {
 	
-	private static final Logger log = Logger.getLogger(RecipeCharacteristicController.class);
+	private static final Logger log = Logger.getLogger(CharacteristicController.class);
 	
 	@Autowired
-	private RecipeCharacteristicService service;
+	private CharacteristicService service;
 	
 	
 	

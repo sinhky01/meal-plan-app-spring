@@ -7,27 +7,27 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.revature.boot.beans.Recipe;
-import com.revature.boot.beans.RecipeCharacteristic;
-import com.revature.boot.controller.RecipeCharacteristicController;
-import com.revature.boot.data.RecipeCharacteristicRepository;
+import com.revature.boot.beans.Characteristic;
+import com.revature.boot.controller.CharacteristicController;
+import com.revature.boot.data.CharacteristicRepository;
 
 @Service
-public class RecipeCharacteristicService {
+public class CharacteristicService {
 	
-	private static final Logger log = Logger.getLogger(RecipeCharacteristicController.class);
+	private static final Logger log = Logger.getLogger(CharacteristicController.class);
 	
 	@Autowired
-	private RecipeCharacteristicRepository repo;
+	private CharacteristicRepository repo;
 	
-	public RecipeCharacteristic save(RecipeCharacteristic rc) {
+	public Characteristic save(Characteristic rc) {
 		return repo.save(rc);
 	}
 	
-	public List<RecipeCharacteristic> findByR_id(int id){
+	public List<Characteristic> findByR_id(int id){
 		return repo.findByR_id();
 	}
 	
-	public List<RecipeCharacteristic> findByCharacteristic(String characteristic){
+	public List<Characteristic> findByCharacteristic(String characteristic){
 		return repo.findByCharacteristic(characteristic);
 	}
 	
