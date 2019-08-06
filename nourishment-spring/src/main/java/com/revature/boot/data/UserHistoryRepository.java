@@ -13,9 +13,9 @@ import com.revature.boot.beans.composites.UserHistoryPk;
 @Repository
 public interface UserHistoryRepository extends JpaRepository<UserHistory, UserHistoryPk>{
 	
-	public List<UserHistory> findByU_id(int u_id);
+	public List<UserHistory> findByUserHistoryPkU_id(int u_id);
 	
-	public List<UserHistory> findByR_id(int r_id);
+	public List<UserHistory> findByUserHistoryPkR_id(int r_id);
 	
 	
 	@Query("select r from Recipe r JOIN r.history uh WHERE uh.marker=1 AND uh.u_id= :u_id")

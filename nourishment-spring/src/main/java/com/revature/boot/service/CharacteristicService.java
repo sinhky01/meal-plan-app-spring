@@ -1,6 +1,7 @@
 package com.revature.boot.service;
 
 import java.util.List;
+import java.util.Set;
 
 import org.jboss.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,14 +24,15 @@ public class CharacteristicService {
 		return repo.save(rc);
 	}
 	
-	public List<Characteristic> findByR_id(int id){
-		return repo.findByR_id();
+	public List<Characteristic> findByRecipesAssociated(Set<Recipe> recipes){
+		return repo.findByRecipesAssociated(recipes);
 	}
 	
 	public List<Characteristic> findByCharacteristic(String characteristic){
 		return repo.findByCharacteristic(characteristic);
 	}
 	
+	/*
 	public List<Recipe> recipesByCharacteristic(String characteristic){
 		return repo.recipesByCharacteristic(characteristic);
 	}
@@ -38,4 +40,5 @@ public class CharacteristicService {
 	public List<String> characteristicsOfRecipe(int id){
 		return repo.characteristicsOfRecipe(id);
 	}
+	*/
 }

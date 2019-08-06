@@ -22,10 +22,10 @@ public class MealCompositionService {
 	}
 	
 	public List<MealComposition> findByRecId(int r_id){
-		return repo.findByR_id(r_id);
+		return repo.findByMealCompositionPkR_id(r_id);
 	}
 	
 	public List<MealComposition> findByIngrId(int i_id){
-		return repo.findByI_id(i_id);
+		return repo.findByMealCompositionPkI_id(i_id);
 	}
 }

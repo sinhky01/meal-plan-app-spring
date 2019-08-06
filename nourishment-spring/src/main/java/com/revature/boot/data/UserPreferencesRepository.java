@@ -10,9 +10,9 @@ import com.revature.boot.beans.UserPreferences;
 import com.revature.boot.beans.composites.UserPrefPk;
 
 public interface UserPreferencesRepository extends JpaRepository<UserPreferences, UserPrefPk>{
-	public List<UserPreferences> findByU_id(int u_id);
+	public List<UserPreferences> findByUserPrefPkU_id(int u_id);
 	
-	public List<UserPreferences> findByI_id(int i_id);
+	public List<UserPreferences> findByUserPrefPkI_id(int i_id);
 	
 	@Query("select i from ingredient i join i.userpreferences up where up.marker = 1 and up.u_id = :id")
 	public List<Ingredient> findByPreferred(int id);

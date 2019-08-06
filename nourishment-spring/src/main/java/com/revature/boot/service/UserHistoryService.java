@@ -21,7 +21,7 @@ public class UserHistoryService {
 	private UserHistoryRepository repo;
 	
 	public List<UserHistory> findByUser(int id){
-		return repo.findByU_id(id);
+		return repo.findByUserHistoryPkU_id(id);
 	}
 	
 	public List<Recipe> findByFavorited(int id){
@@ -29,7 +29,7 @@ public class UserHistoryService {
 	}
 	
 	public List<UserHistory> findByRec(int r_id){
-		return repo.findByR_id(r_id);
+		return repo.findByUserHistoryPkR_id(r_id);
 	}
 	
 	public UserHistory findByPk(UserHistoryPk histpk) {

@@ -11,7 +11,7 @@ import com.revature.boot.beans.composites.MealCompositionPk;
 @Repository
 public interface MealCompositionRepository extends JpaRepository<MealComposition, MealCompositionPk>{
 	
-	public List<MealComposition> findByR_id(int r_id);
+	public List<MealComposition> findByMealCompositionPkR_id(int r_id);
 	
-	public List<MealComposition> findByI_id(int i_id);
+	public List<MealComposition> findByMealCompositionPkI_id(int i_id);
 }

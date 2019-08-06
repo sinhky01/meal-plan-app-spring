@@ -8,12 +8,12 @@ import org.springframework.stereotype.Repository;
 
 import com.revature.boot.beans.Calendar;
 import com.revature.boot.beans.CalendarPk;
+import com.revature.boot.beans.Recipe;
 
 @Repository
 public interface CalendarRepository extends JpaRepository<Calendar, CalendarPk> {
 	public List<Calendar> findByMealNum(int mealNum);
-	//public List<Calendar> findByUserId(int userId);
-	public List<Calendar> findByRecipeId(int recipeId);
-	//public List<Calendar> findByDate(Date date);
-	public List<Calendar> findByPk(CalendarPk pk);
+	public List<Calendar> findByIdUserId(int userId);
+	public List<Calendar> findByRecipe(Recipe recipe);
+	public List<Calendar> findByIdDateTime(Date date);
 }
