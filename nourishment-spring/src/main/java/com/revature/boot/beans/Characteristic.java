@@ -18,7 +18,7 @@ import com.revature.boot.beans.composites.RecipeCharacteristicPk;
 
 @Entity
 @Table(name="recipe_characteristic")
-public class RecipeCharacteristic {
+public class Characteristic {
 	
 	@Id
 	@Column(name="characteristic")
@@ -27,11 +27,11 @@ public class RecipeCharacteristic {
 	@ManyToMany(mappedBy = "characteristics")
 	private Set<Recipe> recipesAssociated;
 
-	public RecipeCharacteristic() {
+	public Characteristic() {
 		
 	}
 	
-	public RecipeCharacteristic(int r_id, String characteristic) {
+	public Characteristic(int r_id, String characteristic) {
 		super();
 		this.characteristic = characteristic;
 	}

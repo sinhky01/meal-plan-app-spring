@@ -27,7 +27,7 @@ import com.revature.boot.service.UserPreferencesService;
 @RequestMapping(value = "/api/v1/preferences/")
 public class UserPreferencesController {
 	
-	private static final Logger log = Logger.getLogger(RecipeCharacteristicController.class);
+	private static final Logger log = Logger.getLogger(CharacteristicController.class);
 	
 	@Autowired
 	private UserPreferencesService service;
