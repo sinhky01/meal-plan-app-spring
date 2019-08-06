@@ -7,16 +7,17 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import com.revature.boot.beans.Recipe;
-import com.revature.boot.beans.RecipeCharacteristic;
+import com.revature.boot.beans.Characteristic;
 import com.revature.boot.beans.composites.RecipeCharacteristicPk;
 
 @Repository
-public interface RecipeCharacteristicRepository extends JpaRepository<RecipeCharacteristic, RecipeCharacteristicPk> {
+public interface CharacteristicRepository extends JpaRepository<Characteristic, String> {
 
-	public List<RecipeCharacteristic> findByR_id();
+	public List<Characteristic> findByR_id();
 	
-	public List<RecipeCharacteristic> findByCharacteristic(String characteristic);
+	public List<Characteristic> findByCharacteristic(String characteristic);
 	
+	//FIX QUERIES AND SERVICE AND CONTROLLER
 	@Query("select r from Recipe r join r.characteristics rc where rc.characteristic = :characteristic")
 	public List<Recipe> recipesByCharacteristic(String characteristic);
 	
