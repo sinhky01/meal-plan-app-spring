@@ -35,6 +35,15 @@ public class User {
 
 	public User() {}
 
+	public User(String first, String last, String uname, String pword)
+	{
+		super();
+		this.fname = first;
+		this.lname = last;
+		this.username = uname;
+		this.password = pword;
+	}
+	
 	public User(int id, String first, String last, String usename, String pword)
 	{
 		super();
@@ -93,6 +102,36 @@ public class User {
 	public void setPass(String pass)
 	{
 		this.password = pass;
+	}
+
+	public List<UserPreferences> getuserPrefs()
+	{
+		return this.userPref;
+	}
+
+	public void setUserPrefs(List<UserPreferences> usePref)
+	{
+		this.userPref = usePref;
+	}
+
+	public List<UserHistory> getUserHist()
+	{
+		return this.userHist;
+	}
+
+	public void setUserHist(List<UserHistory> useHist)
+	{
+		this.userHist = useHist;
+	}
+
+	public List<Calendar> getUserCal()
+	{
+		return this.user_data;
+	}
+
+	public void setUserCal(List<Calendar> useCal)
+	{
+		this.user_data = useCal;
 	}
 
 	@Override
