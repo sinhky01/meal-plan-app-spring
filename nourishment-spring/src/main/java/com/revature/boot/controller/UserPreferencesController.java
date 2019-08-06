@@ -47,7 +47,7 @@ public class UserPreferencesController {
 	
 	@PostMapping("/save/{id}/{ingredient}/{marker}")
 	public ResponseEntity<UserPreferences> savePref(@PathVariable int id,@PathVariable int ingredient, @PathVariable int marker){
-		UserPreferences up = new UserPreferences(new UserPrefPk(id,ingredient),id,ingredient,marker);
+		UserPreferences up = new UserPreferences(new UserPrefPk(id,ingredient),marker);
 		return new ResponseEntity<UserPreferences>(service.save(up),HttpStatus.CREATED);
 	}
 }

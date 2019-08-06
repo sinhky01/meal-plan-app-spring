@@ -17,7 +17,7 @@ import javax.persistence.Table;
 import com.revature.boot.beans.composites.RecipeCharacteristicPk;
 
 @Entity
-@Table(name="recipe_characteristic")
+@Table(name="characteristic")
 public class Characteristic {
 	
 	@Id
@@ -31,7 +31,7 @@ public class Characteristic {
 		
 	}
 	
-	public Characteristic(int r_id, String characteristic) {
+	public Characteristic(String characteristic) {
 		super();
 		this.characteristic = characteristic;
 	}

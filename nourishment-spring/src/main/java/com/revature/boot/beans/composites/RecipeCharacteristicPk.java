@@ -3,9 +3,10 @@ package com.revature.boot.beans.composites;
 import java.io.Serializable;
 
 import javax.persistence.Column;
+import javax.persistence.Embeddable;
 import javax.persistence.Entity;
 
-@Entity
+@Embeddable
 public class RecipeCharacteristicPk implements Serializable{
 
 	@Column(name="r_id")

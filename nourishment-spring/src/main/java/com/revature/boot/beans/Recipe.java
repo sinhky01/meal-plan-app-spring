@@ -34,10 +34,10 @@ public class Recipe {
 	})
 	private Set<Characteristic> characteristics;
 	
-	@OneToMany(mappedBy="r_id")
+	@OneToMany(mappedBy="recipe")
 	private Set<UserHistory> recentUsers;
 	
-	@OneToMany(mappedBy="r_id")
+	@OneToMany(mappedBy="recipe")
 	private Set<Calendar> scheduledEntry;
 
 	public Recipe() {}

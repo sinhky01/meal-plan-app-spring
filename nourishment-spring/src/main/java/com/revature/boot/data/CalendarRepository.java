@@ -12,7 +12,8 @@ import com.revature.boot.beans.CalendarPk;
 @Repository
 public interface CalendarRepository extends JpaRepository<Calendar, CalendarPk> {
 	public List<Calendar> findByMealNum(int mealNum);
-	public List<Calendar> findByUserId(int userId);
+	//public List<Calendar> findByUserId(int userId);
 	public List<Calendar> findByRecipeId(int recipeId);
-	public List<Calendar> findByDate(Date date);
+	//public List<Calendar> findByDate(Date date);
+	public List<Calendar> findByPk(CalendarPk pk);
 }

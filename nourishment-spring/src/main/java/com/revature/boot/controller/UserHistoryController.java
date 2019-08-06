@@ -51,6 +51,6 @@ public class UserHistoryController {
 	
 	@PostMapping("/save/{id}/{recipe}/{marker}")
 	public ResponseEntity<UserHistory> saveHistory(@PathVariable int id, @PathVariable int recipe, @PathVariable int marker){
-		return new ResponseEntity<UserHistory>(service.save(new UserHistory(new UserHistoryPk(id,recipe),marker,id,recipe)),HttpStatus.CREATED);
+		return new ResponseEntity<UserHistory>(service.save(new UserHistory(new UserHistoryPk(id,recipe),marker)),HttpStatus.CREATED);
 	}
 }

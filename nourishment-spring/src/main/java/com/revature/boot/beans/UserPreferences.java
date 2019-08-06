@@ -25,23 +25,21 @@ public class UserPreferences {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@MapsId("u_id")
 	@JoinColumn(name = "u_id")
-	private int u_id;
+	private User user;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@MapsId("i_id")
 	@JoinColumn(name = "i_id")
-	private int i_id;
+	private Ingredient ingredient;
 
 	public UserPreferences() {
 		
 	}
 	
-	public UserPreferences(UserPrefPk userPrefPk, int marker, int u_id, int i_id) {
+	public UserPreferences(UserPrefPk userPrefPk, int marker) {
 		super();
 		this.userPrefPk = userPrefPk;
 		this.marker = marker;
-		this.u_id = u_id;
-		this.i_id = i_id;
 	}
 
 	public UserPrefPk getUserPrefPk() {
@@ -59,22 +57,5 @@ public class UserPreferences {
 	public void setMarker(int marker) {
 		this.marker = marker;
 	}
-
-	public int getU_id() {
-		return u_id;
-	}
-
-	public void setU_id(int u_id) {
-		this.u_id = u_id;
-	}
-
-	public int getI_id() {
-		return i_id;
-	}
-
-	public void setI_id(int i_id) {
-		this.i_id = i_id;
-	}
-	
 	
 }
