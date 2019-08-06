@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.revature.boot.beans.Recipe;
 import com.revature.boot.beans.UserHistory;
 import com.revature.boot.beans.composites.UserHistoryPk;
 import com.revature.boot.data.UserHistoryRepository;
@@ -17,6 +18,10 @@ public class UserHistoryService {
 	
 	public List<UserHistory> findByUser(int id){
 		return repo.findByU_id(id);
+	}
+	
+	public List<Recipe> findByFavorited(int id){
+		return repo.findByFavorited(id);
 	}
 	
 	public List<UserHistory> findByRec(int r_id){

@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.revature.boot.beans.Recipe;
 import com.revature.boot.beans.UserHistory;
 import com.revature.boot.beans.composites.UserHistoryPk;
 import com.revature.boot.service.UserHistoryService;
@@ -33,6 +34,11 @@ public class UserHistoryController {
 	@GetMapping("/user/{id}")
 	public ResponseEntity<List<UserHistory>> getByUser(@PathVariable int id){
 		return new ResponseEntity<List<UserHistory>>(service.findByUser(id),HttpStatus.OK);
+	}
+	
+	@GetMapping("/user/{id}/favorited")
+	public ResponseEntity<List<Recipe>> getFavorited(@PathVariable int id){
+		return new ResponseEntity<List<Recipe>>(service.findByFavorited(id),HttpStatus.OK);
 	}
 	
 	@DeleteMapping("/delete/{id}/{rec}")
