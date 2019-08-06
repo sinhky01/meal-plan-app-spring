@@ -32,4 +32,5 @@ public class RecipeCharacteristicController {
 	private RecipeCharacteristicService service;
 	
 	
+	
 }
