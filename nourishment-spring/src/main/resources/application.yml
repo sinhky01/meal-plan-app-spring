@@ -1,0 +1,11 @@
+server:
+  port: 9595
+  servlet:
+    session:
+      cookie:
+        http-only: true
+spring:
+  application:
+    name: nourishment-api
+  datasource:
+    platform: h2

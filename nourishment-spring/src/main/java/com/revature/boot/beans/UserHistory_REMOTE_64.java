@@ -9,17 +9,16 @@ import javax.persistence.ManyToOne;
 import javax.persistence.MapsId;
 import javax.persistence.Table;
 
-import com.revature.boot.beans.composites.UserPrefPk;
+import com.revature.boot.beans.composites.UserHistoryPk;
 
 @Entity
-@Table(name="user_preference")
-public class UserPreferences {
-
+@Table(name="user_history")
+public class UserHistory {
 	
 	@EmbeddedId
-	private UserPrefPk userPrefPk;
+	private UserHistoryPk userHistoryPk;
 	
-	@Column(name="marker")
+	@Column(name = "marker")
 	private int marker;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
@@ -28,28 +27,28 @@ public class UserPreferences {
 	private int u_id;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
-	@MapsId("i_id")
-	@JoinColumn(name = "i_id")
-	private int i_id;
-
-	public UserPreferences() {
+	@MapsId("r_id")
+	@JoinColumn(name = "r_id")
+	private int r_id;
+	
+	public UserHistory () {
 		
 	}
-	
-	public UserPreferences(UserPrefPk userPrefPk, int marker, int u_id, int i_id) {
+
+	public UserHistory(UserHistoryPk userHistoryPk, int marker, int u_id, int r_id) {
 		super();
-		this.userPrefPk = userPrefPk;
+		this.userHistoryPk = userHistoryPk;
 		this.marker = marker;
 		this.u_id = u_id;
-		this.i_id = i_id;
+		this.r_id = r_id;
 	}
 
-	public UserPrefPk getUserPrefPk() {
-		return userPrefPk;
+	public UserHistoryPk getUserHistoryPk() {
+		return userHistoryPk;
 	}
 
-	public void setUserPrefPk(UserPrefPk userPrefPk) {
-		this.userPrefPk = userPrefPk;
+	public void setUserHistoryPk(UserHistoryPk userHistoryPk) {
+		this.userHistoryPk = userHistoryPk;
 	}
 
 	public int getMarker() {
@@ -68,12 +67,12 @@ public class UserPreferences {
 		this.u_id = u_id;
 	}
 
-	public int getI_id() {
-		return i_id;
+	public int getR_id() {
+		return r_id;
 	}
 
-	public void setI_id(int i_id) {
-		this.i_id = i_id;
+	public void setR_id(int r_id) {
+		this.r_id = r_id;
 	}
 	
 	

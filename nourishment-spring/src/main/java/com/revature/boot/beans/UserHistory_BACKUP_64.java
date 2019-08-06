@@ -1,5 +1,11 @@
 package com.revature.boot.beans;
 
+<<<<<<< HEAD
+import javax.persistence.*;
+
+@Entity
+@Table(name = "userHist")
+=======
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
@@ -13,6 +19,7 @@ import com.revature.boot.beans.composites.UserHistoryPk;
 
 @Entity
 @Table(name="user_history")
+>>>>>>> 30b40481e527d7a8970434ee37d8a008e769ad4e
 public class UserHistory {
 	
 	@EmbeddedId
