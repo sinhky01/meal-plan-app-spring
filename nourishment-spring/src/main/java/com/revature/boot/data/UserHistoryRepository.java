@@ -18,7 +18,7 @@ public interface UserHistoryRepository extends JpaRepository<UserHistory, UserHi
 	public List<UserHistory> findByR_id(int r_id);
 	
 	
-	@Query("select r from Recipe r JOIN r.characteristics rc WHERE rc.marker=1 AND rc.u_id= :u_id")
+	@Query("select r from Recipe r JOIN r.history uh WHERE uh.marker=1 AND uh.u_id= :u_id")
 	//@Query(value = "SELECT r_id, rname, recipe FROM recipe INNER JOIN recipe_characteristic WHERE marker=1", nativeQuery = true)
 	public List<Recipe> findByFavorited(int u_id);
 	

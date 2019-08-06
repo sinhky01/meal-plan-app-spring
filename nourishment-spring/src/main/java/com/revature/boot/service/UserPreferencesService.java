@@ -2,15 +2,19 @@ package com.revature.boot.service;
 
 import java.util.List;
 
+import org.jboss.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.revature.boot.beans.UserPreferences;
 import com.revature.boot.beans.composites.UserPrefPk;
+import com.revature.boot.controller.RecipeCharacteristicController;
 import com.revature.boot.data.UserPreferencesRepository;
 
 @Service
 public class UserPreferencesService {
+	
+	private static final Logger log = Logger.getLogger(RecipeCharacteristicController.class);
 	
 	@Autowired
 	private UserPreferencesRepository repo;

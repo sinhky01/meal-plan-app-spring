@@ -2,16 +2,20 @@ package com.revature.boot.service;
 
 import java.util.List;
 
+import org.jboss.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.revature.boot.beans.Recipe;
 import com.revature.boot.beans.UserHistory;
 import com.revature.boot.beans.composites.UserHistoryPk;
+import com.revature.boot.controller.RecipeCharacteristicController;
 import com.revature.boot.data.UserHistoryRepository;
 
 @Service
 public class UserHistoryService {
+	
+	private static final Logger log = Logger.getLogger(RecipeCharacteristicController.class);
 
 	@Autowired
 	private UserHistoryRepository repo;

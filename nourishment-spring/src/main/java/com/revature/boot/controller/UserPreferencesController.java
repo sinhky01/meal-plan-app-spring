@@ -23,11 +23,11 @@ import com.revature.boot.beans.UserPreferences;
 import com.revature.boot.beans.composites.UserPrefPk;
 import com.revature.boot.service.UserPreferencesService;
 
-
-
 @RestController
 @RequestMapping(value = "/api/v1/preferences/")
 public class UserPreferencesController {
+	
+	private static final Logger log = Logger.getLogger(RecipeCharacteristicController.class);
 	
 	@Autowired
 	private UserPreferencesService service;

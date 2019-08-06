@@ -28,6 +28,8 @@ import com.revature.boot.service.UserHistoryService;
 @RequestMapping(value = "/api/v1/history/")
 public class UserHistoryController {
 
+	private static final Logger log = Logger.getLogger(RecipeCharacteristicController.class);
+	
 	@Autowired
 	private UserHistoryService service;
 	
