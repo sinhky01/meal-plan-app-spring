@@ -9,8 +9,9 @@ import javax.persistence.*;
 public class User {
 	
 	@Id
+	@Column(name="u_id")
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int u_id;
+	private int userId;
 	
 	@Column(name="fname")
 	private String fname;
@@ -35,10 +36,10 @@ public class User {
 
 	public User() {};
 	
-	public User(int u_id, String fname, String lname, String username, String password, List<UserPreferences> userPref,
+	public User(int userId, String fname, String lname, String username, String password, List<UserPreferences> userPref,
 			List<UserHistory> userHist, List<Calendar> user_data) {
 		super();
-		this.u_id = u_id;
+		this.userId = userId;
 		this.fname = fname;
 		this.lname = lname;
 		this.username = username;
@@ -48,12 +49,12 @@ public class User {
 		this.user_data = user_data;
 	}
 
-	public int getU_id() {
-		return u_id;
+	public int getUserId() {
+		return userId;
 	}
 
-	public void setU_id(int u_id) {
-		this.u_id = u_id;
+	public void setUserId(int userId) {
+		this.userId = userId;
 	}
 
 	public String getFname() {

@@ -9,43 +9,43 @@ import javax.persistence.Embeddable;
 public class MealCompositionPk implements Serializable{
 	
 	@Column(name="r_id")
-	private int r_id;
+	private int recipeId;
 	
 	@Column(name="i_id")
-	private int i_id;
+	private int ingredientId;
 
-	public int getR_id() {
-		return r_id;
+	public int getRecipeId() {
+		return recipeId;
 	}
 
-	public void setR_id(int r_id) {
-		this.r_id = r_id;
+	public void setRecipeId(int recipeId) {
+		this.recipeId = recipeId;
 	}
 
-	public int getI_id() {
-		return i_id;
+	public int getIngredientId() {
+		return ingredientId;
 	}
 
-	public void setI_id(int i_id) {
-		this.i_id = i_id;
+	public void setIngredientId(int ingredientId) {
+		this.ingredientId = ingredientId;
 	}
 
 	public MealCompositionPk() {
 		
 	}
 	
-	public MealCompositionPk(int r_id, int i_id) {
+	public MealCompositionPk(int recipeId, int ingredientId) {
 		super();
-		this.r_id = r_id;
-		this.i_id = i_id;
+		this.recipeId = recipeId;
+		this.ingredientId = ingredientId;
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + i_id;
-		result = prime * result + r_id;
+		result = prime * result + ingredientId;
+		result = prime * result + recipeId;
 		return result;
 	}
 
@@ -58,9 +58,9 @@ public class MealCompositionPk implements Serializable{
 		if (getClass() != obj.getClass())
 			return false;
 		MealCompositionPk other = (MealCompositionPk) obj;
-		if (i_id != other.i_id)
+		if (ingredientId != other.ingredientId)
 			return false;
-		if (r_id != other.r_id)
+		if (recipeId != other.recipeId)
 			return false;
 		return true;
 	}

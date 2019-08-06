@@ -16,7 +16,7 @@ import com.revature.boot.beans.composites.MealCompositionPk;
 public class MealComposition {
 
 	@EmbeddedId
-	private MealCompositionPk id;
+	private MealCompositionPk mealCompositionPk;
 	
 	@Column(name="quantity")
 	private int quantity;
@@ -40,17 +40,17 @@ public class MealComposition {
 	
 	public MealComposition(MealCompositionPk id, int quantity, String units) {
 		super();
-		this.id = id;
+		this.mealCompositionPk = id;
 		this.quantity = quantity;
 		this.units = units;
 	}
 
 	public MealCompositionPk getId() {
-		return id;
+		return mealCompositionPk;
 	}
 
 	public void setId(MealCompositionPk id) {
-		this.id = id;
+		this.mealCompositionPk = id;
 	}
 
 	public int getQuantity() {

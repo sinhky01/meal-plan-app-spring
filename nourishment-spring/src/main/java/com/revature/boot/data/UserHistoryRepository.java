@@ -13,15 +13,15 @@ import com.revature.boot.beans.composites.UserHistoryPk;
 @Repository
 public interface UserHistoryRepository extends JpaRepository<UserHistory, UserHistoryPk>{
 	
-	public List<UserHistory> findByUserHistoryPkU_id(int u_id);
+	public List<UserHistory> findByUserHistoryPkUserId(int userId);
 	
-	public List<UserHistory> findByUserHistoryPkR_id(int r_id);
+	public List<UserHistory> findByUserHistoryPkRecipeId(int recipeId);
 	
-	
+	/*
 	@Query("select r from Recipe r JOIN r.history uh WHERE uh.marker=1 AND uh.u_id= :u_id")
 	//@Query(value = "SELECT r_id, rname, recipe FROM recipe INNER JOIN recipe_characteristic WHERE marker=1", nativeQuery = true)
 	public List<Recipe> findByFavorited(int u_id);
 	
-	
+	*/
 	
 }

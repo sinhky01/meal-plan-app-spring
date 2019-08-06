@@ -21,11 +21,11 @@ public class MealCompositionService {
 		return repo.save(mc);
 	}
 	
-	public List<MealComposition> findByRecId(int r_id){
-		return repo.findByMealCompositionPkR_id(r_id);
+	public List<MealComposition> findByRecId(int recipeId){
+		return repo.findByMealCompositionPkRecipeId(recipeId);
 	}
 	
-	public List<MealComposition> findByIngrId(int i_id){
-		return repo.findByMealCompositionPkI_id(i_id);
+	public List<MealComposition> findByIngrId(int ingredientId){
+		return repo.findByMealCompositionPkIngredientId(ingredientId);
 	}
 }

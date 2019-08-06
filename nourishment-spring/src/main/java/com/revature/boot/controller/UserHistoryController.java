@@ -38,11 +38,12 @@ public class UserHistoryController {
 		return new ResponseEntity<List<UserHistory>>(service.findByUser(id),HttpStatus.OK);
 	}
 	
+	/*
 	@GetMapping("/user/{id}/favorited")
 	public ResponseEntity<List<Recipe>> getFavorited(@PathVariable int id){
 		return new ResponseEntity<List<Recipe>>(service.findByFavorited(id),HttpStatus.OK);
 	}
-	
+	*/
 	@DeleteMapping("/delete/{id}/{rec}")
 	public ResponseEntity<Void> deleteRecipe(@PathVariable int id, @PathVariable int rec){
 		service.delete(service.findByPk(new UserHistoryPk(id,rec)));
