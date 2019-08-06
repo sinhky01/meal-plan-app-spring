@@ -6,6 +6,8 @@ import java.util.Objects;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Embeddable
 public class CalendarPk implements Serializable {
@@ -15,6 +17,7 @@ public class CalendarPk implements Serializable {
 	 */
 	private static final long serialVersionUID = -2914077051235336327L;
 	
+	@Temporal(TemporalType.DATE)
 	@Column(name = "datetime")
 	private Date dateTime;
 	

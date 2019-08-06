@@ -64,7 +64,8 @@ public class CalendarController {
 	
 	@GetMapping("/recipes/{recipeId}")
 	public ResponseEntity<List<Calendar>> mealsByRecipe(@PathVariable int recipeId) {
-		return new ResponseEntity<List<Calendar>>(service.getByRecipe(recipeId), HttpStatus.OK);
+		//return new ResponseEntity<List<Calendar>>(service.getByRecipe(recipeId), HttpStatus.OK);
+		return null;
 	}
 	
 	@GetMapping("/{date}")

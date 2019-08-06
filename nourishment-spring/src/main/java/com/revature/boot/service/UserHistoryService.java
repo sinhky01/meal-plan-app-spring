@@ -21,15 +21,16 @@ public class UserHistoryService {
 	private UserHistoryRepository repo;
 	
 	public List<UserHistory> findByUser(int id){
-		return repo.findByU_id(id);
+		return repo.findByUserHistoryPkUserId(id);
 	}
 	
+	/*
 	public List<Recipe> findByFavorited(int id){
 		return repo.findByFavorited(id);
 	}
-	
+	*/
 	public List<UserHistory> findByRec(int r_id){
-		return repo.findByR_id(r_id);
+		return repo.findByUserHistoryPkRecipeId(r_id);
 	}
 	
 	public UserHistory findByPk(UserHistoryPk histpk) {

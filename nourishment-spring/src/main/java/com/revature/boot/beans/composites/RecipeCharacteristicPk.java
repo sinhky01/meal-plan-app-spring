@@ -3,13 +3,14 @@ package com.revature.boot.beans.composites;
 import java.io.Serializable;
 
 import javax.persistence.Column;
+import javax.persistence.Embeddable;
 import javax.persistence.Entity;
 
-@Entity
+@Embeddable
 public class RecipeCharacteristicPk implements Serializable{
 
 	@Column(name="r_id")
-	private int r_id;
+	private int recipeId;
 	
 	@Column(name="characteristic")
 	private String chracteristic;
@@ -19,19 +20,19 @@ public class RecipeCharacteristicPk implements Serializable{
 	}
 
 	
-	public RecipeCharacteristicPk(int r_id, String chracteristic) {
+	public RecipeCharacteristicPk(int recipeId, String chracteristic) {
 		super();
-		this.r_id = r_id;
+		this.recipeId = recipeId;
 		this.chracteristic = chracteristic;
 	}
 
 
-	public int getR_id() {
-		return r_id;
+	public int getRecipeId() {
+		return recipeId;
 	}
 
-	public void setR_id(int r_id) {
-		this.r_id = r_id;
+	public void setRecipeId(int recipeId) {
+		this.recipeId = recipeId;
 	}
 
 	public String getChracteristic() {
@@ -48,7 +49,7 @@ public class RecipeCharacteristicPk implements Serializable{
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((chracteristic == null) ? 0 : chracteristic.hashCode());
-		result = prime * result + r_id;
+		result = prime * result + recipeId;
 		return result;
 	}
 
@@ -67,7 +68,7 @@ public class RecipeCharacteristicPk implements Serializable{
 				return false;
 		} else if (!chracteristic.equals(other.chracteristic))
 			return false;
-		if (r_id != other.r_id)
+		if (recipeId != other.recipeId)
 			return false;
 		return true;
 	}

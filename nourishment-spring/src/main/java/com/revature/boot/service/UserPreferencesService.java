@@ -20,7 +20,7 @@ public class UserPreferencesService {
 	private UserPreferencesRepository repo;
 	
 	public List<UserPreferences> findByUserId(int id){
-		return repo.findByU_id(id);
+		return repo.findByUserPrefPkUserId(id);
 	}
 	
 	public UserPreferences save(UserPreferences up) {

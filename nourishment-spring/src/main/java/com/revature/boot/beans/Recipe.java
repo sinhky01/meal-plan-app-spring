@@ -18,7 +18,7 @@ public class Recipe {
 	
 	@Id
 	@Column(name="R_ID")
-	private int r_id;
+	private int recipeId;
 	
 	@Column(name="RNAME")
 	private String name;
@@ -34,18 +34,18 @@ public class Recipe {
 	})
 	private Set<Characteristic> characteristics;
 	
-	@OneToMany(mappedBy="r_id")
+	@OneToMany(mappedBy="recipe")
 	private Set<UserHistory> recentUsers;
 	
-	@OneToMany(mappedBy="r_id")
+	@OneToMany(mappedBy="recipe")
 	private Set<Calendar> scheduledEntry;
 
 	public Recipe() {}
 	
-	public Recipe(int r_id, String name, String directions, Set<Characteristic> characteristics,
+	public Recipe(int recipeId, String name, String directions, Set<Characteristic> characteristics,
 			Set<UserHistory> recentUsers, Set<Calendar> scheduledEntry) {
 		super();
-		this.r_id = r_id;
+		this.recipeId = recipeId;
 		this.name = name;
 		this.directions = directions;
 		this.characteristics = characteristics;
@@ -53,12 +53,12 @@ public class Recipe {
 		this.scheduledEntry = scheduledEntry;
 	}
 
-	public int getR_id() {
-		return r_id;
+	public int getRecipeId() {
+		return recipeId;
 	}
 
-	public void setR_id(int r_id) {
-		this.r_id = r_id;
+	public void setRecipeId(int recipeId) {
+		this.recipeId = recipeId;
 	}
 
 	public String getName() {
