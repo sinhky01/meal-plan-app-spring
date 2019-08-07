@@ -4,6 +4,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 import javax.validation.Valid;
 
@@ -38,4 +39,9 @@ public class CharacteristicController {
 		return new ResponseEntity<List<Recipe>>(list,HttpStatus.OK);
 	}
 	
+	@GetMapping("/id/{id}")
+	public ResponseEntity<List<String>> characteristicsOfRecipe(@PathVariable int id){
+		List<String> list = service.characteristicsOfRecipe(id);
+		return new ResponseEntity<List<String>>(list,HttpStatus.OK);
+	}
 }
