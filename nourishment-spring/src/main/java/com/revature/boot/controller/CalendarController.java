@@ -81,7 +81,7 @@ public class CalendarController {
 		return null;
 	}
 	
-	@GetMapping("/user/{date}")
+	@GetMapping("/date/{date}")
 	public ResponseEntity<List<Calendar>> mealsByDate(@PathVariable String date) {
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 		Date parsedDate = null;
