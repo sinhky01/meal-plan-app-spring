@@ -9,44 +9,44 @@ import javax.persistence.Embeddable;
 public class UserHistoryPk implements Serializable{
 	
 	@Column(name="u_id")
-	private int u_id;
+	private int userId;
 	
 	@Column(name = "r_id")
-	private int r_id;
+	private int recipeId;
 	
 
-	public int getU_id() {
-		return u_id;
+	public int getUserId() {
+		return userId;
 	}
 
-	public void setU_id(int u_id) {
-		this.u_id = u_id;
+	public void setUserId(int userId) {
+		this.userId = userId;
 	}
 
-	public int getR_id() {
-		return r_id;
+	public int getRecipeId() {
+		return recipeId;
 	}
 
-	public void setR_id(int r_id) {
-		this.r_id = r_id;
+	public void setRecipeId(int recipeId) {
+		this.recipeId = recipeId;
 	}
 
 	public UserHistoryPk() {
 		
 	}
 
-	public UserHistoryPk(int u_id, int r_id) {
+	public UserHistoryPk(int userId, int recipeId) {
 		super();
-		this.u_id = u_id;
-		this.r_id = r_id;
+		this.userId = userId;
+		this.recipeId = recipeId;
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + r_id;
-		result = prime * result + u_id;
+		result = prime * result + recipeId;
+		result = prime * result + userId;
 		return result;
 	}
 
@@ -59,9 +59,9 @@ public class UserHistoryPk implements Serializable{
 		if (getClass() != obj.getClass())
 			return false;
 		UserHistoryPk other = (UserHistoryPk) obj;
-		if (r_id != other.r_id)
+		if (recipeId != other.recipeId)
 			return false;
-		if (u_id != other.u_id)
+		if (userId != other.userId)
 			return false;
 		return true;
 	}

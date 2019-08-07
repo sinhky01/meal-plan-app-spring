@@ -19,25 +19,18 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.revature.boot.beans.MealComposition;
 import com.revature.boot.service.MealCompositionService;
+import com.revature.boot.service.CharacteristicService;
 
 @RestController
-@RequestMapping(value = "/api/v1/mealcomposition/")
-public class MealCompositionController {
+@RequestMapping(value = "/api/v1/characteristic/")
+public class CharacteristicController {
 	
-	private static final Logger log = Logger.getLogger(MealCompositionController.class);
+	private static final Logger log = Logger.getLogger(CharacteristicController.class);
 	
 	@Autowired
-	private MealCompositionService service;
+	private CharacteristicService service;
 	
-	@GetMapping("/meal/{recipe}")
-	public ResponseEntity<List<MealComposition>> compositionOfMeal(@PathVariable int recipe){
-		return new ResponseEntity<List<MealComposition>>(service.findByRecId(recipe),HttpStatus.OK);
-	}
 	
-	@PostMapping("/meal/save")
-	public ResponseEntity<MealComposition> saveComposition(@Valid MealComposition mc){
-		return new ResponseEntity<MealComposition>(service.save(mc),HttpStatus.CREATED);
-	}
+	
 }
