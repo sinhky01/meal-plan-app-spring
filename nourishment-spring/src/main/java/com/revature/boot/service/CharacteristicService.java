@@ -32,13 +32,19 @@ public class CharacteristicService {
 		return repo.findByCharacteristic(characteristic);
 	}
 	
-	/*
+	
 	public List<Recipe> recipesByCharacteristic(String characteristic){
 		return repo.recipesByCharacteristic(characteristic);
 	}
 	
 	public List<String> characteristicsOfRecipe(int id){
+//		Recipe rec = repo.characteristicsOfRecipe(id);
+//		Set<String> strSet = null;
+//		for(Characteristic chs:rec.getCharacteristics()) {
+//			strSet.add(chs.getCharacteristic());
+//		}
+//		return strSet;
 		return repo.characteristicsOfRecipe(id);
 	}
-	*/
+	
 }

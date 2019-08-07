@@ -18,14 +18,15 @@ public interface CharacteristicRepository extends JpaRepository<Characteristic, 
 	
 	public List<Characteristic> findByCharacteristic(String characteristic);
 	
+	//@Query(value="SELECT ",nativeQuery = true)
 	//FIX QUERIES AND SERVICE AND CONTROLLER
 	/*
 	 * 
-	 
+	*/
 	@Query("select r from Recipe r join r.characteristics rc where rc.characteristic = :characteristic")
 	public List<Recipe> recipesByCharacteristic(String characteristic);
 	
-	@Query("select rc from RecipeCharacteristics rc where rc.r_id = :id")
+	@Query("select rc.characteristic from Recipe r join r.characteristics rc where r.recipeId = :id")
 	public List<String> characteristicsOfRecipe(int id); 
-	*/
+	
 }
