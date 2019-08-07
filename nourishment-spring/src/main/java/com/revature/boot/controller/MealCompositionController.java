@@ -37,7 +37,7 @@ public class MealCompositionController {
 	}
 	
 	@PostMapping("/meal/save")
-	public ResponseEntity<MealComposition> saveComposition(@Valid MealComposition mc){
+	public ResponseEntity<MealComposition> saveComposition(@Valid@RequestBody MealComposition mc){
 		return new ResponseEntity<MealComposition>(service.save(mc),HttpStatus.CREATED);
 	}
 }

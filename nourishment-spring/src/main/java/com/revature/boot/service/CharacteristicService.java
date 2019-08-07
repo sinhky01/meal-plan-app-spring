@@ -32,11 +32,11 @@ public class CharacteristicService {
 		return repo.findByCharacteristic(characteristic);
 	}
 	
-	/*
+	
 	public List<Recipe> recipesByCharacteristic(String characteristic){
 		return repo.recipesByCharacteristic(characteristic);
 	}
-	
+	/*
 	public List<String> characteristicsOfRecipe(int id){
 		return repo.characteristicsOfRecipe(id);
 	}

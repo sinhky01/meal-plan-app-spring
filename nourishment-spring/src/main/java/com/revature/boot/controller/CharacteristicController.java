@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.revature.boot.service.MealCompositionService;
+import com.revature.boot.beans.Recipe;
 import com.revature.boot.service.CharacteristicService;
 
 @RestController
@@ -31,6 +32,10 @@ public class CharacteristicController {
 	@Autowired
 	private CharacteristicService service;
 	
-	
+	@GetMapping("/{characteristic}")
+	public ResponseEntity<List<Recipe>> findRecipesByCharacteristic(@PathVariable String characteristic){
+		List<Recipe> list = service.recipesByCharacteristic(characteristic);
+		return new ResponseEntity<List<Recipe>>(list,HttpStatus.OK);
+	}
 	
 }
