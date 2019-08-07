@@ -4,6 +4,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 import javax.validation.Valid;
 
@@ -20,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.revature.boot.service.MealCompositionService;
+import com.revature.boot.beans.Recipe;
 import com.revature.boot.service.CharacteristicService;
 
 @RestController
@@ -31,6 +33,15 @@ public class CharacteristicController {
 	@Autowired
 	private CharacteristicService service;
 	
+	@GetMapping("/{characteristic}")
+	public ResponseEntity<List<Recipe>> findRecipesByCharacteristic(@PathVariable String characteristic){
+		List<Recipe> list = service.recipesByCharacteristic(characteristic);
+		return new ResponseEntity<List<Recipe>>(list,HttpStatus.OK);
+	}
 	
-	
+	@GetMapping("/id/{id}")
+	public ResponseEntity<List<String>> characteristicsOfRecipe(@PathVariable int id){
+		List<String> list = service.characteristicsOfRecipe(id);
+		return new ResponseEntity<List<String>>(list,HttpStatus.OK);
+	}
 }

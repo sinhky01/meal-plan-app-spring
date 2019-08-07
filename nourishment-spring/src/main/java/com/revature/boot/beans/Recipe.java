@@ -30,7 +30,7 @@ public class Recipe {
 	@JoinTable(name="RECIPE_CHARACTERISTIC", joinColumns = {
 			@JoinColumn(name="R_ID")
 	}, inverseJoinColumns = {
-			@JoinColumn(name="CHARACTERISTIC")
+			@JoinColumn(name="characteristic")
 	})
 	private Set<Characteristic> characteristics;
 	

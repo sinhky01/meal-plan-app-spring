@@ -11,6 +11,7 @@ import org.jboss.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpHeaders;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -33,11 +34,15 @@ public class MealCompositionController {
 	
 	@GetMapping("/meal/{recipe}")
 	public ResponseEntity<List<MealComposition>> compositionOfMeal(@PathVariable int recipe){
-		return new ResponseEntity<List<MealComposition>>(service.findByRecId(recipe),HttpStatus.OK);
+		HttpHeaders head = new HttpHeaders();
+		head.add(HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN,"http://localhost:4200");
+		return new ResponseEntity<List<MealComposition>>(service.findByRecId(recipe),
+				head, 
+				HttpStatus.OK);
 	}
 	
 	@PostMapping("/meal/save")
-	public ResponseEntity<MealComposition> saveComposition(@Valid MealComposition mc){
+	public ResponseEntity<MealComposition> saveComposition(@Valid@RequestBody MealComposition mc){
 		return new ResponseEntity<MealComposition>(service.save(mc),HttpStatus.CREATED);
 	}
 }
