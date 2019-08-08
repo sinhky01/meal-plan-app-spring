@@ -24,23 +24,21 @@ public class UserHistory {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@MapsId("u_id")
 	@JoinColumn(name = "u_id")
-	private int u_id;
+	private User user;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@MapsId("r_id")
 	@JoinColumn(name = "r_id")
-	private int r_id;
+	private Recipe recipe;
 	
 	public UserHistory () {
 		
 	}
 
-	public UserHistory(UserHistoryPk userHistoryPk, int marker, int u_id, int r_id) {
+	public UserHistory(UserHistoryPk userHistoryPk, int marker) {
 		super();
 		this.userHistoryPk = userHistoryPk;
 		this.marker = marker;
-		this.u_id = u_id;
-		this.r_id = r_id;
 	}
 
 	public UserHistoryPk getUserHistoryPk() {
@@ -57,23 +55,5 @@ public class UserHistory {
 
 	public void setMarker(int marker) {
 		this.marker = marker;
-	}
-
-	public int getU_id() {
-		return u_id;
-	}
-
-	public void setU_id(int u_id) {
-		this.u_id = u_id;
-	}
-
-	public int getR_id() {
-		return r_id;
-	}
-
-	public void setR_id(int r_id) {
-		this.r_id = r_id;
-	}
-	
-	
+	}	
 }

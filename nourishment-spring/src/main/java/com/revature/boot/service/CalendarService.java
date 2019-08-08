@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import com.revature.boot.beans.Calendar;
 import com.revature.boot.beans.CalendarPk;
+import com.revature.boot.beans.Recipe;
 import com.revature.boot.data.CalendarRepository;
 
 @Service
@@ -39,16 +40,16 @@ public class CalendarService {
 	}
 
 	public List<Calendar> getByUserId(int userId) {
-		return repo.findByUserId(userId);
+		return repo.findByIdUserId(userId);
 	}
 	public List<Calendar> getByMealType(int mealNum) {
 		return repo.findByMealNum(mealNum);
 	}
-	public List<Calendar> getByRecipe(int recipeId) {
-		return repo.findByRecipeId(recipeId);
+	public List<Calendar> getByRecipe(Recipe recipe) {
+		return repo.findByRecipe(recipe);
 	}
 	public List<Calendar> getByDate(Date date) {
-		return repo.findByDate(date);
+		return repo.findByIdDateTime(date);
 	}
 	
 }

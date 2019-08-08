@@ -9,8 +9,9 @@ import javax.persistence.*;
 public class User {
 	
 	@Id
+	@Column(name="u_id")
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int u_id;
+	private int userId;
 	
 	@Column(name="fname")
 	private String fname;
@@ -23,120 +24,93 @@ public class User {
 	
 	@Column(name="pass")
 	private String password;
-	
-	@OneToMany(mappedBy = "prefid")
+  
+	@OneToMany(mappedBy = "user")
 	private List<UserPreferences> userPref;
 	
-	@OneToMany(mappedBy = "histid")
+	@OneToMany(mappedBy = "user")
 	private List<UserHistory> userHist;
 	
-	@OneToMany(mappedBy = "calid")
+	@OneToMany(mappedBy = "user")
 	private List<Calendar> user_data;
 
-	public User() {}
-
-	public User(String first, String last, String uname, String pword)
-	{
+	public User() {};
+	
+	public User(int userId, String fname, String lname, String username, String password, List<UserPreferences> userPref,
+			List<UserHistory> userHist, List<Calendar> user_data) {
 		super();
-		this.fname = first;
-		this.lname = last;
-		this.username = uname;
-		this.password = pword;
+		this.userId = userId;
+		this.fname = fname;
+		this.lname = lname;
+		this.username = username;
+		this.password = password;
+		this.userPref = userPref;
+		this.userHist = userHist;
+		this.user_data = user_data;
+	}
+
+	public int getUserId() {
+		return userId;
+	}
+
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
+
+	public String getFname() {
+		return fname;
+	}
+
+	public void setFname(String fname) {
+		this.fname = fname;
+	}
+
+	public String getLname() {
+		return lname;
+	}
+
+	public void setLname(String lname) {
+		this.lname = lname;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public List<UserPreferences> getUserPref() {
+		return userPref;
+	}
+
+	public void setUserPref(List<UserPreferences> userPref) {
+		this.userPref = userPref;
+	}
+
+	public List<UserHistory> getUserHist() {
+		return userHist;
+	}
+
+	public void setUserHist(List<UserHistory> userHist) {
+		this.userHist = userHist;
+	}
+
+	public List<Calendar> getUser_data() {
+		return user_data;
+	}
+
+	public void setUser_data(List<Calendar> user_data) {
+		this.user_data = user_data;
 	}
 	
-	public User(int id, String first, String last, String usename, String pword)
-	{
-		super();
-		this.u_id = id;
-		this.fname = first;
-		this.lname = last;
-		this.username = usename;
-		this.password = pword;
-	}
-
-	public int getId()
-	{
-		return this.u_id;
-	}
-
-	public void setId(int id)
-	{
-		this.u_id = id;
-	}
-
-	public String getFname()
-	{
-		return this.fname;
-	}
-
-	public void setFname(String first)
-	{
-		this.fname = first;
-	}
-
-	public String getLname()
-	{
-		return this.lname;
-	}
-
-	public void setLname(String last)
-	{
-		this.lname = last;
-	}
-
-	public String getUname()
-	{
-		return this.username;
-	}
-
-	public void setUname(String uname)
-	{
-		this.username = uname;
-	}
-
-	public String getPass()
-	{
-		return this.password;
-	}
-
-	public void setPass(String pass)
-	{
-		this.password = pass;
-	}
-
-	public List<UserPreferences> getuserPrefs()
-	{
-		return this.userPref;
-	}
-
-	public void setUserPrefs(List<UserPreferences> usePref)
-	{
-		this.userPref = usePref;
-	}
-
-	public List<UserHistory> getUserHist()
-	{
-		return this.userHist;
-	}
-
-	public void setUserHist(List<UserHistory> useHist)
-	{
-		this.userHist = useHist;
-	}
-
-	public List<Calendar> getUserCal()
-	{
-		return this.user_data;
-	}
-
-	public void setUserCal(List<Calendar> useCal)
-	{
-		this.user_data = useCal;
-	}
-
-	@Override
-	public String toString()
-	{
-		return "User [ID = " + u_id + ", Username = " + username + ", First Name = " + fname + ", Last Name = " + lname + "]";
-	}
 }

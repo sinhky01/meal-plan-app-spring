@@ -9,26 +9,26 @@ import javax.persistence.Embeddable;
 public class UserPrefPk implements Serializable{
 	
 	@Column(name="u_id")
-	private int u_id;
+	private int userId;
 	
 	@Column(name="i_id")
-	private int i_id;
+	private int ingredientId;
 	
 
-	public int getU_id() {
-		return u_id;
+	public int getUserId() {
+		return userId;
 	}
 
-	public void setU_id(int u_id) {
-		this.u_id = u_id;
+	public void setUserId(int userId) {
+		this.userId = userId;
 	}
 
-	public int getI_id() {
-		return i_id;
+	public int getIngredientId() {
+		return ingredientId;
 	}
 
-	public void setI_id(int i_id) {
-		this.i_id = i_id;
+	public void setIngredientId(int ingredientId) {
+		this.ingredientId = ingredientId;
 	}
 
 	
@@ -36,18 +36,18 @@ public class UserPrefPk implements Serializable{
 		
 	}
 
-	public UserPrefPk(int u_id, int i_id) {
+	public UserPrefPk(int userId, int ingredientId) {
 		super();
-		this.u_id = u_id;
-		this.i_id = i_id;
+		this.userId = userId;
+		this.ingredientId = ingredientId;
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + i_id;
-		result = prime * result + u_id;
+		result = prime * result + ingredientId;
+		result = prime * result + userId;
 		return result;
 	}
 
@@ -60,9 +60,9 @@ public class UserPrefPk implements Serializable{
 		if (getClass() != obj.getClass())
 			return false;
 		UserPrefPk other = (UserPrefPk) obj;
-		if (i_id != other.i_id)
+		if (ingredientId != other.ingredientId)
 			return false;
-		if (u_id != other.u_id)
+		if (userId != other.userId)
 			return false;
 		return true;
 	}

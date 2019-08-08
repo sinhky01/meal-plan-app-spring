@@ -16,37 +16,29 @@ public class Calendar {
 	private int mealNum; // this is a number representation of which meal of the day it is
 
 	@ManyToOne(fetch = FetchType.LAZY)
+	@MapsId("u_id")
 	@JoinColumn(name = "u_id")
-	private int userId;
+	private User user;
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "r_id")
-	private int recipeId;
-	
-	@Temporal(TemporalType.DATE)
-	@Column(name = "datetime")
-	private Date date;
+	private Recipe recipe;
 	
 	public Calendar() {
 		
 	}
 	
 	
-	public Calendar(CalendarPk id, int mealNum, int userId, int recipeId, Date date) {
+	public Calendar(CalendarPk id, int mealNum) {
 		super();
 		this.id = id;
 		this.mealNum = mealNum;
-		this.userId = userId;
-		this.recipeId = recipeId;
-		this.date = date;
 	}
 
 	public Calendar(int mealNum, int userId, int recipeId, Date date) {
 		super();
 		this.mealNum = mealNum;
-		this.userId = userId;
-		this.recipeId = recipeId;
-		this.date = date;
+		
 	}
 
 
@@ -65,30 +57,4 @@ public class Calendar {
 	public void setMealNum(int mealNum) {
 		this.mealNum = mealNum;
 	}
-
-	public int getUserId() {
-		return userId;
-	}
-
-	public void setUserId(int userId) {
-		this.userId = userId;
-	}
-
-	public int getRecipeId() {
-		return recipeId;
-	}
-
-	public void setRecipeId(int recipeId) {
-		this.recipeId = recipeId;
-	}
-
-
-	public Date getDate() {
-		return date;
-	}
-
-	public void setDate(Date date) {
-		this.date = date;
-	}
-
 }

@@ -39,11 +39,24 @@ public class CalendarController {
 	}
 	
 	@GetMapping("/meal/{userId}/{datetime}") 
-	public Calendar findByPk(@PathVariable int userId, @PathVariable Date datetime) {
+	public Calendar findByPk(@PathVariable int userId, @PathVariable String datetime) {
+		// convert date 
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+		Date parsedDate = null;
+		try {
+			parsedDate = formatter.parse(datetime);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
 		// creating calendarpk to be used in calendar object from get parameters
-		CalendarPk pk = new CalendarPk(datetime, userId);
+		CalendarPk pk = new CalendarPk(parsedDate, userId);
 		return service.findByCompoundId(pk);
 	}
+	
+//	@GetMapping("/getstuff")
+//	public void doStuff() {
+//		System.out.println("Doing stuff");
+//	}
 	
 	@DeleteMapping("/meal/{userId}/{datetime}")
 	public ResponseEntity<Void> delete(@PathVariable int userId, @PathVariable Date datetime) {
@@ -52,7 +65,7 @@ public class CalendarController {
 		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 	}
 	
-	@GetMapping("/{userId}")
+	@GetMapping("/user/{userId}")
 	public ResponseEntity<List<Calendar>> mealsByUser(@PathVariable int userId) {
 		return new ResponseEntity<List<Calendar>>(service.getByUserId(userId), HttpStatus.OK);
 	}
@@ -64,10 +77,11 @@ public class CalendarController {
 	
 	@GetMapping("/recipes/{recipeId}")
 	public ResponseEntity<List<Calendar>> mealsByRecipe(@PathVariable int recipeId) {
-		return new ResponseEntity<List<Calendar>>(service.getByRecipe(recipeId), HttpStatus.OK);
+		//return new ResponseEntity<List<Calendar>>(service.getByRecipe(recipeId), HttpStatus.OK);
+		return null;
 	}
 	
-	@GetMapping("/{date}")
+	@GetMapping("/date/{date}")
 	public ResponseEntity<List<Calendar>> mealsByDate(@PathVariable String date) {
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 		Date parsedDate = null;
