@@ -22,6 +22,19 @@ public class UserController {
 
     }
 
+    @GetMapping("/{userId}")
+        public ResponseEntity<User> getUser(@PathVariable int userId)
+        {
+            return new ResponseEntity<User>(service.getUserById(userId), HttpStatus.OK);
+        }
+
+    @DeleteMapping("/user/{userId}")
+    public ResponseEntity<Void> delete(@PathVariable int userId)
+    {
+        service.delete(service.getUserById(userId));
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+
 
 }
 
