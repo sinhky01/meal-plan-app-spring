@@ -23,7 +23,11 @@ public class CalendarPk implements Serializable {
 	
 	@Column(name = "u_id")
 	private int userId;
-
+	
+	public CalendarPk() {
+		
+	}
+	
 	public CalendarPk(Date dateTime, int userId) {
 		super();
 		this.dateTime = dateTime;
