@@ -24,11 +24,10 @@ public class UserHistoryService {
 		return repo.findByUserHistoryPkUserId(id);
 	}
 	
-	/*
 	public List<Recipe> findByFavorited(int id){
 		return repo.findByFavorited(id);
 	}
-	*/
+	
 	public List<UserHistory> findByRec(int r_id){
 		return repo.findByUserHistoryPkRecipeId(r_id);
 	}

@@ -6,6 +6,7 @@ import org.jboss.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.revature.boot.beans.Ingredient;
 import com.revature.boot.beans.UserPreferences;
 import com.revature.boot.beans.composites.UserPrefPk;
 import com.revature.boot.controller.CharacteristicController;
@@ -33,5 +34,9 @@ public class UserPreferencesService {
 	
 	public UserPreferences findByPk(UserPrefPk pk) {
 		return repo.findById(pk).get();
+	}
+	
+	public List<Ingredient> findByPreferred(int id){
+		return repo.findByFavorited(id);
 	}
 }

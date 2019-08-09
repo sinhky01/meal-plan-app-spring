@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.revature.boot.beans.Ingredient;
 import com.revature.boot.beans.UserPreferences;
 import com.revature.boot.beans.composites.UserPrefPk;
 import com.revature.boot.service.UserPreferencesService;
@@ -49,5 +50,10 @@ public class UserPreferencesController {
 	public ResponseEntity<UserPreferences> savePref(@PathVariable int id,@PathVariable int ingredient, @PathVariable int marker){
 		UserPreferences up = new UserPreferences(new UserPrefPk(id,ingredient),marker);
 		return new ResponseEntity<UserPreferences>(service.save(up),HttpStatus.CREATED);
+	}
+	
+	@GetMapping("/preferences/{id}")
+	public ResponseEntity<List<Ingredient>> findByPreferred(@PathVariable int id){
+		return new ResponseEntity<List<Ingredient>>(service.findByPreferred(id),HttpStatus.OK);
 	}
 }

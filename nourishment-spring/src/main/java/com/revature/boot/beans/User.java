@@ -11,6 +11,8 @@ public class User {
 	@Id
 	@Column(name="u_id")
 	@GeneratedValue(strategy = GenerationType.AUTO)
+//	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_gen")
+//	@SequenceGenerator(name = "user_gen", sequenceName = "USER_ID_SEQ")
 	private int userId;
 	
 	@Column(name="fname")

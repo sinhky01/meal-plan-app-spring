@@ -19,8 +19,15 @@ INSERT INTO MEAL_COMPOSITION (R_ID, I_ID, QUANTITY, UNITS) VALUES(1, 7, 10, 'oz'
 INSERT INTO MEAL_COMPOSITION (R_ID, I_ID, QUANTITY, UNITS) VALUES(1, 8, 10, 'oz');
 INSERT INTO MEAL_COMPOSITION (R_ID, I_ID, QUANTITY, UNITS) VALUES(1, 9, 10, 'oz');
 
-INSERT INTO appuser (u_id, fname, lname, uname, pass) values(1, 'Jason', 'Macias', 'jmacias', 'password');
+INSERT INTO appuser ( u_id, fname, lname, uname, pass) values( 1,'Jason', 'Macias', 'jmacias', 'password');
 INSERT INTO characteristic (characteristic) VALUES ('sandwich');
 INSERT INTO characteristic (characteristic) VALUES ('lunch');
 INSERT INTO RECIPE_CHARACTERISTIC (R_ID,characteristic) VALUES (1,'sandwich');
 INSERT INTO RECIPE_CHARACTERISTIC (R_ID,characteristic) VALUES (1,'lunch');
+
+INSERT INTO user_preference VALUES (1,1,1);
+INSERT INTO user_preference VALUES (2,1,1);
+INSERT INTO user_preference VALUES (5,1,1);
+
+INSERT INTO user_history VALUES (1,1,1);
+

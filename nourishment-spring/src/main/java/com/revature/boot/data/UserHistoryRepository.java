@@ -24,4 +24,7 @@ public interface UserHistoryRepository extends JpaRepository<UserHistory, UserHi
 	
 	*/
 	
+	@Query("select r from Recipe r join r.recentUsers uh where uh.marker = 1 and uh.userHistoryPk.userId = :id")
+	public List<Recipe> findByFavorited(int id);
+	
 }
