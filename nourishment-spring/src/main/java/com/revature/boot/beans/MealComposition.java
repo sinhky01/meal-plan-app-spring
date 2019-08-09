@@ -9,6 +9,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.MapsId;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.revature.boot.beans.composites.MealCompositionPk;
 
 @Entity
@@ -31,6 +32,7 @@ public class MealComposition {
 	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@MapsId("i_id")
+	@JsonBackReference
 	@JoinColumn(name = "i_id")
 	private Ingredient ingredient;
 
@@ -45,12 +47,12 @@ public class MealComposition {
 		this.units = units;
 	}
 
-	public MealCompositionPk getId() {
-		return mealCompositionPk;
-	}
-
-	public void setId(MealCompositionPk id) {
-		this.mealCompositionPk = id;
+	public MealComposition(MealCompositionPk mealCompositionPk, int quantity, String units, Ingredient ingredient) {
+		super();
+		this.mealCompositionPk = mealCompositionPk;
+		this.quantity = quantity;
+		this.units = units;
+		this.ingredient = ingredient;
 	}
 
 	public int getQuantity() {
@@ -67,5 +69,13 @@ public class MealComposition {
 
 	public void setUnits(String units) {
 		this.units = units;
+	}
+
+	public MealCompositionPk getMealCompositionPk() {
+		return mealCompositionPk;
+	}
+
+	public void setMealCompositionPk(MealCompositionPk mealCompositionPk) {
+		this.mealCompositionPk = mealCompositionPk;
 	}	
 }
