@@ -4,6 +4,8 @@ import java.util.List;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 @Entity
 @Table(name="ingredient")
 public class Ingredient {
@@ -17,7 +19,8 @@ public class Ingredient {
 	@Column(name="ingredient")
 	private String ingredient;
 	
-	@OneToMany(mappedBy = "ingredient")
+	@OneToMany(mappedBy = "ingredient", fetch = FetchType.LAZY)
+	@JsonManagedReference
 	private List<MealComposition> usedBy;
 	
 	@OneToMany(mappedBy = "ingredient")
