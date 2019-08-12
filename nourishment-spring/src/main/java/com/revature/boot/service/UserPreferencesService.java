@@ -1,5 +1,6 @@
 package com.revature.boot.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.jboss.logging.Logger;
@@ -36,7 +37,12 @@ public class UserPreferencesService {
 		return repo.findById(pk).get();
 	}
 	
-	public List<Ingredient> findByPreferred(int id){
-		return repo.findByFavorited(id);
+	public List<String> findByPreferred(int id){
+		List<Ingredient> arrI = repo.findByFavorited(id);
+		List<String> nameArr = new ArrayList<String>();
+		for(Ingredient i: arrI) {
+			nameArr.add(i.getIngredient());
+		}
+		return nameArr;
 	}
 }

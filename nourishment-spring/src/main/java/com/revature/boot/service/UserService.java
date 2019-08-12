@@ -1,6 +1,9 @@
 package com.revature.boot.service;
 
 import org.springframework.stereotype.Service;
+
+import java.util.List;
+
 import org.jboss.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.revature.boot.beans.User;
@@ -28,8 +31,11 @@ public class UserService {
         repo.delete(user);
     }
     
-    public User loginCheck(String username, String password) {
-    	return repo.checkLogin(username, password);
+    public User loginCheck(String username) {
+    	//User u = repo.checkLogin(username).get(0);
+    	User u = repo.findFirstByUsername(username);
+    	//System.out.println(u);
+    	return u;
     }
 
 }

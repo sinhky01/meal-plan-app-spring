@@ -9,6 +9,7 @@ import javax.validation.Valid;
 
 import org.jboss.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -53,7 +54,9 @@ public class UserPreferencesController {
 	}
 	
 	@GetMapping("/preferences/{id}")
-	public ResponseEntity<List<Ingredient>> findByPreferred(@PathVariable int id){
-		return new ResponseEntity<List<Ingredient>>(service.findByPreferred(id),HttpStatus.OK);
+	public ResponseEntity<List<String>> findByPreferred(@PathVariable int id){
+		HttpHeaders head = new HttpHeaders();
+		head.add(HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN,"http://localhost:4200");
+		return new ResponseEntity<List<String>>(service.findByPreferred(id),head,HttpStatus.OK);
 	}
 }

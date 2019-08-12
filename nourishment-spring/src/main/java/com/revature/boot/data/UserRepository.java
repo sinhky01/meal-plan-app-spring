@@ -13,6 +13,6 @@ import com.revature.boot.beans.User;
 public interface UserRepository extends JpaRepository<User, Integer> {
 	public User findById(int userId);
 	
-	@Query("select u from User u where u.username = :username and u.password = :password")
-	public User checkLogin(String username, String password);
+	//@Query("select u from User u where u.username = :username")
+	public User findFirstByUsername(String username);//(User user)
 }

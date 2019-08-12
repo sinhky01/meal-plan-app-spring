@@ -4,8 +4,24 @@ server:
     session:
       cookie:
         http-only: true
-spring:
-  application:
-    name: nourishment-api
+#spring:
+#  application:
+#    name: nourishment-api
+#  datasource:
+#    platform: h2
+#  h2:
+#    console:
+#      enabled: true
+#      path: /h2-console
+spring:  application:    name: nourishment-api
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.Oracle10gDialect
+      
+    hibernate:      ddl-auto: create-drop      
   datasource:
-    platform: h2
+    url: jdbc:oracle:thin:@project2-nourishment-db.czbmyzgcpgqi.us-east-2.rds.amazonaws.com:1521:ORCL
+    username: nourishmentAdmin
+    password: nourishmentPasswordchange
+    driver-class-name: oracle.jdbc.driver.OracleDriver

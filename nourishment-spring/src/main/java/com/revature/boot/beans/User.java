@@ -10,9 +10,8 @@ public class User {
 	
 	@Id
 	@Column(name="u_id")
-	@GeneratedValue(strategy = GenerationType.AUTO)
-//	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_gen")
-//	@SequenceGenerator(name = "user_gen", sequenceName = "USER_ID_SEQ")
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_gen")
+	@SequenceGenerator(name = "user_gen", sequenceName = "u_seq")
 	private int userId;
 	
 	@Column(name="fname")
@@ -21,7 +20,7 @@ public class User {
 	@Column(name="lname")
 	private String lname;
 	
-	@Column(name="uname")
+	@Column(name="uname",unique=true)
 	private String username;
 	
 	@Column(name="pass")
@@ -38,6 +37,22 @@ public class User {
 
 	public User() {};
 	
+	public User(String username,String password) {
+		this.username=username;
+		this.password=password;
+	}
+	
+	
+	
+	public User(int userId, String fname, String lname, String username, String password) {
+		super();
+		this.userId = userId;
+		this.fname = fname;
+		this.lname = lname;
+		this.username = username;
+		this.password = password;
+	}
+
 	public User(int userId, String fname, String lname, String username, String password, List<UserPreferences> userPref,
 			List<UserHistory> userHist, List<Calendar> user_data) {
 		super();
@@ -113,6 +128,12 @@ public class User {
 
 	public void setUser_data(List<Calendar> user_data) {
 		this.user_data = user_data;
+	}
+
+	@Override
+	public String toString() {
+		return "User [userId=" + userId + ", fname=" + fname + ", lname=" + lname + ", username=" + username
+				+ ", password=" + password + "]";
 	}
 	
 	
