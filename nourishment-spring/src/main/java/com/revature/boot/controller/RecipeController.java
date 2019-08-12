@@ -1,5 +1,7 @@
 package com.revature.boot.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -25,6 +27,15 @@ public class RecipeController {
 		head.add(HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN,"http://localhost:4200");
 		return new ResponseEntity<Recipe>(service.findByRecipeId(recipe), 
 				head, 
+				HttpStatus.OK);
+	}
+	
+	@GetMapping("/view/all")
+	public ResponseEntity<List<Recipe>> findAll() {
+		HttpHeaders head = new HttpHeaders();
+		head.add(HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN,"http://localhost:4200");
+		return new ResponseEntity<List<Recipe>>(service.findAll(),
+				head,
 				HttpStatus.OK);
 	}
 }
