@@ -9,6 +9,7 @@ import javax.validation.Valid;
 
 import org.jboss.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -37,13 +38,14 @@ public class UserHistoryController {
 	public ResponseEntity<List<UserHistory>> getByUser(@PathVariable int id){
 		return new ResponseEntity<List<UserHistory>>(service.findByUser(id),HttpStatus.OK);
 	}
-	
-	/*
+	 
 	@GetMapping("/user/{id}/favorited")
-	public ResponseEntity<List<Recipe>> getFavorited(@PathVariable int id){
-		return new ResponseEntity<List<Recipe>>(service.findByFavorited(id),HttpStatus.OK);
+	public ResponseEntity<List<String>> getFavorited(@PathVariable int id){
+		HttpHeaders head = new HttpHeaders();
+		head.add(HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN,"http://localhost:4200");
+		return new ResponseEntity<List<String>>(service.findByFavorited(id),head,HttpStatus.OK);
 	}
-	*/
+	
 	@DeleteMapping("/delete/{id}/{rec}")
 	public ResponseEntity<Void> deleteRecipe(@PathVariable int id, @PathVariable int rec){
 		service.delete(service.findByPk(new UserHistoryPk(id,rec)));

@@ -12,7 +12,8 @@ public class Ingredient {
 	
 	@Id
 	@Column(name="i_id")
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ing_gen")
+	@SequenceGenerator(name = "ing_gen", sequenceName = "i_seq")
 	private int ingredientId;
 	
 	@Column(name="ingredient")

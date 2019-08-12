@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n    <div class=\"row\">\r\n        <h4 class=\"jumbotron\">Account</h4>\r\n    </div>\r\n    <div class=\"row\">\r\n        <!--One row and card for the account information\r\n        and one row and maybe multiple cards for meal favorites-->\r\n        <div class=\"card col-6\">\r\n            <div class=\"card-body\">\r\n                <h4 class=\"card-title\">{{fname}}'s Account Information</h4>\r\n                <h6 class=\"card-subtitle mb-2 text-muted\">A brief description</h6>\r\n                <p class=\"card-text\">\r\n                </p>\r\n                <ul>\r\n                    <li><span class=\"font-weight-bold\">First Name: </span><span class=\"font-italic\">{{fname}}</span>\r\n                    </li>\r\n                    <li><span class=\"font-weight-bold\">Last Name: </span><span class=\"font-italic\">{{lname}}</span>\r\n                    </li>\r\n                    <li><span class=\"font-weight-bold\">User ID: </span><span class=\"font-italic\">{{u_id}}</span>\r\n                    </li>\r\n                </ul>\r\n\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"row\">\r\n        <div class=\"card col-6\">\r\n            <div class=\"card-body\">\r\n                <h4 class=\"card-title\">Stored Meal Favorites</h4>\r\n                <h6 class=\"card-subtitle mb-2 text-muted\">A brief description</h6>\r\n                <p class=\"card-text\">\r\n\r\n                </p>\r\n                <div *ngFor='let favorite of favorites'>\r\n                    <ul>\r\n                        <li><span class=\"font-weight-bold\">{{favorite}}</span></li>\r\n                    </ul>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"row\">\r\n        <div class=\"card col-6\">\r\n            <div class=\"card-body\">\r\n                <h4 class=\"card-title\">Ingredient Preferences</h4>\r\n                <h6 class=\"card-subtitle mb-2 text-muted\">A brief description</h6>\r\n                <p class=\"card-text\">\r\n\r\n                </p>\r\n                <div *ngFor='let ingredient of ingredients'>\r\n                    <ul>\r\n                        <li><span class=\"font-weight-bold\">{{ingredient}}</span></li>\r\n                    </ul>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
+module.exports = "<div class=\"container\">\r\n    <div class=\"row\">\r\n        <h4 class=\"jumbotron col-12\">Account</h4>\r\n    </div>\r\n    <div class=\"row\">\r\n        <!--One row and card for the account information\r\n        and one row and maybe multiple cards for meal favorites-->\r\n        <div class=\"card col-6 border-dark mb-3\">\r\n            <div class=\"card-body\">\r\n                <h4 class=\"card-title\">{{fname}}'s Account Information</h4>\r\n                <p class=\"card-text\">\r\n                </p>\r\n                <ul>\r\n                    <li><span class=\"font-weight-bold\">First Name: </span><span class=\"font-italic\">{{fname}}</span>\r\n                    </li>\r\n                    <li><span class=\"font-weight-bold\">Last Name: </span><span class=\"font-italic\">{{lname}}</span>\r\n                    </li>\r\n                    <li><span class=\"font-weight-bold\">User ID: </span><span class=\"font-italic\">{{u_id}}</span>\r\n                    </li>\r\n                    <li><span class=\"font-weight-bold\">Username: </span><span class=\"font-italic\">{{username}}</span>\r\n                    </li>\r\n                </ul>\r\n\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"row\">\r\n        <div class=\"card col-6 border-dark mb-3\">\r\n            <div class=\"card-body\">\r\n                <h4 class=\"card-title\">Stored Meal Favorites</h4>\r\n                \r\n                <p class=\"card-text\">\r\n\r\n                </p>\r\n                <div *ngFor='let favorite of favorites'>\r\n                    <ul>\r\n                        <li><span class=\"font-weight-bold\">{{favorite}}</span></li>\r\n                    </ul>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"row\">\r\n        <div class=\"card col-6 border-dark mb-3\">\r\n            <div class=\"card-body\">\r\n                <h4 class=\"card-title\">Ingredient Preferences</h4>\r\n                <p class=\"card-text\">\r\n\r\n                </p>\r\n                <div *ngFor='let ingredient of ingredients'>\r\n                    <ul>\r\n                        <li><span class=\"font-weight-bold\">{{ingredient}}</span></li>\r\n                    </ul>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -52,7 +52,7 @@ module.exports = "<app-nav></app-nav>\r\n<router-outlet></router-outlet>\r\n<app
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row text-center\">\r\n  <div class=\"col-md-4\">\r\n    <div class=\"btn-group\">\r\n      <div\r\n        class=\"btn btn-primary\"\r\n        mwlCalendarPreviousView\r\n        [view]=\"view\"\r\n        [(viewDate)]=\"viewDate\"\r\n        (viewDateChange)=\"closeOpenMonthViewDay()\"\r\n      >\r\n        Previous\r\n      </div>\r\n      <div\r\n        class=\"btn btn-outline-secondary\"\r\n        mwlCalendarToday\r\n        [(viewDate)]=\"viewDate\"\r\n      >\r\n        Today\r\n      </div>\r\n      <div\r\n        class=\"btn btn-primary\"\r\n        mwlCalendarNextView\r\n        [view]=\"view\"\r\n        [(viewDate)]=\"viewDate\"\r\n        (viewDateChange)=\"closeOpenMonthViewDay()\"\r\n      >\r\n        Next\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"col-md-4\">\r\n    <h3>{{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}</h3>\r\n  </div>\r\n  <div class=\"col-md-4\">\r\n    <div class=\"btn-group\">\r\n      <div\r\n        class=\"btn btn-primary\"\r\n        (click)=\"setView(CalendarView.Month)\"\r\n        [class.active]=\"view === CalendarView.Month\"\r\n      >\r\n        Month\r\n      </div>\r\n      <div\r\n        class=\"btn btn-primary\"\r\n        (click)=\"setView(CalendarView.Week)\"\r\n        [class.active]=\"view === CalendarView.Week\"\r\n      >\r\n        Week\r\n      </div>\r\n      <div\r\n        class=\"btn btn-primary\"\r\n        (click)=\"setView(CalendarView.Day)\"\r\n        [class.active]=\"view === CalendarView.Day\"\r\n      >\r\n        Day\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<br />\r\n<div [ngSwitch]=\"view\">\r\n  <mwl-calendar-month-view\r\n    *ngSwitchCase=\"CalendarView.Month\"\r\n    [viewDate]=\"viewDate\"\r\n    [events]=\"events\"\r\n    [refresh]=\"refresh\"\r\n    [activeDayIsOpen]=\"activeDayIsOpen\"\r\n    (dayClicked)=\"dayClicked($event.day)\"\r\n    (eventClicked)=\"handleEvent('Clicked', $event.event)\"\r\n    (eventTimesChanged)=\"eventTimesChanged($event)\"\r\n  >\r\n  </mwl-calendar-month-view>\r\n  <mwl-calendar-week-view\r\n    *ngSwitchCase=\"CalendarView.Week\"\r\n    [viewDate]=\"viewDate\"\r\n    [events]=\"events\"\r\n    [refresh]=\"refresh\"\r\n    (eventClicked)=\"handleEvent('Clicked', $event.event)\"\r\n    (eventTimesChanged)=\"eventTimesChanged($event)\"\r\n  >\r\n  </mwl-calendar-week-view>\r\n  <mwl-calendar-day-view\r\n    *ngSwitchCase=\"CalendarView.Day\"\r\n    [viewDate]=\"viewDate\"\r\n    [events]=\"events\"\r\n    [refresh]=\"refresh\"\r\n    (eventClicked)=\"handleEvent('Clicked', $event.event)\"\r\n    (eventTimesChanged)=\"eventTimesChanged($event)\"\r\n  >\r\n  </mwl-calendar-day-view>\r\n</div>\r\n\r\n"
+module.exports = "<div class=\"row text-center\">\r\n  <div class=\"col-md-4\">\r\n    <div class=\"btn-group\">\r\n      <div\r\n        class=\"btn btn-primary\"\r\n        mwlCalendarPreviousView\r\n        [view]=\"view\"\r\n        [(viewDate)]=\"viewDate\"\r\n        (viewDateChange)=\"closeOpenMonthViewDay()\"\r\n      >\r\n        Previous\r\n      </div>\r\n      <div\r\n        class=\"btn btn-outline-secondary\"\r\n        mwlCalendarToday\r\n        [(viewDate)]=\"viewDate\"\r\n      >\r\n        Today\r\n      </div>\r\n      <div\r\n        class=\"btn btn-primary\"\r\n        mwlCalendarNextView\r\n        [view]=\"view\"\r\n        [(viewDate)]=\"viewDate\"\r\n        (viewDateChange)=\"closeOpenMonthViewDay()\"\r\n      >\r\n        Next\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"col-md-4\">\r\n    <h3>{{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}</h3>\r\n  </div>\r\n  <div class=\"col-md-4\">\r\n    <div class=\"btn-group\">\r\n      <div\r\n        class=\"btn btn-primary\"\r\n        (click)=\"setView(CalendarView.Month)\"\r\n        [class.active]=\"view === CalendarView.Month\"\r\n      >\r\n        Month\r\n      </div>\r\n      <div\r\n        class=\"btn btn-primary\"\r\n        (click)=\"setView(CalendarView.Week)\"\r\n        [class.active]=\"view === CalendarView.Week\"\r\n      >\r\n        Week\r\n      </div>\r\n      <div\r\n        class=\"btn btn-primary\"\r\n        (click)=\"setView(CalendarView.Day)\"\r\n        [class.active]=\"view === CalendarView.Day\"\r\n      >\r\n        Day\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<br />\r\n<div [ngSwitch]=\"view\">\r\n  <mwl-calendar-month-view\r\n    *ngSwitchCase=\"CalendarView.Month\"\r\n    [viewDate]=\"viewDate\"\r\n    [events]=\"events\"\r\n    [refresh]=\"refresh\"\r\n    [activeDayIsOpen]=\"activeDayIsOpen\"\r\n    (dayClicked)=\"dayClicked($event.day)\"\r\n    (eventClicked)=\"handleEvent('Clicked', $event.event)\"\r\n    (eventTimesChanged)=\"eventTimesChanged($event)\"\r\n  >\r\n  </mwl-calendar-month-view>\r\n  <mwl-calendar-week-view\r\n    *ngSwitchCase=\"CalendarView.Week\"\r\n    [viewDate]=\"viewDate\"\r\n    [events]=\"events\"\r\n    [refresh]=\"refresh\"\r\n    (eventClicked)=\"handleEvent('Clicked', $event.event)\"\r\n    (eventTimesChanged)=\"eventTimesChanged($event)\"\r\n  >\r\n  </mwl-calendar-week-view>\r\n  <mwl-calendar-day-view\r\n    *ngSwitchCase=\"CalendarView.Day\"\r\n    [viewDate]=\"viewDate\"\r\n    [events]=\"events\"\r\n    [refresh]=\"refresh\"\r\n    (eventClicked)=\"handleEvent('Clicked', $event.event)\"\r\n    (eventTimesChanged)=\"eventTimesChanged($event)\"\r\n  >\r\n  </mwl-calendar-day-view>\r\n</div>\r\n<button class=\"btn btn-danger\" (click)=\"populateCalendar()\">Get Meals</button>\r\n"
 
 /***/ }),
 
@@ -63,7 +63,7 @@ module.exports = "<div class=\"row text-center\">\r\n  <div class=\"col-md-4\">\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<form>\n  <div class=\"form-group\">\n    <label for=\"username-input\">Enter User Name:\n    </label><br />\n      <input [(ngModel)]=\"userName\" id=\"username-input\" placeholder=\"User Name\" name=\"username-input\" /><br />\n    <label for=\"password-input\">Enter Password:\n    </label ><br />\n      <input [(ngModel)]=\"password1\" id=\"password-input\" placeholder=\"Password\" name=\"password-input\" /><br />\n    <label for=\"password2-input\">Enter Password Again:\n    </label><br />\n      <input [(ngModel)]=\"password2\" id=\"password2-input\" placeholder=\"Password\" name=\"password2-input\" /><br />\n    <h2>Test divs</h2>\n    <div>User Name: {{userName}}</div>\n    <div>Password: {{password1}}</div>\n    <div>Password2: {{password2}}</div>\n  </div>\n</form>"
+module.exports = "<form>\r\n  <div class=\"form-group\">\r\n    <label for=\"username-input\">Enter User Name:\r\n    </label><br />\r\n      <input [(ngModel)]=\"userName\" id=\"username-input\" placeholder=\"User Name\" name=\"username-input\" /><br />\r\n    <label for=\"password-input\">Enter Password:\r\n    </label ><br />\r\n      <input [(ngModel)]=\"password1\" id=\"password-input\" placeholder=\"Password\" name=\"password-input\" /><br />\r\n    <label for=\"password2-input\">Enter Password Again:\r\n    </label><br />\r\n      <input [(ngModel)]=\"password2\" id=\"password2-input\" placeholder=\"Password\" name=\"password2-input\" /><br />\r\n    <h2>Test divs</h2>\r\n    <div>User Name: {{userName}}</div>\r\n    <div>Password: {{password1}}</div>\r\n    <div>Password2: {{password2}}</div>\r\n  </div>\r\n</form>"
 
 /***/ }),
 
@@ -96,7 +96,7 @@ module.exports = "<p>directions works!</p>\r\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n    <div class=\"row\">\r\n        <h4 class=\"jumbotron\">Edit Account Information</h4>\r\n    </div>\r\n    <div class=\"row\">\r\n        <!--One row and card for the account information\r\n        and one row and maybe multiple cards for meal favorites-->\r\n        <div class=\"card\">\r\n            <div class=\"card-body\">\r\n                <h4 class=\"card-title\">{{fname}}'s Account Information</h4>\r\n                <h6 class=\"card-subtitle mb-2 text-muted\">A brief description</h6>\r\n                <p class=\"card-text\">\r\n                </p>\r\n                <ul>\r\n                    <li><span class=\"font-weight-bold\">First Name: </span><span class=\"font-italic\">{{fname}}</span>\r\n                    </li>\r\n                    <li><span class=\"font-weight-bold\">Last Name: </span><span class=\"font-italic\">{{lname}}</span>\r\n                    </li>\r\n                    <li><span class=\"font-weight-bold\">User ID: </span><span class=\"font-italic\">{{u_id}}</span>\r\n                    </li>\r\n                </ul>\r\n\r\n            </div>\r\n        </div>\r\n        <div class=\"card\">\r\n            <div class=\"card-body\">\r\n                <h4 class=\"card-title\">Edit Information</h4>\r\n                <h6 class=\"card-subtitle mb-2 text-muted\">A brief description</h6>\r\n                <form>\r\n                    <span class=\"font-weight-bold\">First Name: </span><input type=\"text\" id=\"fname\" name=\"fname\" /><br/>\r\n                    <span class=\"font-weight-bold\">Last Name: </span><input type=\"text\" id=\"lname\" name=\"lname\" /><br/>\r\n                    <input type=\"submit\" id=\"submitbtn\" name=\"submitbtn\" value=\"submit\" />\r\n\r\n                </form>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
+module.exports = "<div class=\"container\">\r\n    <div class=\"row\">\r\n        <h4 class=\"jumbotron col-12\">Edit Account Information</h4>\r\n    </div>\r\n    <div class=\"row\">\r\n        <!--One row and card for the account information\r\n        and one row and maybe multiple cards for meal favorites-->\r\n        <div class=\"card\">\r\n            <div class=\"card-body\">\r\n                <h4 class=\"card-title\">{{fname}}'s Account Information</h4>\r\n                <h6 class=\"card-subtitle mb-2 text-muted\">A brief description</h6>\r\n                <p class=\"card-text\">\r\n                </p>\r\n                <ul>\r\n                    <li><span class=\"font-weight-bold\">First Name: </span><span class=\"font-italic\">{{fname}}</span>\r\n                    </li>\r\n                    <li><span class=\"font-weight-bold\">Last Name: </span><span class=\"font-italic\">{{lname}}</span>\r\n                    </li>\r\n                    <li><span class=\"font-weight-bold\">User ID: </span><span class=\"font-italic\">{{u_id}}</span>\r\n                    </li>\r\n                </ul>\r\n\r\n            </div>\r\n        </div>\r\n        <div class=\"card\">\r\n            <div class=\"card-body\">\r\n                <h4 class=\"card-title\">Edit Information</h4>\r\n                <h6 class=\"card-subtitle mb-2 text-muted\"></h6>\r\n                <form>\r\n                    <span class=\"font-weight-bold\">First Name: </span><input type=\"text\" id=\"fname\" name=\"fname\" /><br/>\r\n                    <span class=\"font-weight-bold\">Last Name: </span><input type=\"text\" id=\"lname\" name=\"lname\" /><br/>\r\n                    <input type=\"submit\" id=\"submitbtn\" name=\"submitbtn\" value=\"submit\" />\r\n                </form>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -151,7 +151,7 @@ module.exports = "<p>information works!</p>\r\n<div class=\"card\">\r\n  <div cl
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>ingredient-list works!</p>\r\n"
+module.exports = "<div class=\"container\" style=\"border: 2px solid green; border-radius: 5px\">\r\n    <div class=\"row\" id='ingRow' style=\"border: 2px dotted green; border-radius: 5px\">\r\n        \r\n    </div>\r\n</div>\r\n\r\n                    "
 
 /***/ }),
 
@@ -173,7 +173,7 @@ module.exports = "<div class=\"container\">\r\n    <div class=\"row\">\r\n      
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<!--Navbar-->\r\n<head>\r\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\">\r\n    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js\"></script>\r\n    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\"></script>\r\n</head>\r\n<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\r\n  <a class=\"navbar-brand\" id=\"nutrition\" href=\"#\">Nutrition</a>\r\n  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n    <span class=\"navbar-toggler-icon\"></span>\r\n  </button>\r\n\r\n  <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\r\n    <ul class=\"navbar-nav mr-auto\">\r\n      <li class=\"nav-item active\">\r\n        <a class=\"nav-link\" routerLink=\"dashboard\">Home <span class=\"sr-only\">(current)</span></a>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link\" routerLink=\"/calendar\">Calendar</a>\r\n      </li>\r\n      <li class=\"nav-item dropdown\">\r\n        <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          Recipes\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" routerLink=\"/recipe\">Random Recipe</a>\r\n          <a class=\"dropdown-item\" routerLink=\"/search\">Search for Recipe</a>\r\n          <div class=\"dropdown-divider\"></div>\r\n          <a class=\"dropdown-item\" routerLink=\"/editrecipe\">Create New Recipe</a>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item dropdown\">\r\n        <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          My Profile\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" routerLink=\"/account\">Account Info</a>\r\n          <a class=\"dropdown-item\" routerLInk=\"/information\">My Preferences</a>\r\n        </div>\r\n      </li>\r\n    </ul>\r\n    <!--<form class=\"form-inline my-2 my-lg-0\">\r\n      <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">\r\n      <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\" routerLink=\"/search\">Search</button>\r\n    </form>\r\n  -->\r\n  </div>\r\n</nav>"
+module.exports = "\r\n<!--Navbar-->\r\n<head>\r\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\">\r\n    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js\"></script>\r\n    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\"></script>\r\n</head>\r\n<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\r\n  <a class=\"navbar-brand\" id=\"nutrition\" href=\"#\">Nutrition</a>\r\n  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n    <span class=\"navbar-toggler-icon\"></span>\r\n  </button>\r\n\r\n  <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\r\n    <ul class=\"navbar-nav mr-auto\">\r\n      <li class=\"nav-item active\">\r\n        <a class=\"nav-link\" routerLink=\"dashboard\">Home <span class=\"sr-only\">(current)</span></a>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link\" routerLink=\"/calendar\">Calendar</a>\r\n      </li>\r\n      <li class=\"nav-item dropdown\">\r\n        <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          Recipes\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" routerLink=\"/randomRecipe\">Random Recipe</a>\r\n          <a class=\"dropdown-item\" routerLink=\"/search\">Search for Recipe</a>\r\n          <div class=\"dropdown-divider\"></div>\r\n          <a class=\"dropdown-item\" routerLink=\"/editrecipe\">Create New Recipe</a>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item dropdown\">\r\n        <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          My Profile\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" routerLink=\"/account\">Account Info</a>\r\n          <a class=\"dropdown-item\" routerLInk=\"/information\">My Preferences</a>\r\n        </div>\r\n      </li>\r\n    </ul>\r\n    <!--<form class=\"form-inline my-2 my-lg-0\">\r\n      <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">\r\n      <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\" routerLink=\"/search\">Search</button>\r\n    </form>\r\n  -->\r\n  </div>\r\n</nav>"
 
 /***/ }),
 
@@ -206,7 +206,7 @@ module.exports = "<p>recipe-editor works!</p>\r\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>recipe-view works!</p>\r\n"
+module.exports = "<div class=\"container\" style=\"border: 2px solid blue; border-radius: 5px; height: 125px;\">\r\n    <div class=\"row\" style=\"border: 2px dotted blue; border-radius: 5px; height: 125px;\">\r\n        <div class=\"col-lg-12\" style=\"border: 2px dashed blue; border-radius: 5px; height: 125px;\">\r\n                <app-ingredient-list [recipeId]=[recipeId]></app-ingredient-list>\r\n                <!-- <app-ingredient-list [recipeId]=\"1\"></app-ingredient-list> -->\r\n                <!-- <app-ingredient-list></app-ingredient-list> -->\r\n        </div>\r\n        \r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -261,7 +261,7 @@ module.exports = "<form>\r\n  <div *ngFor=\"let id of ids\" class=\"form-group\"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<label for=\"{{id | lowercase}}\">{{id}}</label>\n<input type=\"text\" id=\"{{id}}\" />\n"
+module.exports = "<label for=\"{{id | lowercase}}\">{{id}}</label>\r\n<input type=\"text\" id=\"{{id}}\" />\r\n"
 
 /***/ }),
 
@@ -272,7 +272,7 @@ module.exports = "<label for=\"{{id | lowercase}}\">{{id}}</label>\n<input type=
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>suggested-recipe works!</p>\r\n"
+module.exports = "<div class=\"container\">\r\n    <div class=\"row\">\r\n        <h4>{{recipe.meals[0].strMeal}}</h4>\r\n    </div>\r\n    <div class=\"row\">\r\n        <div class=\"col-6\">\r\n            <ul>\r\n                <li><span>{{recipe.meals[0].strIngredient1}} -- {{recipe.meals[0].strMeasure1}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient2}} -- {{recipe.meals[0].strMeasure2}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient3}} -- {{recipe.meals[0].strMeasure3}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient4}} -- {{recipe.meals[0].strMeasure4}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient5}} -- {{recipe.meals[0].strMeasure5}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient6}} -- {{recipe.meals[0].strMeasure6}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient7}} -- {{recipe.meals[0].strMeasure7}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient8}} -- {{recipe.meals[0].strMeasure8}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient9}} -- {{recipe.meals[0].strMeasure9}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient10}} -- {{recipe.meals[0].strMeasure10}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient11}} -- {{recipe.meals[0].strMeasure11}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient12}} -- {{recipe.meals[0].strMeasure12}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient13}} -- {{recipe.meals[0].strMeasure13}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient14}} -- {{recipe.meals[0].strMeasure14}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient15}} -- {{recipe.meals[0].strMeasure15}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient16}} -- {{recipe.meals[0].strMeasure16}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient17}} -- {{recipe.meals[0].strMeasure17}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient18}} -- {{recipe.meals[0].strMeasure18}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient19}} -- {{recipe.meals[0].strMeasure19}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient20}} -- {{recipe.meals[0].strMeasure20}}</span></li>\r\n            </ul>\r\n        </div>\r\n        <div class=\"col-6\">\r\n            <img class = \"img-fluid\" src={{recipe.meals[0].strMealThumb}} />\r\n        </div>\r\n    </div>\r\n    <div class=\"row\">\r\n        <p>{{recipe.meals[0].strInstructions}}</p>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -283,7 +283,7 @@ module.exports = "<p>suggested-recipe works!</p>\r\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".card {\r\n    margin: 10px;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWNjb3VudC9hY2NvdW50LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxZQUFZO0FBQ2hCIiwiZmlsZSI6InNyYy9hcHAvYWNjb3VudC9hY2NvdW50LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY2FyZCB7XHJcbiAgICBtYXJnaW46IDEwcHg7XHJcbn0iXX0= */"
+module.exports = ".card {\r\n    margin: 10px;\r\n}\r\n\r\n.card-title{\r\n    margin: 2px;\r\n}\r\n\r\nh4 {\r\n    margin-bottom: 20px;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWNjb3VudC9hY2NvdW50LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxZQUFZO0FBQ2hCOztBQUVBO0lBQ0ksV0FBVztBQUNmOztBQUVBO0lBQ0ksbUJBQW1CO0FBQ3ZCIiwiZmlsZSI6InNyYy9hcHAvYWNjb3VudC9hY2NvdW50LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY2FyZCB7XHJcbiAgICBtYXJnaW46IDEwcHg7XHJcbn1cclxuXHJcbi5jYXJkLXRpdGxle1xyXG4gICAgbWFyZ2luOiAycHg7XHJcbn1cclxuXHJcbmg0IHtcclxuICAgIG1hcmdpbi1ib3R0b206IDIwcHg7XHJcbn0iXX0= */"
 
 /***/ }),
 
@@ -299,19 +299,36 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AccountComponent", function() { return AccountComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _services_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/user.service */ "./src/app/services/user.service.ts");
+
 
 
 let AccountComponent = class AccountComponent {
-    constructor() {
-        this.fname = "Ricky";
-        this.lname = "Richardson";
-        this.u_id = 178456;
-        this.ingredients = ["Pepper", 'Chicken', 'Cinnamon'];
-        this.favorites = ["Chicken Bruschetta", 'Beef Noodle Stew', 'Pork Stir Fry'];
+    constructor(user) {
+        this.user = user;
+        this.fname = sessionStorage.getItem("fname");
+        this.lname = sessionStorage.getItem("lname");
+        this.u_id = parseInt(sessionStorage.getItem("id"), 10);
+        this.username = sessionStorage.getItem("username");
     }
     ngOnInit() {
+        sessionStorage.setItem("fname", "Ricky");
+        sessionStorage.setItem("lname", "Rickyson");
+        sessionStorage.setItem("username", "fish_are_friends");
+        sessionStorage.setItem("id", "1");
+        this.getPreferences(parseInt(sessionStorage.getItem("id"), 10));
+        this.getHistory(parseInt(sessionStorage.getItem("id"), 10));
+    }
+    getPreferences(id) {
+        this.user.getPreferences(id).subscribe(ingredients => this.ingredients = ingredients);
+    }
+    getHistory(id) {
+        this.user.getHistory(id).subscribe(favorites => this.favorites = favorites);
     }
 };
+AccountComponent.ctorParameters = () => [
+    { type: _services_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"] }
+];
 AccountComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-account',
@@ -349,6 +366,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _searchbar_searchbar_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./searchbar/searchbar.component */ "./src/app/searchbar/searchbar.component.ts");
 /* harmony import */ var _search_search_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./search/search.component */ "./src/app/search/search.component.ts");
 /* harmony import */ var _change_pw_change_pw_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./change-pw/change-pw.component */ "./src/app/change-pw/change-pw.component.ts");
+/* harmony import */ var _suggested_recipe_suggested_recipe_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./suggested-recipe/suggested-recipe.component */ "./src/app/suggested-recipe/suggested-recipe.component.ts");
+
 
 
 
@@ -413,6 +432,10 @@ const routes = [
     {
         path: 'search',
         component: _search_search_component__WEBPACK_IMPORTED_MODULE_13__["SearchComponent"]
+    },
+    {
+        path: 'randomRecipe',
+        component: _suggested_recipe_suggested_recipe_component__WEBPACK_IMPORTED_MODULE_15__["SuggestedRecipeComponent"]
     },
     {
         path: 'changepassword',
@@ -493,34 +516,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm2015/animations.js");
-/* harmony import */ var angular_calendar__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! angular-calendar */ "./node_modules/angular-calendar/fesm2015/angular-calendar.js");
-/* harmony import */ var angularx_flatpickr__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! angularx-flatpickr */ "./node_modules/angularx-flatpickr/fesm2015/angularx-flatpickr.js");
-/* harmony import */ var angular_calendar_date_adapters_date_fns__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! angular-calendar/date-adapters/date-fns */ "./node_modules/angular-calendar/date-adapters/date-fns/index.js");
-/* harmony import */ var angular_calendar_date_adapters_date_fns__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(angular_calendar_date_adapters_date_fns__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _nav_nav_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./nav/nav.component */ "./src/app/nav/nav.component.ts");
-/* harmony import */ var _footer_footer_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./footer/footer.component */ "./src/app/footer/footer.component.ts");
-/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./login/login.component */ "./src/app/login/login.component.ts");
-/* harmony import */ var _register_register_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./register/register.component */ "./src/app/register/register.component.ts");
-/* harmony import */ var _information_information_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./information/information.component */ "./src/app/information/information.component.ts");
-/* harmony import */ var _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./dashboard/dashboard.component */ "./src/app/dashboard/dashboard.component.ts");
-/* harmony import */ var _calendar_calendar_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./calendar/calendar.component */ "./src/app/calendar/calendar.component.ts");
-/* harmony import */ var _recipe_view_recipe_view_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./recipe-view/recipe-view.component */ "./src/app/recipe-view/recipe-view.component.ts");
-/* harmony import */ var _ingredient_list_ingredient_list_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./ingredient-list/ingredient-list.component */ "./src/app/ingredient-list/ingredient-list.component.ts");
-/* harmony import */ var _directions_directions_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./directions/directions.component */ "./src/app/directions/directions.component.ts");
-/* harmony import */ var _recipe_editor_recipe_editor_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./recipe-editor/recipe-editor.component */ "./src/app/recipe-editor/recipe-editor.component.ts");
-/* harmony import */ var _edit_ingredient_edit_ingredient_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./edit-ingredient/edit-ingredient.component */ "./src/app/edit-ingredient/edit-ingredient.component.ts");
-/* harmony import */ var _edit_direction_edit_direction_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./edit-direction/edit-direction.component */ "./src/app/edit-direction/edit-direction.component.ts");
-/* harmony import */ var _account_account_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./account/account.component */ "./src/app/account/account.component.ts");
-/* harmony import */ var _edit_account_edit_account_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./edit-account/edit-account.component */ "./src/app/edit-account/edit-account.component.ts");
-/* harmony import */ var _search_search_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./search/search.component */ "./src/app/search/search.component.ts");
-/* harmony import */ var _results_results_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./results/results.component */ "./src/app/results/results.component.ts");
-/* harmony import */ var _result_entry_result_entry_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./result-entry/result-entry.component */ "./src/app/result-entry/result-entry.component.ts");
-/* harmony import */ var _print_view_print_view_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./print-view/print-view.component */ "./src/app/print-view/print-view.component.ts");
-/* harmony import */ var _suggested_recipe_suggested_recipe_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./suggested-recipe/suggested-recipe.component */ "./src/app/suggested-recipe/suggested-recipe.component.ts");
-/* harmony import */ var _searchbar_searchbar_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./searchbar/searchbar.component */ "./src/app/searchbar/searchbar.component.ts");
-/* harmony import */ var _change_pw_change_pw_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./change-pw/change-pw.component */ "./src/app/change-pw/change-pw.component.ts");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm2015/animations.js");
+/* harmony import */ var angular_calendar__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! angular-calendar */ "./node_modules/angular-calendar/fesm2015/angular-calendar.js");
+/* harmony import */ var angularx_flatpickr__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! angularx-flatpickr */ "./node_modules/angularx-flatpickr/fesm2015/angularx-flatpickr.js");
+/* harmony import */ var angular_calendar_date_adapters_date_fns__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! angular-calendar/date-adapters/date-fns */ "./node_modules/angular-calendar/date-adapters/date-fns/index.js");
+/* harmony import */ var angular_calendar_date_adapters_date_fns__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(angular_calendar_date_adapters_date_fns__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _nav_nav_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./nav/nav.component */ "./src/app/nav/nav.component.ts");
+/* harmony import */ var _footer_footer_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./footer/footer.component */ "./src/app/footer/footer.component.ts");
+/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./login/login.component */ "./src/app/login/login.component.ts");
+/* harmony import */ var _register_register_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./register/register.component */ "./src/app/register/register.component.ts");
+/* harmony import */ var _information_information_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./information/information.component */ "./src/app/information/information.component.ts");
+/* harmony import */ var _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./dashboard/dashboard.component */ "./src/app/dashboard/dashboard.component.ts");
+/* harmony import */ var _calendar_calendar_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./calendar/calendar.component */ "./src/app/calendar/calendar.component.ts");
+/* harmony import */ var _recipe_view_recipe_view_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./recipe-view/recipe-view.component */ "./src/app/recipe-view/recipe-view.component.ts");
+/* harmony import */ var _ingredient_list_ingredient_list_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./ingredient-list/ingredient-list.component */ "./src/app/ingredient-list/ingredient-list.component.ts");
+/* harmony import */ var _directions_directions_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./directions/directions.component */ "./src/app/directions/directions.component.ts");
+/* harmony import */ var _recipe_editor_recipe_editor_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./recipe-editor/recipe-editor.component */ "./src/app/recipe-editor/recipe-editor.component.ts");
+/* harmony import */ var _edit_ingredient_edit_ingredient_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./edit-ingredient/edit-ingredient.component */ "./src/app/edit-ingredient/edit-ingredient.component.ts");
+/* harmony import */ var _edit_direction_edit_direction_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./edit-direction/edit-direction.component */ "./src/app/edit-direction/edit-direction.component.ts");
+/* harmony import */ var _account_account_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./account/account.component */ "./src/app/account/account.component.ts");
+/* harmony import */ var _edit_account_edit_account_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./edit-account/edit-account.component */ "./src/app/edit-account/edit-account.component.ts");
+/* harmony import */ var _search_search_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./search/search.component */ "./src/app/search/search.component.ts");
+/* harmony import */ var _results_results_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./results/results.component */ "./src/app/results/results.component.ts");
+/* harmony import */ var _result_entry_result_entry_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./result-entry/result-entry.component */ "./src/app/result-entry/result-entry.component.ts");
+/* harmony import */ var _print_view_print_view_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./print-view/print-view.component */ "./src/app/print-view/print-view.component.ts");
+/* harmony import */ var _suggested_recipe_suggested_recipe_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./suggested-recipe/suggested-recipe.component */ "./src/app/suggested-recipe/suggested-recipe.component.ts");
+/* harmony import */ var _searchbar_searchbar_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./searchbar/searchbar.component */ "./src/app/searchbar/searchbar.component.ts");
+/* harmony import */ var _change_pw_change_pw_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./change-pw/change-pw.component */ "./src/app/change-pw/change-pw.component.ts");
 
 
 
@@ -562,28 +585,28 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
         declarations: [
             _app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"],
-            _nav_nav_component__WEBPACK_IMPORTED_MODULE_12__["NavComponent"],
-            _footer_footer_component__WEBPACK_IMPORTED_MODULE_13__["FooterComponent"],
-            _login_login_component__WEBPACK_IMPORTED_MODULE_14__["LoginComponent"],
-            _register_register_component__WEBPACK_IMPORTED_MODULE_15__["RegisterComponent"],
-            _information_information_component__WEBPACK_IMPORTED_MODULE_16__["InformationComponent"],
-            _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_17__["DashboardComponent"],
-            _calendar_calendar_component__WEBPACK_IMPORTED_MODULE_18__["CalendarComponent"],
-            _recipe_view_recipe_view_component__WEBPACK_IMPORTED_MODULE_19__["RecipeViewComponent"],
-            _ingredient_list_ingredient_list_component__WEBPACK_IMPORTED_MODULE_20__["IngredientListComponent"],
-            _directions_directions_component__WEBPACK_IMPORTED_MODULE_21__["DirectionsComponent"],
-            _recipe_editor_recipe_editor_component__WEBPACK_IMPORTED_MODULE_22__["RecipeEditorComponent"],
-            _edit_ingredient_edit_ingredient_component__WEBPACK_IMPORTED_MODULE_23__["EditIngredientComponent"],
-            _edit_direction_edit_direction_component__WEBPACK_IMPORTED_MODULE_24__["EditDirectionComponent"],
-            _account_account_component__WEBPACK_IMPORTED_MODULE_25__["AccountComponent"],
-            _edit_account_edit_account_component__WEBPACK_IMPORTED_MODULE_26__["EditAccountComponent"],
-            _search_search_component__WEBPACK_IMPORTED_MODULE_27__["SearchComponent"],
-            _results_results_component__WEBPACK_IMPORTED_MODULE_28__["ResultsComponent"],
-            _result_entry_result_entry_component__WEBPACK_IMPORTED_MODULE_29__["ResultEntryComponent"],
-            _print_view_print_view_component__WEBPACK_IMPORTED_MODULE_30__["PrintViewComponent"],
-            _suggested_recipe_suggested_recipe_component__WEBPACK_IMPORTED_MODULE_31__["SuggestedRecipeComponent"],
-            _searchbar_searchbar_component__WEBPACK_IMPORTED_MODULE_32__["SearchbarComponent"],
-            _change_pw_change_pw_component__WEBPACK_IMPORTED_MODULE_33__["ChangePwComponent"]
+            _nav_nav_component__WEBPACK_IMPORTED_MODULE_13__["NavComponent"],
+            _footer_footer_component__WEBPACK_IMPORTED_MODULE_14__["FooterComponent"],
+            _login_login_component__WEBPACK_IMPORTED_MODULE_15__["LoginComponent"],
+            _register_register_component__WEBPACK_IMPORTED_MODULE_16__["RegisterComponent"],
+            _information_information_component__WEBPACK_IMPORTED_MODULE_17__["InformationComponent"],
+            _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_18__["DashboardComponent"],
+            _calendar_calendar_component__WEBPACK_IMPORTED_MODULE_19__["CalendarComponent"],
+            _recipe_view_recipe_view_component__WEBPACK_IMPORTED_MODULE_20__["RecipeViewComponent"],
+            _ingredient_list_ingredient_list_component__WEBPACK_IMPORTED_MODULE_21__["IngredientListComponent"],
+            _directions_directions_component__WEBPACK_IMPORTED_MODULE_22__["DirectionsComponent"],
+            _recipe_editor_recipe_editor_component__WEBPACK_IMPORTED_MODULE_23__["RecipeEditorComponent"],
+            _edit_ingredient_edit_ingredient_component__WEBPACK_IMPORTED_MODULE_24__["EditIngredientComponent"],
+            _edit_direction_edit_direction_component__WEBPACK_IMPORTED_MODULE_25__["EditDirectionComponent"],
+            _account_account_component__WEBPACK_IMPORTED_MODULE_26__["AccountComponent"],
+            _edit_account_edit_account_component__WEBPACK_IMPORTED_MODULE_27__["EditAccountComponent"],
+            _search_search_component__WEBPACK_IMPORTED_MODULE_28__["SearchComponent"],
+            _results_results_component__WEBPACK_IMPORTED_MODULE_29__["ResultsComponent"],
+            _result_entry_result_entry_component__WEBPACK_IMPORTED_MODULE_30__["ResultEntryComponent"],
+            _print_view_print_view_component__WEBPACK_IMPORTED_MODULE_31__["PrintViewComponent"],
+            _suggested_recipe_suggested_recipe_component__WEBPACK_IMPORTED_MODULE_32__["SuggestedRecipeComponent"],
+            _searchbar_searchbar_component__WEBPACK_IMPORTED_MODULE_33__["SearchbarComponent"],
+            _change_pw_change_pw_component__WEBPACK_IMPORTED_MODULE_34__["ChangePwComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -591,18 +614,63 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"],
             _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__["NgbModalModule"],
             _app_routing_module__WEBPACK_IMPORTED_MODULE_6__["AppRoutingModule"],
-            _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_8__["BrowserAnimationsModule"],
-            _angular_common_http__WEBPACK_IMPORTED_MODULE_34__["HttpClientModule"],
-            angularx_flatpickr__WEBPACK_IMPORTED_MODULE_10__["FlatpickrModule"].forRoot(),
-            angular_calendar__WEBPACK_IMPORTED_MODULE_9__["CalendarModule"].forRoot({
-                provide: angular_calendar__WEBPACK_IMPORTED_MODULE_9__["DateAdapter"],
-                useFactory: angular_calendar_date_adapters_date_fns__WEBPACK_IMPORTED_MODULE_11__["adapterFactory"]
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_8__["HttpClientModule"],
+            _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_9__["BrowserAnimationsModule"],
+            angularx_flatpickr__WEBPACK_IMPORTED_MODULE_11__["FlatpickrModule"].forRoot(),
+            angular_calendar__WEBPACK_IMPORTED_MODULE_10__["CalendarModule"].forRoot({
+                provide: angular_calendar__WEBPACK_IMPORTED_MODULE_10__["DateAdapter"],
+                useFactory: angular_calendar_date_adapters_date_fns__WEBPACK_IMPORTED_MODULE_12__["adapterFactory"]
             })
         ],
         providers: [],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]]
     })
 ], AppModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/calendar.service.ts":
+/*!*************************************!*\
+  !*** ./src/app/calendar.service.ts ***!
+  \*************************************/
+/*! exports provided: CalendarService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CalendarService", function() { return CalendarService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+
+
+
+let CalendarService = class CalendarService {
+    constructor(http) {
+        this.http = http;
+        this.calendarUrl = 'api/v1/calendar/user/' + sessionStorage.getItem("userId");
+        this.calendarUrlTemp = 'http://localhost:9595/api/v1/calendar/user/' + sessionStorage.getItem("userId");
+    }
+    // this function will retrieve an array of meal/dates
+    // returned items will include 
+    /* 1) date
+       2) meal(breakfast, lunch, dinner)
+       3) recipe
+    */
+    getMeals() {
+        return this.http.get(this.calendarUrlTemp);
+    }
+};
+CalendarService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
+];
+CalendarService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], CalendarService);
 
 
 
@@ -636,6 +704,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
 /* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
 /* harmony import */ var angular_calendar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! angular-calendar */ "./node_modules/angular-calendar/fesm2015/angular-calendar.js");
+/* harmony import */ var _calendar_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../calendar.service */ "./src/app/calendar.service.ts");
+/* harmony import */ var _meal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../meal */ "./src/app/meal.ts");
+/* harmony import */ var _mealid__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../mealid */ "./src/app/mealid.ts");
+
+
+
 
 
 
@@ -657,8 +731,9 @@ const colors = {
     }
 };
 let CalendarComponent = class CalendarComponent {
-    constructor(modal) {
+    constructor(modal, calendarService) {
         this.modal = modal;
+        this.calendarService = calendarService;
         this.view = angular_calendar__WEBPACK_IMPORTED_MODULE_5__["CalendarView"].Month;
         this.CalendarView = angular_calendar__WEBPACK_IMPORTED_MODULE_5__["CalendarView"];
         this.viewDate = new Date();
@@ -706,20 +781,21 @@ let CalendarComponent = class CalendarComponent {
         this.modalData = { event, action };
         this.modal.open(this.modalContent, { size: 'lg' });
     }
-    addEvent() {
+    addEvent(addedMeal) {
         this.events = [
             ...this.events,
-            {
-                title: 'New event',
-                start: Object(date_fns__WEBPACK_IMPORTED_MODULE_2__["startOfDay"])(new Date()),
-                end: Object(date_fns__WEBPACK_IMPORTED_MODULE_2__["endOfDay"])(new Date()),
-                color: colors.red,
-                draggable: true,
-                resizable: {
-                    beforeStart: true,
-                    afterEnd: true
-                }
-            }
+            addedMeal
+            // {
+            //   title: 'New event',
+            //   start: startOfDay(new Date()),
+            //   end: endOfDay(new Date()),
+            //   color: colors.red,
+            //   draggable: true,
+            //   resizable: {
+            //     beforeStart: true,
+            //     afterEnd: true
+            //   }
+            // }
         ];
     }
     deleteEvent(eventToDelete) {
@@ -731,12 +807,49 @@ let CalendarComponent = class CalendarComponent {
     closeOpenMonthViewDay() {
         this.activeDayIsOpen = false;
     }
+    getMeals() {
+        this.calendarService.getMeals()
+            .subscribe(meals => {
+            if (!this.meals) {
+                this.meals = new Array();
+            }
+            for (let i = 0; i < meals.length; i++) {
+                this.meals.push(new _meal__WEBPACK_IMPORTED_MODULE_7__["Meal"](new _mealid__WEBPACK_IMPORTED_MODULE_8__["MealId"](meals[i].id.dateTime, meals[i].id.userId), meals[i].mealNum));
+                console.log("meal" + meals[i]);
+            }
+            console.log(meals);
+        });
+    }
     ngOnInit() {
         // load calendar events for user from db here
+        sessionStorage.setItem("userId", "1");
+        this.getMeals();
+    }
+    populateCalendar() {
+        console.log(this.meals);
+        for (let i = 0; i < this.meals.length; i++) {
+            const mealDate = new Date(this.meals[i].id.dateTime);
+            const hours = this.meals[i].mealNum === 1 ? 8 : this.meals[i].mealNum === 2 ? 12 : 18;
+            mealDate.setHours(hours);
+            const mealDateEnd = new Date(this.meals[i].id.dateTime);
+            mealDateEnd.setHours(hours + 1);
+            this.addEvent({
+                title: 'New event ' + (i + 1),
+                start: mealDate,
+                end: mealDateEnd,
+                color: colors.red,
+                draggable: true,
+                resizable: {
+                    beforeStart: true,
+                    afterEnd: true
+                }
+            });
+        }
     }
 };
 CalendarComponent.ctorParameters = () => [
-    { type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["NgbModal"] }
+    { type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["NgbModal"] },
+    { type: _calendar_service__WEBPACK_IMPORTED_MODULE_6__["CalendarService"] }
 ];
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('modalContent', { static: true })
@@ -1119,13 +1232,63 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IngredientListComponent", function() { return IngredientListComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _services_recipe_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/recipe.service */ "./src/app/services/recipe.service.ts");
+
 
 
 let IngredientListComponent = class IngredientListComponent {
-    constructor() { }
+    constructor(recipeService) {
+        this.recipeService = recipeService;
+    }
     ngOnInit() {
+        console.log("Recipe id is " + this.recipeId);
+        this.recipeService.fetchIngredients(this.recipeId).subscribe(ingredients => this.ingredients = ingredients, error => console.log(`Error: ${error}`));
+        // this.ingredients = [new Ingredient(1,"potato"), new Ingredient(2, "tomato"), new Ingredient(3, "lettuce"), new Ingredient(4,"potato"), new Ingredient(5,"potato"), new Ingredient(6,"potato"), new Ingredient(7,"potato"), new Ingredient(8,"potato"), new Ingredient(9,"potato"), new Ingredient(10,"potato"), new Ingredient(11,"potato"), new Ingredient(12,"potato"), new Ingredient(13,"potato"), new Ingredient(14,"potato"), new Ingredient(15,"otato"), new Ingredient(16,"tato"), new Ingredient(17,"orange"), new Ingredient(18,"you"), new Ingredient(19,"glad"), new Ingredient(20,"I"), new Ingredient(21,"didn't"), new Ingredient(22,"say")];
+        // this.displayIngredients();
+    }
+    displayIngredients() {
+        let ingIter = 0;
+        while (ingIter < this.ingredients.length) {
+            let colIngArr = new Array();
+            let colIter = 0;
+            if (this.ingredients.length <= 16) {
+                while (colIter < 4 && ingIter < this.ingredients.length) {
+                    colIngArr.push(this.ingredients[ingIter]);
+                    colIter++;
+                    ingIter++;
+                }
+            }
+            else {
+                console.log("More than 16 ingredients");
+                while (colIter < this.ingredients.length / 4 && ingIter < this.ingredients.length) {
+                    colIngArr.push(this.ingredients[ingIter]);
+                    colIter++;
+                    ingIter++;
+                }
+            }
+            document.getElementById('ingRow').appendChild(this.createCol(colIngArr));
+        }
+    }
+    createCol(colIng) {
+        let rowDiv = document.createElement('div');
+        rowDiv.setAttribute("class", "col-md-3 h-100");
+        rowDiv.setAttribute("style", "border: 2px solid orange; border-radius: 5px");
+        let entryList = document.createElement("ul");
+        colIng.forEach(element => {
+            let elementEntry = document.createElement("li");
+            elementEntry.innerHTML = element.name;
+            entryList.appendChild(elementEntry);
+        });
+        rowDiv.appendChild(entryList);
+        return rowDiv;
     }
 };
+IngredientListComponent.ctorParameters = () => [
+    { type: _services_recipe_service__WEBPACK_IMPORTED_MODULE_2__["RecipeService"] }
+];
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], IngredientListComponent.prototype, "recipeId", void 0);
 IngredientListComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-ingredient-list',
@@ -1176,6 +1339,84 @@ LoginComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     })
 ], LoginComponent);
 
+
+
+/***/ }),
+
+/***/ "./src/app/meal.ts":
+/*!*************************!*\
+  !*** ./src/app/meal.ts ***!
+  \*************************/
+/*! exports provided: Meal */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Meal", function() { return Meal; });
+/* harmony import */ var _mealid__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./mealid */ "./src/app/mealid.ts");
+
+// The purpose of this class is to be used with calendar service component, at least temporarily
+class Meal {
+    constructor(id, mealNum) {
+        this.id = id;
+        this.mealNum = mealNum;
+    }
+}
+Meal.ctorParameters = () => [
+    { type: _mealid__WEBPACK_IMPORTED_MODULE_0__["MealId"] },
+    { type: Number }
+];
+
+
+/***/ }),
+
+/***/ "./src/app/mealid.ts":
+/*!***************************!*\
+  !*** ./src/app/mealid.ts ***!
+  \***************************/
+/*! exports provided: MealId */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MealId", function() { return MealId; });
+class MealId {
+    constructor(dateTime, userId) {
+        this.dateTime = dateTime;
+        this.userId = userId;
+    }
+}
+MealId.ctorParameters = () => [
+    { type: Date },
+    { type: Number }
+];
+
+
+/***/ }),
+
+/***/ "./src/app/models/user.model.ts":
+/*!**************************************!*\
+  !*** ./src/app/models/user.model.ts ***!
+  \**************************************/
+/*! exports provided: User */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "User", function() { return User; });
+class User {
+    // userPref: UserPref[];
+    // userHist: UserHistory[];
+    // user_data: UserData[];
+    constructor(username, password) {
+        this.username = username;
+        this.password = password;
+    }
+}
+User.ctorParameters = () => [
+    { type: String },
+    { type: String }
+];
 
 
 /***/ }),
@@ -1332,7 +1573,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let RecipeViewComponent = class RecipeViewComponent {
-    constructor() { }
+    constructor() {
+        this.recipeId = 1;
+    }
     ngOnInit() {
     }
 };
@@ -1562,6 +1805,157 @@ SearchbarComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/services/api-recipe.service.ts":
+/*!************************************************!*\
+  !*** ./src/app/services/api-recipe.service.ts ***!
+  \************************************************/
+/*! exports provided: ApiRecipeService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ApiRecipeService", function() { return ApiRecipeService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+
+
+
+
+
+let ApiRecipeService = class ApiRecipeService {
+    constructor(http) {
+        this.http = http;
+    }
+    fetchMeal() {
+        return this.http.get('https://www.themealdb.com/api/json/v1/1/random.php').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
+    }
+    handleError(error) {
+        return rxjs__WEBPACK_IMPORTED_MODULE_2__["Observable"].throw(error.statusText);
+    }
+};
+ApiRecipeService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] }
+];
+ApiRecipeService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], ApiRecipeService);
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/recipe.service.ts":
+/*!********************************************!*\
+  !*** ./src/app/services/recipe.service.ts ***!
+  \********************************************/
+/*! exports provided: RecipeService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RecipeService", function() { return RecipeService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+
+
+
+
+
+let RecipeService = class RecipeService {
+    constructor(http) {
+        this.http = http;
+        this.uriBase = "https://cors-anywhere.herokuapp.com/http://localhost:9595/api/v1/mealcomposition/"; //"http://localhost:9595/api/v1/mealcomposition";
+    }
+    //TODO set get path based on id passed
+    fetchRecipe(id) {
+        return this.http.get('').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
+    }
+    //TODO set path based on recipeId passed. Server should return as array of ingredients
+    fetchIngredients(recipeId) {
+        return this.http.get(this.uriBase + '/meal/1').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
+    }
+    handleError(error) {
+        return rxjs__WEBPACK_IMPORTED_MODULE_2__["Observable"].throw(error.statusText);
+    }
+};
+RecipeService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] }
+];
+RecipeService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], RecipeService);
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/user.service.ts":
+/*!******************************************!*\
+  !*** ./src/app/services/user.service.ts ***!
+  \******************************************/
+/*! exports provided: UserService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserService", function() { return UserService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _models_user_model__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../models/user.model */ "./src/app/models/user.model.ts");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+
+
+
+
+
+
+let UserService = class UserService {
+    constructor(http) {
+        this.http = http;
+        //url: string = 'https://localhost:4200';
+        this.url = 'https://localhost:9595';
+    }
+    fetchUser(id) {
+        return this.http.get(`${this.url}/api/v1/user/${id}`).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(this.handleError));
+    }
+    checkLogin(username, password) {
+        return this.http.post(`${this.url}/api/v1/user/login`, JSON.stringify(new _models_user_model__WEBPACK_IMPORTED_MODULE_2__["User"](username, password))).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(this.handleError));
+    }
+    getPreferences(id) {
+        return this.http.get(`${this.url}/api/v1/preferences/preferences/${id}`).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(this.handleError));
+    }
+    getHistory(id) {
+        return this.http.get(`${this.url}/api/v1/history/user/${id}/favorited`).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(this.handleError));
+    }
+    handleError(error) {
+        return rxjs__WEBPACK_IMPORTED_MODULE_3__["Observable"].throw(error.statusText);
+    }
+};
+UserService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"] }
+];
+UserService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], UserService);
+
+
+
+/***/ }),
+
 /***/ "./src/app/suggested-recipe/suggested-recipe.component.css":
 /*!*****************************************************************!*\
   !*** ./src/app/suggested-recipe/suggested-recipe.component.css ***!
@@ -1585,13 +1979,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SuggestedRecipeComponent", function() { return SuggestedRecipeComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _services_api_recipe_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/api-recipe.service */ "./src/app/services/api-recipe.service.ts");
+
 
 
 let SuggestedRecipeComponent = class SuggestedRecipeComponent {
-    constructor() { }
+    constructor(apiRecipe) {
+        this.apiRecipe = apiRecipe;
+    }
     ngOnInit() {
+        this.getApiRecipeInfo();
+    }
+    getApiRecipeInfo() {
+        this.apiRecipe.fetchMeal().subscribe(recipe => this.recipe = recipe, error => console.log(`Error: ${error}`));
+        console.log(this.recipe);
     }
 };
+SuggestedRecipeComponent.ctorParameters = () => [
+    { type: _services_api_recipe_service__WEBPACK_IMPORTED_MODULE_2__["ApiRecipeService"] }
+];
 SuggestedRecipeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-suggested-recipe',
@@ -1665,7 +2071,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\jmaci\Desktop\Revature\project-2\meal-plan-app\nourishment-ang\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\kyles\Documents\meal-plan-app\nourishment-ang\src\main.ts */"./src/main.ts");
 
 
 /***/ })

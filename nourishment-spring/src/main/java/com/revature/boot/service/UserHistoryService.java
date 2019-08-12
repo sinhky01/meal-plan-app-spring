@@ -1,5 +1,6 @@
 package com.revature.boot.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.jboss.logging.Logger;
@@ -24,11 +25,15 @@ public class UserHistoryService {
 		return repo.findByUserHistoryPkUserId(id);
 	}
 	
-	/*
-	public List<Recipe> findByFavorited(int id){
-		return repo.findByFavorited(id);
+	public List<String> findByFavorited(int id){
+		List<Recipe> recList = repo.findByFavorited(id);
+		List<String> nameList = new ArrayList<String>();
+		for(Recipe r: recList) {
+			nameList.add(r.getName());
+		}
+		return nameList;
 	}
-	*/
+	
 	public List<UserHistory> findByRec(int r_id){
 		return repo.findByUserHistoryPkRecipeId(r_id);
 	}

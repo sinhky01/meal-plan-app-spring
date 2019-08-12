@@ -11,7 +11,7 @@ INSERT INTO INGREDIENT (I_ID, INGREDIENT) VALUES(8, 'Pickles');
 INSERT INTO INGREDIENT (I_ID, INGREDIENT) VALUES(9, 'Mayo');
 INSERT INTO INGREDIENT (I_ID, INGREDIENT) VALUES(10, 'Fish');
 INSERT INTO INGREDIENT (I_ID, INGREDIENT) VALUES(11, 'Chips');
-INSERT INTO INGREDIENT (I_ID, INGREDIENT) VALUES(15, 'Test Ingredient');
+
 INSERT INTO MEAL_COMPOSITION (R_ID, I_ID, QUANTITY, UNITS) VALUES(1, 1, 10, 'oz');
 INSERT INTO MEAL_COMPOSITION (R_ID, I_ID, QUANTITY, UNITS) VALUES(1, 2, 10, 'oz');
 INSERT INTO MEAL_COMPOSITION (R_ID, I_ID, QUANTITY, UNITS) VALUES(1, 3, 10, 'oz');
@@ -24,10 +24,19 @@ INSERT INTO MEAL_COMPOSITION (R_ID, I_ID, QUANTITY, UNITS) VALUES(1, 9, 10, 'oz'
 INSERT INTO MEAL_COMPOSITION (R_ID, I_ID, QUANTITY, UNITS) VALUES(2, 10, 10, 'oz');
 INSERT INTO MEAL_COMPOSITION (R_ID, I_ID, QUANTITY, UNITS) VALUES(2, 11, 10, 'oz');
 
-INSERT INTO appuser (u_id, fname, lname, uname, pass) values(1, 'Jason', 'Macias', 'jmacias', 'password');
+INSERT INTO appuser ( u_id, fname, lname, uname, pass) values( 1,'Jason', 'Macias', 'jmacias', 'password');
 INSERT INTO characteristic (characteristic) VALUES ('sandwich');
 INSERT INTO characteristic (characteristic) VALUES ('lunch');
 INSERT INTO characteristic (characteristic) VALUES ('fish');
 INSERT INTO RECIPE_CHARACTERISTIC (R_ID,characteristic) VALUES (1,'sandwich');
 INSERT INTO RECIPE_CHARACTERISTIC (R_ID,characteristic) VALUES (1,'lunch');
 INSERT INTO RECIPE_CHARACTERISTIC (R_ID,characteristic) VALUES (2,'fish');
+
+
+INSERT INTO user_preference VALUES (1,1,1);
+INSERT INTO user_preference VALUES (2,1,1);
+INSERT INTO user_preference VALUES (5,1,1);
+
+INSERT INTO user_history VALUES (1,1,1);
+
+
