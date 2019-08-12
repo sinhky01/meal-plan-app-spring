@@ -4,19 +4,23 @@ import java.util.List;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 @Entity
 @Table(name="ingredient")
 public class Ingredient {
 	
 	@Id
 	@Column(name="i_id")
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ing_gen")
+	@SequenceGenerator(name = "ing_gen", sequenceName = "i_seq")
 	private int ingredientId;
 	
 	@Column(name="ingredient")
 	private String ingredient;
 	
-	@OneToMany(mappedBy = "ingredient")
+	@OneToMany(mappedBy = "ingredient", fetch = FetchType.LAZY)
+	@JsonManagedReference
 	private List<MealComposition> usedBy;
 	
 	@OneToMany(mappedBy = "ingredient")
