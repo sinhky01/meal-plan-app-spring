@@ -717,7 +717,7 @@ let CalendarService = class CalendarService {
     }
     addMeal(mealDate, userId, mealNum, recipeId, name, directions) {
         const getCalendarUrl = "api/v1/calendar/meal";
-        const getCalendarUrlTemp = "http://localhost:9595/api/v1/calendar/meal";
+        const getCalendarUrlTemp = "http://3.130.255.174:9595/api/v1/calendar/meal";
         const uId = sessionStorage.getItem("userId");
         const httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
@@ -1421,7 +1421,8 @@ let LoginComponent = class LoginComponent {
         this.http = http;
         this.router = router;
         // loginForm: FormGroup;
-        this.url = 'http://localhost:9595';
+        //url: string = 'http://localhost:9595';
+        this.url = 'http://3.130.255.174:9595';
         this.username = '';
         this.password = '';
     }
@@ -1775,7 +1776,8 @@ let RegisterComponent = class RegisterComponent {
         this.lname = '';
         this.password = '';
         this.passwordConfirm = '';
-        this.url = 'http://localhost:9595';
+        //url: string = 'http://localhost:9595';
+        this.url = 'http://3.130.255.174:9595';
     }
     ngOnInit() {
     }
@@ -2131,7 +2133,7 @@ __webpack_require__.r(__webpack_exports__);
 let RecipeService = class RecipeService {
     constructor(http) {
         this.http = http;
-        this.uriBase = "http://localhost:9595/api/v1/";
+        this.uriBase = "http://3.130.255.174:9595/api/v1/";
     }
     //TODO set get path based on id passed
     fetchRecipe(id) {
@@ -2182,11 +2184,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let UserService = class UserService {
-    //url: string = 'http://3.130.255.174:9595';
     constructor(http) {
         this.http = http;
         //url: string = 'http://localhost:4200';
-        this.url = 'http://localhost:9595';
+        //url: string = 'http://localhost:9595';
+        this.url = 'http://3.130.255.174:9595';
     }
     fetchUser(id) {
         return this.http.get(`${this.url}/api/v1/user/${id}`).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));

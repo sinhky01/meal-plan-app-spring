@@ -728,7 +728,7 @@ var CalendarService = /** @class */ (function () {
     };
     CalendarService.prototype.addMeal = function (mealDate, userId, mealNum, recipeId, name, directions) {
         var getCalendarUrl = "api/v1/calendar/meal";
-        var getCalendarUrlTemp = "http://localhost:9595/api/v1/calendar/meal";
+        var getCalendarUrlTemp = "http://3.130.255.174:9595/api/v1/calendar/meal";
         var uId = sessionStorage.getItem("userId");
         var httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
@@ -1457,7 +1457,8 @@ var LoginComponent = /** @class */ (function () {
         this.http = http;
         this.router = router;
         // loginForm: FormGroup;
-        this.url = 'http://localhost:9595';
+        //url: string = 'http://localhost:9595';
+        this.url = 'http://3.130.255.174:9595';
         this.username = '';
         this.password = '';
     }
@@ -1827,7 +1828,8 @@ var RegisterComponent = /** @class */ (function () {
         this.lname = '';
         this.password = '';
         this.passwordConfirm = '';
-        this.url = 'http://localhost:9595';
+        //url: string = 'http://localhost:9595';
+        this.url = 'http://3.130.255.174:9595';
     }
     RegisterComponent.prototype.ngOnInit = function () {
     };
@@ -2199,7 +2201,7 @@ __webpack_require__.r(__webpack_exports__);
 var RecipeService = /** @class */ (function () {
     function RecipeService(http) {
         this.http = http;
-        this.uriBase = "http://localhost:9595/api/v1/";
+        this.uriBase = "http://3.130.255.174:9595/api/v1/";
     }
     //TODO set get path based on id passed
     RecipeService.prototype.fetchRecipe = function (id) {
@@ -2251,11 +2253,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var UserService = /** @class */ (function () {
-    //url: string = 'http://3.130.255.174:9595';
     function UserService(http) {
         this.http = http;
         //url: string = 'http://localhost:4200';
-        this.url = 'http://localhost:9595';
+        //url: string = 'http://localhost:9595';
+        this.url = 'http://3.130.255.174:9595';
     }
     UserService.prototype.fetchUser = function (id) {
         return this.http.get(this.url + "/api/v1/user/" + id).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
