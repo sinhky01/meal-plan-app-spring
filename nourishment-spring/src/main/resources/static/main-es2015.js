@@ -1438,7 +1438,7 @@ let LoginComponent = class LoginComponent {
         //this.http.post<User>("hi","hey");
         // this.username = (<HTMLInputElement>document.getElementById("username")).value;
         // this.password = (<HTMLInputElement>document.getElementById("password")).value;
-        this.http.post(`${this.url}/api/v1/user/login?user=${this.username}`, {}).subscribe(user => this.user = user);
+        this.http.post(`api/v1/user/login?user=${this.username}`, {}).subscribe(user => this.user = user);
         console.log('before the first check on the user object');
         console.log(this.user);
         if (this.user) {
@@ -1796,7 +1796,7 @@ let RegisterComponent = class RegisterComponent {
             this.user.fname = this.fname;
             this.user.lname = this.lname;
             this.user.password = this.password;
-            this.http.post(`${this.url}/api/v1/user/user`, JSON.stringify(this.user), httpOptions).subscribe(user => this.user = user);
+            this.http.post(`api/v1/user/user`, JSON.stringify(this.user), httpOptions).subscribe(user => this.user = user);
             this.router.navigate([`/login`]);
         }
     }
@@ -2133,7 +2133,7 @@ __webpack_require__.r(__webpack_exports__);
 let RecipeService = class RecipeService {
     constructor(http) {
         this.http = http;
-        this.uriBase = "http://3.130.255.174:9595/api/v1/";
+        this.uriBase = "api/v1/";
     }
     //TODO set get path based on id passed
     fetchRecipe(id) {
@@ -2191,16 +2191,16 @@ let UserService = class UserService {
         this.url = 'http://3.130.255.174:9595';
     }
     fetchUser(id) {
-        return this.http.get(`${this.url}/api/v1/user/${id}`).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
+        return this.http.get(`api/v1/user/${id}`).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
     }
     // public checkLogin(username: string, password: string): Observable<User>{
     //     return this.http.post<User>(`${this.url}/api/v1/user/login`,JSON.stringify(new User(username,password))).pipe(catchError(this.handleError));
     // }
     getPreferences(id) {
-        return this.http.get(`${this.url}/api/v1/preferences/preferences/${id}`).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
+        return this.http.get(`api/v1/preferences/preferences/${id}`).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
     }
     getHistory(id) {
-        return this.http.get(`${this.url}/api/v1/history/user/${id}/favorited`).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
+        return this.http.get(`api/v1/history/user/${id}/favorited`).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
     }
     handleError(error) {
         return rxjs__WEBPACK_IMPORTED_MODULE_2__["Observable"].throw(error.statusText);
