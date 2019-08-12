@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n    <div class=\"row\">\r\n        <h4 class=\"jumbotron col-12\">Account</h4>\r\n    </div>\r\n    <div class=\"row\">\r\n        <!--One row and card for the account information\r\n        and one row and maybe multiple cards for meal favorites-->\r\n        <div class=\"card col-6 border-dark mb-3\">\r\n            <div class=\"card-body\">\r\n                <h4 class=\"card-title\">{{fname}}'s Account Information</h4>\r\n                <p class=\"card-text\">\r\n                </p>\r\n                <ul>\r\n                    <li><span class=\"font-weight-bold\">First Name: </span><span class=\"font-italic\">{{fname}}</span>\r\n                    </li>\r\n                    <li><span class=\"font-weight-bold\">Last Name: </span><span class=\"font-italic\">{{lname}}</span>\r\n                    </li>\r\n                    <li><span class=\"font-weight-bold\">User ID: </span><span class=\"font-italic\">{{u_id}}</span>\r\n                    </li>\r\n                    <li><span class=\"font-weight-bold\">Username: </span><span class=\"font-italic\">{{username}}</span>\r\n                    </li>\r\n                </ul>\r\n\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"row\">\r\n        <div class=\"card col-6 border-dark mb-3\">\r\n            <div class=\"card-body\">\r\n                <h4 class=\"card-title\">Stored Meal Favorites</h4>\r\n                \r\n                <p class=\"card-text\">\r\n\r\n                </p>\r\n                <div *ngFor='let favorite of favorites'>\r\n                    <ul>\r\n                        <li><span class=\"font-weight-bold\">{{favorite}}</span></li>\r\n                    </ul>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"row\">\r\n        <div class=\"card col-6 border-dark mb-3\">\r\n            <div class=\"card-body\">\r\n                <h4 class=\"card-title\">Ingredient Preferences</h4>\r\n                <p class=\"card-text\">\r\n\r\n                </p>\r\n                <div *ngFor='let ingredient of ingredients'>\r\n                    <ul>\r\n                        <li><span class=\"font-weight-bold\">{{ingredient}}</span></li>\r\n                    </ul>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
+module.exports = "<div class=\"container\">\r\n    <div class=\"row\">\r\n        <h4 class=\"jumbotron col-12\">Account</h4>\r\n    </div>\r\n    <div class=\"row\">\r\n        <!--One row and card for the account information\r\n        and one row and maybe multiple cards for meal favorites-->\r\n        <div class=\"card col-6 border-dark mb-3\">\r\n            <div class=\"card-body\">\r\n                <h4 class=\"card-title\">{{fname}}'s Account Information</h4>\r\n                <p class=\"card-text\">\r\n                </p>\r\n                <ul>\r\n                    <li><span class=\"font-weight-bold\">First Name: </span><span class=\"font-italic\">{{fname}}</span>\r\n                    </li>\r\n                    <li><span class=\"font-weight-bold\">Last Name: </span><span class=\"font-italic\">{{lname}}</span>\r\n                    </li>\r\n                    <li><span class=\"font-weight-bold\">User ID: </span><span class=\"font-italic\">{{u_id}}</span>\r\n                    </li>\r\n                    <li><span class=\"font-weight-bold\">Username: </span><span class=\"font-italic\">{{username}}</span>\r\n                    </li>\r\n                </ul>\r\n\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"row\">\r\n        <div class=\"card col-6 border-dark mb-3\">\r\n            <div class=\"card-body\">\r\n                <h4 class=\"card-title\">Stored Meal Favorites</h4>\r\n                \r\n                <p class=\"card-text\">\r\n\r\n                </p>\r\n                <div *ngFor='let favorite of favorites'>\r\n                    <ul>\r\n                        <li><span class=\"font-weight-bold\">{{favorite}}</span></li>\r\n                    </ul>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"row\">\r\n        <div class=\"card col-6 border-dark mb-3\">\r\n            <div class=\"card-body\">\r\n                <h4 class=\"card-title\">Ingredient Preferences</h4>\r\n                <p class=\"card-text\">\r\n\r\n                </p>\r\n                <div *ngFor='let ingredient of ingredients'>\r\n                    <ul>\r\n                        <li><span class=\"font-weight-bold\">{{ingredient}}</span></li>\r\n                    </ul>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"row\">\r\n        <a routerLink=\"/editaccount\" class=\"offset-2 btn btn-primary\">Edit Information</a>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -52,7 +52,7 @@ module.exports = "<app-nav></app-nav>\r\n<router-outlet></router-outlet>\r\n<app
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row text-center\">\r\n  <div class=\"col-md-4\">\r\n    <div class=\"btn-group\">\r\n      <div\r\n        class=\"btn btn-primary\"\r\n        mwlCalendarPreviousView\r\n        [view]=\"view\"\r\n        [(viewDate)]=\"viewDate\"\r\n        (viewDateChange)=\"closeOpenMonthViewDay()\"\r\n      >\r\n        Previous\r\n      </div>\r\n      <div\r\n        class=\"btn btn-outline-secondary\"\r\n        mwlCalendarToday\r\n        [(viewDate)]=\"viewDate\"\r\n      >\r\n        Today\r\n      </div>\r\n      <div\r\n        class=\"btn btn-primary\"\r\n        mwlCalendarNextView\r\n        [view]=\"view\"\r\n        [(viewDate)]=\"viewDate\"\r\n        (viewDateChange)=\"closeOpenMonthViewDay()\"\r\n      >\r\n        Next\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"col-md-4\">\r\n    <h3>{{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}</h3>\r\n  </div>\r\n  <div class=\"col-md-4\">\r\n    <div class=\"btn-group\">\r\n      <div\r\n        class=\"btn btn-primary\"\r\n        (click)=\"setView(CalendarView.Month)\"\r\n        [class.active]=\"view === CalendarView.Month\"\r\n      >\r\n        Month\r\n      </div>\r\n      <div\r\n        class=\"btn btn-primary\"\r\n        (click)=\"setView(CalendarView.Week)\"\r\n        [class.active]=\"view === CalendarView.Week\"\r\n      >\r\n        Week\r\n      </div>\r\n      <div\r\n        class=\"btn btn-primary\"\r\n        (click)=\"setView(CalendarView.Day)\"\r\n        [class.active]=\"view === CalendarView.Day\"\r\n      >\r\n        Day\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<br />\r\n<div [ngSwitch]=\"view\">\r\n  <mwl-calendar-month-view\r\n    *ngSwitchCase=\"CalendarView.Month\"\r\n    [viewDate]=\"viewDate\"\r\n    [events]=\"events\"\r\n    [refresh]=\"refresh\"\r\n    [activeDayIsOpen]=\"activeDayIsOpen\"\r\n    (dayClicked)=\"dayClicked($event.day)\"\r\n    (eventClicked)=\"handleEvent('Clicked', $event.event)\"\r\n    (eventTimesChanged)=\"eventTimesChanged($event)\"\r\n  >\r\n  </mwl-calendar-month-view>\r\n  <mwl-calendar-week-view\r\n    *ngSwitchCase=\"CalendarView.Week\"\r\n    [viewDate]=\"viewDate\"\r\n    [events]=\"events\"\r\n    [refresh]=\"refresh\"\r\n    (eventClicked)=\"handleEvent('Clicked', $event.event)\"\r\n    (eventTimesChanged)=\"eventTimesChanged($event)\"\r\n  >\r\n  </mwl-calendar-week-view>\r\n  <mwl-calendar-day-view\r\n    *ngSwitchCase=\"CalendarView.Day\"\r\n    [viewDate]=\"viewDate\"\r\n    [events]=\"events\"\r\n    [refresh]=\"refresh\"\r\n    (eventClicked)=\"handleEvent('Clicked', $event.event)\"\r\n    (eventTimesChanged)=\"eventTimesChanged($event)\"\r\n  >\r\n  </mwl-calendar-day-view>\r\n</div>\r\n<button class=\"btn btn-danger\" (click)=\"populateCalendar()\">Get Meals</button>\r\n"
+module.exports = "<div class=\"row text-center\">\r\n  <div class=\"col-md-4\">\r\n    <div class=\"btn-group\">\r\n      <div\r\n        class=\"btn btn-primary\"\r\n        mwlCalendarPreviousView\r\n        [view]=\"view\"\r\n        [(viewDate)]=\"viewDate\"\r\n        (viewDateChange)=\"closeOpenMonthViewDay()\"\r\n      >\r\n        Previous\r\n      </div>\r\n      <div\r\n        class=\"btn btn-outline-secondary\"\r\n        mwlCalendarToday\r\n        [(viewDate)]=\"viewDate\"\r\n      >\r\n        Today\r\n      </div>\r\n      <div\r\n        class=\"btn btn-primary\"\r\n        mwlCalendarNextView\r\n        [view]=\"view\"\r\n        [(viewDate)]=\"viewDate\"\r\n        (viewDateChange)=\"closeOpenMonthViewDay()\"\r\n      >\r\n        Next\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"col-md-4\">\r\n    <h3>{{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}</h3>\r\n  </div>\r\n  <div class=\"col-md-4\">\r\n    <div class=\"btn-group\">\r\n      <div\r\n        class=\"btn btn-primary\"\r\n        (click)=\"setView(CalendarView.Month)\"\r\n        [class.active]=\"view === CalendarView.Month\"\r\n      >\r\n        Month\r\n      </div>\r\n      <div\r\n        class=\"btn btn-primary\"\r\n        (click)=\"setView(CalendarView.Week)\"\r\n        [class.active]=\"view === CalendarView.Week\"\r\n      >\r\n        Week\r\n      </div>\r\n      <div\r\n        class=\"btn btn-primary\"\r\n        (click)=\"setView(CalendarView.Day)\"\r\n        [class.active]=\"view === CalendarView.Day\"\r\n      >\r\n        Day\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<br />\r\n<div [ngSwitch]=\"view\">\r\n  <mwl-calendar-month-view\r\n    *ngSwitchCase=\"CalendarView.Month\"\r\n    [viewDate]=\"viewDate\"\r\n    [events]=\"events\"\r\n    [refresh]=\"refresh\"\r\n    [activeDayIsOpen]=\"activeDayIsOpen\"\r\n    (dayClicked)=\"dayClicked($event.day)\"\r\n    (eventClicked)=\"handleEvent('Clicked', $event.event)\"\r\n    (eventTimesChanged)=\"eventTimesChanged($event)\"\r\n  >\r\n  </mwl-calendar-month-view>\r\n  <mwl-calendar-week-view\r\n    *ngSwitchCase=\"CalendarView.Week\"\r\n    [viewDate]=\"viewDate\"\r\n    [events]=\"events\"\r\n    [refresh]=\"refresh\"\r\n    (eventClicked)=\"handleEvent('Clicked', $event.event)\"\r\n    (eventTimesChanged)=\"eventTimesChanged($event)\"\r\n  >\r\n  </mwl-calendar-week-view>\r\n  <mwl-calendar-day-view\r\n    *ngSwitchCase=\"CalendarView.Day\"\r\n    [viewDate]=\"viewDate\"\r\n    [events]=\"events\"\r\n    [refresh]=\"refresh\"\r\n    (eventClicked)=\"handleEvent('Clicked', $event.event)\"\r\n    (eventTimesChanged)=\"eventTimesChanged($event)\"\r\n  >\r\n  </mwl-calendar-day-view>\r\n</div>\r\n  <div class=\"row\">\r\n  <div class=\"col\">\r\n    <button class=\"btn btn-danger\" (click)=\"populateCalendar()\">Get Meals</button>\r\n  </div>\r\n  <div class=\"col\">\r\n    <button class=\"btn btn-danger\" (click)=\"postNew()\">Add Meal</button><br />\r\n    <input placeholder=\"Recipe Name\" type=\"text\" [(ngModel)]=\"mealName\"><br />\r\n    <input type=\"date\" [(ngModel)]=\"mealDate\"><br />\r\n    <label>Breakfast &nbsp;\r\n      <input type=\"radio\" name=\"mealType\" value=\"breakfast\" [(ngModel)]=\"mealType\" /> &nbsp;\r\n    </label>\r\n    <label>Lunch &nbsp;\r\n      <input type=\"radio\" name=\"mealType\" value=\"lunch\" [(ngModel)]=\"mealType\" /> &nbsp;\r\n    </label>\r\n    <label>Dinner &nbsp;\r\n      <input type=\"radio\" name=\"mealType\" value=\"dinner\" [(ngModel)]=\"mealType\" />\r\n    </label>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -74,7 +74,7 @@ module.exports = "<form>\r\n  <div class=\"form-group\">\r\n    <label for=\"use
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <h2 class=\"jumbotron\">Nutrition</h2> -->\r\n<div class=\"container\">\r\n    \r\n    <div class=\"row\">\r\n        <div class=\"card col-12\">\r\n            <div class=\"card-body text-center\">\r\n                <h4 class=\"card-title\">Recipes</h4>\r\n                <h6 class=\"card-subtitle mb-2 text-muted\">Look for that perfect meal to spice up your day!</h6>\r\n                <p class=\"card-text\">\r\n                    <button class=\"btn btn-primary\" id=\"recipePage\"> Checkout Recipes</button><br />\r\n                </p>\r\n            </div>\r\n        </div>\r\n        <!--set size so that it doesnt expand-->\r\n\r\n    </div>\r\n    <div class=\"row\">\r\n        <div class=\"card col-12\">\r\n            <div class=\"card-body   \" id=\"test\">\r\n                <!-- <img class=\"d-block\" src=\"assets/images/other.jpg\" alt=\"First slide\"> -->\r\n                <div id=\"recipeCarousel\" class=\"carousel slide\" data-ride=\"carousel\" data-interval=\"5000\">\r\n                    <div class=\"carousel-inner col-12\">\r\n                        <div class=\"carousel-item active\">\r\n                            <img class=\"d-block\" src=\"assets/images/other.jpg\" alt=\"First slide\">\r\n                        </div>\r\n                        <div class=\"carousel-item\">\r\n                            <img class=\"d-block\" src=\"assets/images/potatoes.jpg\" alt=\"Second slide\">\r\n                        </div>\r\n                        <!--<div class=\"carousel-item\">\r\n                                    <img class=\"d-block w-100\" src=\"assets/images/potatoes.jpg\" alt=\"Second slide\">\r\n                                </div>-->\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"row\">\r\n        <div class=\"card col-5\" id=\"calendarCard\">\r\n            <div class=\"card-body\">\r\n                <h4 class=\"card-title\"></h4>\r\n                <h6 class=\"card-subtitle mb-2 text-muted\"></h6>\r\n                <p class=\"card-text\">\r\n                    <img class=\"d-block\" src=\"assets/images/calendar.png\" alt=\"First slide\">\r\n                </p>\r\n            </div>\r\n        </div>\r\n        <div class=\"card col-7\">\r\n            <div class=\"card-body text-center\">\r\n                <h4 class=\"card-title\">Calendar</h4>\r\n                <h6 class=\"card-subtitle mb-2 text-muted\">See what savory dishes you have to look forward to!</h6>\r\n                <p class=\"card-text\">\r\n                    <br/>\r\n                    <br/>\r\n                    <br/>\r\n                    <br/>\r\n                    <button class=\"justify-content-center btn btn-primary\" id=\"calendarPage\"> Checkout\r\n                        Calendars</button><br />\r\n                </p>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
+module.exports = "<!-- <h2 class=\"jumbotron\">Nutrition</h2> -->\r\n<div class=\"container\">\r\n    \r\n    <div class=\"row\">\r\n        <div class=\"card col-12\">\r\n            <div class=\"card-body text-center\">\r\n                <h4 class=\"card-title\">Recipes</h4>\r\n                <h6 class=\"card-subtitle mb-2 text-muted\">Look for that perfect meal to spice up your day!</h6>\r\n                <p class=\"card-text\">\r\n                    <a routerLink=\"/recipe\" class=\"btn btn-primary\" id=\"recipePage\"> Checkout Recipes</a><br />\r\n                </p>\r\n            </div>\r\n        </div>\r\n        <!--set size so that it doesnt expand-->\r\n\r\n    </div>\r\n    <div class=\"row\">\r\n        <div class=\"card col-12\">\r\n            <div class=\"card-body   \" id=\"test\">\r\n                <!-- <img class=\"d-block\" src=\"assets/images/other.jpg\" alt=\"First slide\"> -->\r\n                <div id=\"recipeCarousel\" class=\"carousel slide\" data-ride=\"carousel\" data-interval=\"5000\">\r\n                    <div class=\"carousel-inner col-12\">\r\n                        <div class=\"carousel-item active\">\r\n                            <img class=\"d-block\" src=\"assets/images/burger.png\" alt=\"First slide\">\r\n                        </div>\r\n                        <div class=\"carousel-item\">\r\n                            <img class=\"d-block\" src=\"assets/images/sliced-food.jpg\" alt=\"Second slide\">\r\n                        </div>\r\n                        <div class=\"carousel-item\">\r\n                            <img class=\"d-block\" src=\"assets/images/greenplate.jpeg\" alt=\"Third slide\">\r\n                        </div>\r\n                        <!--<div class=\"carousel-item\">\r\n                                    <img class=\"d-block w-100\" src=\"assets/images/potatoes.jpg\" alt=\"Second slide\">\r\n                                </div>-->\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"row\">\r\n        <div class=\"card col-5\" id=\"calendarCard\">\r\n            <div class=\"card-body\">\r\n                <h4 class=\"card-title\"></h4>\r\n                <h6 class=\"card-subtitle mb-2 text-muted\"></h6>\r\n                <p class=\"card-text\">\r\n                    <img class=\"d-block\" src=\"assets/images/calendar.png\" alt=\"First slide\">\r\n                </p>\r\n            </div>\r\n        </div>\r\n        <div class=\"card col-7\">\r\n            <div class=\"card-body text-center\">\r\n                <h4 class=\"card-title\">Calendar</h4>\r\n                <h6 class=\"card-subtitle mb-2 text-muted\">See what savory dishes you have to look forward to!</h6>\r\n                <p class=\"card-text\">\r\n                    <br/>\r\n                    <br/>\r\n                    <br/>\r\n                    <br/>\r\n                    <a routerLink=\"/calendar\" class=\"justify-content-center btn btn-primary\" id=\"calendarPage\"> Checkout\r\n                        Calendars</a><br />\r\n                </p>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -151,7 +151,7 @@ module.exports = "<p>information works!</p>\r\n<div class=\"card\">\r\n  <div cl
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\" style=\"border: 2px solid green; border-radius: 5px\">\r\n    <div class=\"row\" id='ingRow' style=\"border: 2px dotted green; border-radius: 5px\">\r\n        \r\n    </div>\r\n</div>\r\n\r\n                    "
+module.exports = "<div class=\"container\">\r\n    <div class=\"row\" id='ingRow'>\r\n        \r\n    </div>\r\n</div>\r\n\r\n                    "
 
 /***/ }),
 
@@ -162,7 +162,7 @@ module.exports = "<div class=\"container\" style=\"border: 2px solid green; bord
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n    <div class=\"row\">\r\n        <h1 class=\"jumbotron\">Login</h1>\r\n    </div>\r\n</div>\r\n<div class=\"container\">\r\n    <div class=\"row\">\r\n        <div class=\"col-sm-9 col-md-7 col-lg-5 mx-auto\">\r\n            <div class=\"card card-signin my-5\">\r\n                <div class=\"card-body\">\r\n                    <h5 class=\"card-title text-center\">Sign In</h5>\r\n                    <form class=\"form-signin\">\r\n                        <div class=\"form-label-group\">\r\n                            <span>Username:</span><br>\r\n                            <input type=\"text\" id=\"username\" name=\"username\" class=\"form-control\" placeholder=\"Username\"\r\n                                required autofocus>\r\n                            <!-- <label for=\"inputEmail\">Email address</label> -->\r\n                        </div>\r\n\r\n                        <div class=\"form-label-group\">\r\n                            <span>Password:</span><br>\r\n                            <input type=\"password\" id=\"password\" name=\"password\" class=\"form-control\" placeholder=\"Password\"\r\n                                required>\r\n                            <!-- <label for=\"inputPassword\">Password</label> -->\r\n                        </div>\r\n\r\n                        <div class=\"custom-control custom-checkbox mb-3\">\r\n                            <input type=\"checkbox\" class=\"custom-control-input\" id=\"customCheck1\">\r\n                            <label class=\"custom-control-label\" for=\"customCheck1\">Remember password</label>\r\n                        </div>\r\n                        <button class=\"btn btn-lg btn-primary btn-block text-uppercase\" type=\"submit\">Sign in</button>\r\n                        <hr class=\"my-4\">\r\n                        <button class=\"btn btn-md btn-primary btn-block text-uppercase\" id=\"registerBtn\" >Register</button>\r\n                    </form>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
+module.exports = "<div class=\"container\">\r\n    <div class=\"row\">\r\n        <h1 class=\"jumbotron\">Login</h1>\r\n    </div>\r\n</div>\r\n<div class=\"container\">\r\n    <div class=\"row\">\r\n        <div class=\"col-sm-9 col-md-7 col-lg-5 mx-auto\">\r\n            <div class=\"card card-signin my-5\">\r\n                <div class=\"card-body\">\r\n                    <h5 class=\"card-title text-center\">Sign In</h5>\r\n                    <form class=\"form-signin\" (ngSubmit)=\"onSubmit()\" ><!-- [formGroup]=\"loginForm\" -->\r\n                    \r\n                        <div class=\"form-label-group\">\r\n                            <span>Username:</span><br>\r\n                            <input type=\"text\" id=\"username\" name=\"username\" class=\"form-control\" placeholder=\"Username\" [(ngModel)]=\"this.username\" required autofocus>\r\n                        </div>\r\n\r\n                        <div class=\"form-label-group\">\r\n                            <span>Password:</span><br>\r\n                            <input type=\"password\" id=\"password\" name=\"password\" class=\"form-control\"\r\n                                placeholder=\"Password\" [(ngModel)]=\"this.password\" required>\r\n                        </div>\r\n\r\n                        <button class=\"btn btn-lg btn-primary btn-block text-uppercase\" type=\"submit\"\r\n                            >Sign in</button>\r\n                        <hr class=\"my-4\">\r\n                        <button class=\"btn btn-md btn-primary btn-block text-uppercase\"\r\n                            id=\"registerBtn\" routerLink=\"/register\">Register</button>\r\n                    </form>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -173,7 +173,7 @@ module.exports = "<div class=\"container\">\r\n    <div class=\"row\">\r\n      
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<!--Navbar-->\r\n<head>\r\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\">\r\n    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js\"></script>\r\n    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\"></script>\r\n</head>\r\n<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\r\n  <a class=\"navbar-brand\" id=\"nutrition\" href=\"#\">Nutrition</a>\r\n  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n    <span class=\"navbar-toggler-icon\"></span>\r\n  </button>\r\n\r\n  <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\r\n    <ul class=\"navbar-nav mr-auto\">\r\n      <li class=\"nav-item active\">\r\n        <a class=\"nav-link\" routerLink=\"dashboard\">Home <span class=\"sr-only\">(current)</span></a>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link\" routerLink=\"/calendar\">Calendar</a>\r\n      </li>\r\n      <li class=\"nav-item dropdown\">\r\n        <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          Recipes\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" routerLink=\"/randomRecipe\">Random Recipe</a>\r\n          <a class=\"dropdown-item\" routerLink=\"/search\">Search for Recipe</a>\r\n          <div class=\"dropdown-divider\"></div>\r\n          <a class=\"dropdown-item\" routerLink=\"/editrecipe\">Create New Recipe</a>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item dropdown\">\r\n        <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          My Profile\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" routerLink=\"/account\">Account Info</a>\r\n          <a class=\"dropdown-item\" routerLInk=\"/information\">My Preferences</a>\r\n        </div>\r\n      </li>\r\n    </ul>\r\n    <!--<form class=\"form-inline my-2 my-lg-0\">\r\n      <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">\r\n      <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\" routerLink=\"/search\">Search</button>\r\n    </form>\r\n  -->\r\n  </div>\r\n</nav>"
+module.exports = "\r\n<!--Navbar-->\r\n<head>\r\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\">\r\n    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js\"></script>\r\n    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\"></script>\r\n</head>\r\n<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\r\n  <a class=\"navbar-brand\" id=\"nutrition\" href=\"#\">Nutrition</a>\r\n  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n    <span class=\"navbar-toggler-icon\"></span>\r\n  </button>\r\n\r\n  <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\r\n    <ul class=\"navbar-nav mr-auto\">\r\n      <li class=\"nav-item active\">\r\n        <a class=\"nav-link\" routerLink=\"dashboard\">Home <span class=\"sr-only\">(current)</span></a>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link\" routerLink=\"/calendar\">Calendar</a>\r\n      </li>\r\n      <li class=\"nav-item dropdown\">\r\n        <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          Recipes\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" routerLink=\"/randomRecipe\">Random Recipe</a>\r\n          <a class=\"dropdown-item\" routerLink=\"/search\">Search for Recipe</a>\r\n          <div class=\"dropdown-divider\"></div>\r\n          <a class=\"dropdown-item\" routerLink=\"/editrecipe\">Create New Recipe</a>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item dropdown\">\r\n        <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          My Profile\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" routerLink=\"/account\">Account Info</a>\r\n          <a class=\"dropdown-item\" routerLink=\"/information\">My Preferences</a>\r\n          <div class=\"dropdown-divider\"></div>\r\n          <a class=\"dropdown-item\" routerLink=\"/login\" (click)=\"logout()\">Logout</a>\r\n        </div>\r\n      </li>\r\n    </ul>\r\n    <!--<form class=\"form-inline my-2 my-lg-0\">\r\n      <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">\r\n      <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\" routerLink=\"/search\">Search</button>\r\n    </form>\r\n  -->\r\n  </div>\r\n</nav>"
 
 /***/ }),
 
@@ -206,7 +206,7 @@ module.exports = "<p>recipe-editor works!</p>\r\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\" style=\"border: 2px solid blue; border-radius: 5px; height: 125px;\">\r\n    <div class=\"row\" style=\"border: 2px dotted blue; border-radius: 5px; height: 125px;\">\r\n        <div class=\"col-lg-12\" style=\"border: 2px dashed blue; border-radius: 5px; height: 125px;\">\r\n                <app-ingredient-list [recipeId]=[recipeId]></app-ingredient-list>\r\n                <!-- <app-ingredient-list [recipeId]=\"1\"></app-ingredient-list> -->\r\n                <!-- <app-ingredient-list></app-ingredient-list> -->\r\n        </div>\r\n        \r\n    </div>\r\n</div>"
+module.exports = "<div class=\"container\">\r\n    <h2 id=\"recipeTitleElement\"></h2>\r\n    <div class=\"row\">\r\n        <div class=\"col-lg-12\">\r\n                <app-ingredient-list [recipeId]=[recipeId]></app-ingredient-list>\r\n                \r\n        </div>\r\n    </div>\r\n    <div class=\"row\">\r\n        <div class=\"col-lg-10\">\r\n            <span id=\"directionElement\"></span>\r\n        </div>\r\n    </div>\r\n    \r\n</div>"
 
 /***/ }),
 
@@ -217,7 +217,7 @@ module.exports = "<div class=\"container\" style=\"border: 2px solid blue; borde
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n    <div class=\"row\">\r\n        <h1 class=\"jumbotron\">Register</h1>\r\n    </div>\r\n</div>\r\n<div class=\"container\">\r\n        <div class=\"row\">\r\n            <div class=\"col-sm-9 col-md-7 col-lg-5 mx-auto\">\r\n                <div class=\"card card-signin my-5\">\r\n                    <div class=\"card-body\">\r\n                        <h5 class=\"card-title text-center\">Register</h5>\r\n                        <form class=\"form-register\">\r\n                            <div class=\"form-label-group\">\r\n                                <span>Username:</span><br>\r\n                                <input type=\"text\" id=\"username\" name=\"username\" class=\"form-control\" placeholder=\"Username\"\r\n                                    required autofocus>\r\n                                <!-- <label for=\"inputEmail\">Email address</label> -->\r\n                            </div>\r\n                            <div class=\"form-label-group\">\r\n                                    <span>First name:</span><br>\r\n                                    <input type=\"text\" id=\"fname\" name=\"fname\" class=\"form-control\" placeholder=\"First\"\r\n                                        required autofocus>\r\n                                    <!-- <label for=\"inputEmail\">Email address</label> -->\r\n                            </div>\r\n                            <div class=\"form-label-group\">\r\n                                    <span>Last name:</span><br>\r\n                                    <input type=\"text\" id=\"lname\" name=\"lname\" class=\"form-control\" placeholder=\"Last\"\r\n                                        required autofocus>\r\n                                    <!-- <label for=\"inputEmail\">Email address</label> -->\r\n                            </div>\r\n                            <div class=\"form-label-group\">\r\n                                <span>Password:</span><br>\r\n                                <input type=\"password\" id=\"password\" name=\"password\" class=\"form-control\" placeholder=\"Password\"\r\n                                    required>\r\n                                <!-- <label for=\"inputPassword\">Password</label> -->\r\n                            </div>\r\n                            <div class=\"form-label-group\">\r\n                                    <span>Confirm Password:</span><br>\r\n                                    <input type=\"password\" id=\"passwordCon\" name=\"passwordCon\" class=\"form-control\" placeholder=\"Password Confirm\"\r\n                                        required>\r\n                                    <!-- <label for=\"inputPassword\">Password</label> -->\r\n                            </div>\r\n                            <button class=\"btn btn-lg btn-primary btn-block text-uppercase\" type=\"submit\">Register</button>\r\n                            <hr class=\"my-4\">\r\n                        </form>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>"
+module.exports = "<div class=\"container\">\r\n    <div class=\"row\">\r\n        <h1 class=\"jumbotron\">Register</h1>\r\n    </div>\r\n</div>\r\n<div class=\"container\">\r\n        <div class=\"row\">\r\n            <div class=\"col-sm-9 col-md-7 col-lg-5 mx-auto\">\r\n                <div class=\"card card-signin my-5\">\r\n                    <div class=\"card-body\">\r\n                        <h5 class=\"card-title text-center\">Register</h5>\r\n                        <form class=\"form-register\" (ngSubmit)=\"onSubmit()\">\r\n                            <div class=\"form-label-group\">\r\n                                <span>Username:</span><br>\r\n                                <input type=\"text\" id=\"username\" name=\"username\" class=\"form-control\" placeholder=\"Username\" [(ngModel)]=\"this.username\"\r\n                                    required autofocus>\r\n                                <!-- <label for=\"inputEmail\">Email address</label> -->\r\n                            </div>\r\n                            <div class=\"form-label-group\">\r\n                                    <span>First name:</span><br>\r\n                                    <input type=\"text\" id=\"fname\" name=\"fname\" class=\"form-control\" placeholder=\"First Name\" [(ngModel)]=\"this.fname\"\r\n                                        required autofocus>\r\n                                    <!-- <label for=\"inputEmail\">Email address</label> -->\r\n                            </div>\r\n                            <div class=\"form-label-group\">\r\n                                    <span>Last name:</span><br>\r\n                                    <input type=\"text\" id=\"lname\" name=\"lname\" class=\"form-control\" placeholder=\"Last Name\" [(ngModel)]=\"this.lname\"\r\n                                        required autofocus>\r\n                                    <!-- <label for=\"inputEmail\">Email address</label> -->\r\n                            </div>\r\n                            <div class=\"form-label-group\">\r\n                                <span>Password:</span><br>\r\n                                <input type=\"password\" id=\"password\" name=\"password\" class=\"form-control\" placeholder=\"Password\" [(ngModel)]=\"this.password\"\r\n                                    required>\r\n                                <!-- <label for=\"inputPassword\">Password</label> -->\r\n                            </div>\r\n                            <div class=\"form-label-group\">\r\n                                    <span>Confirm Password:</span><br>\r\n                                    <input type=\"password\" id=\"passwordCon\" name=\"passwordCon\" class=\"form-control\" placeholder=\"Password Confirm\" [(ngModel)]=\"this.passwordConfirm\" required>\r\n                                    <!-- <label for=\"inputPassword\">Password</label> -->\r\n                            </div>\r\n                            <button class=\"btn btn-lg btn-primary btn-block text-uppercase\" type=\"submit\">Register</button>\r\n                            <hr class=\"my-4\">\r\n                        </form>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>"
 
 /***/ }),
 
@@ -250,7 +250,7 @@ module.exports = "<p>results works!</p>\r\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<form>\r\n  <div *ngFor=\"let id of ids\" class=\"form-group\">\r\n    <!-- <app-searchbar></app-searchbar> -->\r\n    <label for=\"{{id | lowercase}}\">{{id}}</label><br />\r\n    <input type=\"text\" id=\"{{id}}\" />\r\n  </div>\r\n  <button type=\"submit\" class=\"btn btn-primary\">Submit</button>\r\n</form>"
+module.exports = "<div class='container'>\r\n  <form>\r\n    <div class='form-group row'>\r\n          <label class=\"col-md-1 col-form-label\" for='Search'>Search</label>\r\n          <div class='col-md-2'>\r\n              <input type=\"text\" id=\"Search\" class='form-control'>\r\n          </div>\r\n    </div>\r\n    <div class='form-group row'>\r\n        <button type=\"submit\" class=\"btn btn-primary\">Submit</button>\r\n    </div>\r\n  </form>\r\n  \r\n  <div>\r\n    <a routerLink='/recipe'>\r\n      <table class='table' id='resultSet'>\r\n    \r\n    </table>\r\n    </a>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -272,7 +272,7 @@ module.exports = "<label for=\"{{id | lowercase}}\">{{id}}</label>\r\n<input typ
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n    <div class=\"row\">\r\n        <h4>{{recipe.meals[0].strMeal}}</h4>\r\n    </div>\r\n    <div class=\"row\">\r\n        <div class=\"col-6\">\r\n            <ul>\r\n                <li><span>{{recipe.meals[0].strIngredient1}} -- {{recipe.meals[0].strMeasure1}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient2}} -- {{recipe.meals[0].strMeasure2}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient3}} -- {{recipe.meals[0].strMeasure3}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient4}} -- {{recipe.meals[0].strMeasure4}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient5}} -- {{recipe.meals[0].strMeasure5}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient6}} -- {{recipe.meals[0].strMeasure6}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient7}} -- {{recipe.meals[0].strMeasure7}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient8}} -- {{recipe.meals[0].strMeasure8}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient9}} -- {{recipe.meals[0].strMeasure9}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient10}} -- {{recipe.meals[0].strMeasure10}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient11}} -- {{recipe.meals[0].strMeasure11}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient12}} -- {{recipe.meals[0].strMeasure12}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient13}} -- {{recipe.meals[0].strMeasure13}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient14}} -- {{recipe.meals[0].strMeasure14}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient15}} -- {{recipe.meals[0].strMeasure15}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient16}} -- {{recipe.meals[0].strMeasure16}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient17}} -- {{recipe.meals[0].strMeasure17}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient18}} -- {{recipe.meals[0].strMeasure18}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient19}} -- {{recipe.meals[0].strMeasure19}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient20}} -- {{recipe.meals[0].strMeasure20}}</span></li>\r\n            </ul>\r\n        </div>\r\n        <div class=\"col-6\">\r\n            <img class = \"img-fluid\" src={{recipe.meals[0].strMealThumb}} />\r\n        </div>\r\n    </div>\r\n    <div class=\"row\">\r\n        <p>{{recipe.meals[0].strInstructions}}</p>\r\n    </div>\r\n</div>"
+module.exports = "<div class=\"container\">\r\n    <div class=\"row\">\r\n        <h4>{{recipe.meals[0].strMeal}}</h4>\r\n    </div>\r\n    <div class=\"row\">\r\n        <div class=\"col-6\">\r\n            <ul>\r\n                <li><span>{{recipe.meals[0].strIngredient1}} -- {{recipe.meals[0].strMeasure1}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient2}} -- {{recipe.meals[0].strMeasure2}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient3}} -- {{recipe.meals[0].strMeasure3}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient4}} -- {{recipe.meals[0].strMeasure4}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient5}} -- {{recipe.meals[0].strMeasure5}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient6}} -- {{recipe.meals[0].strMeasure6}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient7}} -- {{recipe.meals[0].strMeasure7}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient8}} -- {{recipe.meals[0].strMeasure8}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient9}} -- {{recipe.meals[0].strMeasure9}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient10}} -- {{recipe.meals[0].strMeasure10}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient11}} -- {{recipe.meals[0].strMeasure11}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient12}} -- {{recipe.meals[0].strMeasure12}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient13}} -- {{recipe.meals[0].strMeasure13}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient14}} -- {{recipe.meals[0].strMeasure14}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient15}} -- {{recipe.meals[0].strMeasure15}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient16}} -- {{recipe.meals[0].strMeasure16}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient17}} -- {{recipe.meals[0].strMeasure17}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient18}} -- {{recipe.meals[0].strMeasure18}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient19}} -- {{recipe.meals[0].strMeasure19}}</span></li>\r\n                <li><span>{{recipe.meals[0].strIngredient20}} -- {{recipe.meals[0].strMeasure20}}</span></li>\r\n            </ul>\r\n        </div>\r\n        <div class=\"col-6\">\r\n            <img class = \"img-fluid\" src={{recipe.meals[0].strMealThumb}} />\r\n        </div>\r\n    </div>\r\n    <div class=\"row\">\r\n        <p>{{recipe.meals[0].strInstructions}}</p>\r\n    </div>\r\n    <div class=\"row\">\r\n        <button class=\"btn btn-primary\" (click)=\"refresh()\">New Recipe</button>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -306,18 +306,14 @@ __webpack_require__.r(__webpack_exports__);
 let AccountComponent = class AccountComponent {
     constructor(user) {
         this.user = user;
-        this.fname = sessionStorage.getItem("fname");
-        this.lname = sessionStorage.getItem("lname");
-        this.u_id = parseInt(sessionStorage.getItem("id"), 10);
-        this.username = sessionStorage.getItem("username");
     }
     ngOnInit() {
-        sessionStorage.setItem("fname", "Ricky");
-        sessionStorage.setItem("lname", "Rickyson");
-        sessionStorage.setItem("username", "fish_are_friends");
-        sessionStorage.setItem("id", "1");
-        this.getPreferences(parseInt(sessionStorage.getItem("id"), 10));
-        this.getHistory(parseInt(sessionStorage.getItem("id"), 10));
+        this.fname = sessionStorage.getItem("fname");
+        this.lname = sessionStorage.getItem("lname");
+        this.u_id = parseInt(sessionStorage.getItem("userId"), 10);
+        this.username = sessionStorage.getItem("username");
+        this.getPreferences(parseInt(sessionStorage.getItem("userId"), 10));
+        this.getHistory(parseInt(sessionStorage.getItem("userId"), 10));
     }
     getPreferences(id) {
         this.user.getPreferences(id).subscribe(ingredients => this.ingredients = ingredients);
@@ -345,11 +341,12 @@ AccountComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*!***************************************!*\
   !*** ./src/app/app-routing.module.ts ***!
   \***************************************/
-/*! exports provided: AppRoutingModule */
+/*! exports provided: routing, AppRoutingModule */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "routing", function() { return routing; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppRoutingModule", function() { return AppRoutingModule; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
@@ -367,6 +364,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _search_search_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./search/search.component */ "./src/app/search/search.component.ts");
 /* harmony import */ var _change_pw_change_pw_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./change-pw/change-pw.component */ "./src/app/change-pw/change-pw.component.ts");
 /* harmony import */ var _suggested_recipe_suggested_recipe_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./suggested-recipe/suggested-recipe.component */ "./src/app/suggested-recipe/suggested-recipe.component.ts");
+/* harmony import */ var _auth_guard__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./auth.guard */ "./src/app/auth.guard.ts");
+
 
 
 
@@ -384,22 +383,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const routes = [
-    {
-        path: ' ',
-        redirectTo: '/main',
-        pathMatch: 'full'
-    },
+    //{ path: '', component: DashboardComponent, canActivate: [AuthGuard] },
     {
         path: 'main',
-        component: _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_3__["DashboardComponent"]
+        component: _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_3__["DashboardComponent"],
+        canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_16__["AuthGuard"]]
     },
     {
         path: 'calendar',
-        component: _calendar_calendar_component__WEBPACK_IMPORTED_MODULE_4__["CalendarComponent"]
+        component: _calendar_calendar_component__WEBPACK_IMPORTED_MODULE_4__["CalendarComponent"],
+        canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_16__["AuthGuard"]]
     },
     {
         path: 'editrecipe',
-        component: _recipe_editor_recipe_editor_component__WEBPACK_IMPORTED_MODULE_5__["RecipeEditorComponent"]
+        component: _recipe_editor_recipe_editor_component__WEBPACK_IMPORTED_MODULE_5__["RecipeEditorComponent"],
+        canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_16__["AuthGuard"]]
     },
     {
         path: 'information',
@@ -407,15 +405,18 @@ const routes = [
     },
     {
         path: 'account',
-        component: _account_account_component__WEBPACK_IMPORTED_MODULE_7__["AccountComponent"]
+        component: _account_account_component__WEBPACK_IMPORTED_MODULE_7__["AccountComponent"],
+        canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_16__["AuthGuard"]]
     },
     {
         path: 'editaccount',
-        component: _edit_account_edit_account_component__WEBPACK_IMPORTED_MODULE_8__["EditAccountComponent"]
+        component: _edit_account_edit_account_component__WEBPACK_IMPORTED_MODULE_8__["EditAccountComponent"],
+        canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_16__["AuthGuard"]]
     },
     {
         path: 'recipe',
-        component: _recipe_view_recipe_view_component__WEBPACK_IMPORTED_MODULE_9__["RecipeViewComponent"]
+        component: _recipe_view_recipe_view_component__WEBPACK_IMPORTED_MODULE_9__["RecipeViewComponent"],
+        canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_16__["AuthGuard"]]
     },
     {
         path: 'login',
@@ -427,22 +428,27 @@ const routes = [
     },
     {
         path: 'searchbar',
-        component: _searchbar_searchbar_component__WEBPACK_IMPORTED_MODULE_12__["SearchbarComponent"]
+        component: _searchbar_searchbar_component__WEBPACK_IMPORTED_MODULE_12__["SearchbarComponent"],
+        canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_16__["AuthGuard"]]
     },
     {
         path: 'search',
-        component: _search_search_component__WEBPACK_IMPORTED_MODULE_13__["SearchComponent"]
+        component: _search_search_component__WEBPACK_IMPORTED_MODULE_13__["SearchComponent"],
+        canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_16__["AuthGuard"]]
     },
     {
         path: 'randomRecipe',
-        component: _suggested_recipe_suggested_recipe_component__WEBPACK_IMPORTED_MODULE_15__["SuggestedRecipeComponent"]
+        component: _suggested_recipe_suggested_recipe_component__WEBPACK_IMPORTED_MODULE_15__["SuggestedRecipeComponent"],
+        canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_16__["AuthGuard"]]
     },
     {
         path: 'changepassword',
-        component: _change_pw_change_pw_component__WEBPACK_IMPORTED_MODULE_14__["ChangePwComponent"]
+        component: _change_pw_change_pw_component__WEBPACK_IMPORTED_MODULE_14__["ChangePwComponent"],
+        canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_16__["AuthGuard"]]
     },
     { path: '**', redirectTo: '/main' }
 ];
+const routing = _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes);
 let AppRoutingModule = class AppRoutingModule {
 };
 AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -631,6 +637,53 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/auth.guard.ts":
+/*!*******************************!*\
+  !*** ./src/app/auth.guard.ts ***!
+  \*******************************/
+/*! exports provided: AuthGuard */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthGuard", function() { return AuthGuard; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _services_auth_guard_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./services/auth-guard.service */ "./src/app/services/auth-guard.service.ts");
+
+
+
+
+let AuthGuard = class AuthGuard {
+    constructor(router, authenticationService) {
+        this.router = router;
+        this.authenticationService = authenticationService;
+    }
+    canActivate(next, state) {
+        if (sessionStorage.getItem("username")) {
+            return true;
+        }
+        else {
+            this.router.navigate(['/login']);
+            return false;
+        }
+    }
+};
+AuthGuard.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+    { type: _services_auth_guard_service__WEBPACK_IMPORTED_MODULE_3__["AuthenticationService"] }
+];
+AuthGuard = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], AuthGuard);
+
+
+
+/***/ }),
+
 /***/ "./src/app/calendar.service.ts":
 /*!*************************************!*\
   !*** ./src/app/calendar.service.ts ***!
@@ -660,7 +713,33 @@ let CalendarService = class CalendarService {
        3) recipe
     */
     getMeals() {
-        return this.http.get(this.calendarUrlTemp);
+        return this.http.get(this.calendarUrl);
+    }
+    addMeal(mealDate, userId, mealNum, recipeId, name, directions) {
+        const getCalendarUrl = "api/v1/calendar/meal";
+        const getCalendarUrlTemp = "http://localhost:9595/api/v1/calendar/meal";
+        const uId = sessionStorage.getItem("userId");
+        const httpOptions = {
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
+                'Content-Type': 'application/json'
+            })
+        };
+        const postObject = JSON.stringify({
+            "id": {
+                "dateTime": mealDate,
+                "userId": userId //uId
+            },
+            "mealNum": mealNum,
+            "user": userId,
+            "recipe": {
+                "recipeId": recipeId,
+                "name": name,
+                "directions": directions
+            }
+        });
+        console.log("post part 2");
+        console.log(`Calendar Url: ${getCalendarUrl}\n postObject: ${postObject}\n Http options: ${JSON.stringify(httpOptions)}`);
+        return this.http.post(getCalendarUrl, postObject, httpOptions);
     }
 };
 CalendarService.ctorParameters = () => [
@@ -818,6 +897,7 @@ let CalendarComponent = class CalendarComponent {
                 console.log("meal" + meals[i]);
             }
             console.log(meals);
+            // this.populateCalendar(); ??
         });
     }
     ngOnInit() {
@@ -834,7 +914,7 @@ let CalendarComponent = class CalendarComponent {
             const mealDateEnd = new Date(this.meals[i].id.dateTime);
             mealDateEnd.setHours(hours + 1);
             this.addEvent({
-                title: 'New event ' + (i + 1),
+                title: 'Meal ' + (i + 1),
                 start: mealDate,
                 end: mealDateEnd,
                 color: colors.red,
@@ -845,6 +925,10 @@ let CalendarComponent = class CalendarComponent {
                 }
             });
         }
+    }
+    postNew() {
+        this.calendarService.addMeal(this.mealDate, parseInt(sessionStorage.getItem("userId")), (this.mealType === "breakfast" ? 1 : this.mealType === "lunch" ? 2 : 3), 1, this.mealName, "directions").subscribe((res) => console.log("subscribe log: " + res));
+        console.log("post part 1");
     }
 };
 CalendarComponent.ctorParameters = () => [
@@ -916,7 +1000,7 @@ ChangePwComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".card {\r\n    max-width: 100%;\r\n    max-height: 100%;\r\n    display: -webkit-box;\r\n    display: flex;\r\n}\r\n\r\n#calendarCard{\r\n    background-color: brown;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZGFzaGJvYXJkL2Rhc2hib2FyZC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksZUFBZTtJQUNmLGdCQUFnQjtJQUNoQixvQkFBYTtJQUFiLGFBQWE7QUFDakI7O0FBRUE7SUFDSSx1QkFBdUI7QUFDM0IiLCJmaWxlIjoic3JjL2FwcC9kYXNoYm9hcmQvZGFzaGJvYXJkLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY2FyZCB7XHJcbiAgICBtYXgtd2lkdGg6IDEwMCU7XHJcbiAgICBtYXgtaGVpZ2h0OiAxMDAlO1xyXG4gICAgZGlzcGxheTogZmxleDtcclxufVxyXG5cclxuI2NhbGVuZGFyQ2FyZHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IGJyb3duO1xyXG59Il19 */"
+module.exports = ".card {\r\n    max-width: 100%;\r\n    max-height: 100%;\r\n    display: -webkit-box;\r\n    display: flex;\r\n}\r\n\r\n#calendarCard{\r\n    background-color: brown;\r\n}\r\n\r\nimg {\r\n    -o-object-fit: cover;\r\n       object-fit: cover;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZGFzaGJvYXJkL2Rhc2hib2FyZC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksZUFBZTtJQUNmLGdCQUFnQjtJQUNoQixvQkFBYTtJQUFiLGFBQWE7QUFDakI7O0FBRUE7SUFDSSx1QkFBdUI7QUFDM0I7O0FBRUE7SUFDSSxvQkFBaUI7T0FBakIsaUJBQWlCO0FBQ3JCIiwiZmlsZSI6InNyYy9hcHAvZGFzaGJvYXJkL2Rhc2hib2FyZC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNhcmQge1xyXG4gICAgbWF4LXdpZHRoOiAxMDAlO1xyXG4gICAgbWF4LWhlaWdodDogMTAwJTtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbn1cclxuXHJcbiNjYWxlbmRhckNhcmR7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiBicm93bjtcclxufVxyXG5cclxuaW1nIHtcclxuICAgIG9iamVjdC1maXQ6IGNvdmVyO1xyXG59Il19 */"
 
 /***/ }),
 
@@ -1021,12 +1105,12 @@ __webpack_require__.r(__webpack_exports__);
 let EditAccountComponent = class EditAccountComponent {
     //ingredient: string = "Pepper";
     //favorite: string = "Chicken Bruschetta";
-    constructor() {
-        this.fname = "Ricky";
-        this.lname = "Richardson";
-        this.u_id = 178456;
-    }
+    constructor() { }
     ngOnInit() {
+        this.fname = sessionStorage.getItem("fname");
+        this.lname = sessionStorage.getItem("lname");
+        this.u_id = parseInt(sessionStorage.getItem("userId"), 10);
+        this.username = sessionStorage.getItem("username");
     }
 };
 EditAccountComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -1242,9 +1326,7 @@ let IngredientListComponent = class IngredientListComponent {
     }
     ngOnInit() {
         console.log("Recipe id is " + this.recipeId);
-        this.recipeService.fetchIngredients(this.recipeId).subscribe(ingredients => this.ingredients = ingredients, error => console.log(`Error: ${error}`));
-        // this.ingredients = [new Ingredient(1,"potato"), new Ingredient(2, "tomato"), new Ingredient(3, "lettuce"), new Ingredient(4,"potato"), new Ingredient(5,"potato"), new Ingredient(6,"potato"), new Ingredient(7,"potato"), new Ingredient(8,"potato"), new Ingredient(9,"potato"), new Ingredient(10,"potato"), new Ingredient(11,"potato"), new Ingredient(12,"potato"), new Ingredient(13,"potato"), new Ingredient(14,"potato"), new Ingredient(15,"otato"), new Ingredient(16,"tato"), new Ingredient(17,"orange"), new Ingredient(18,"you"), new Ingredient(19,"glad"), new Ingredient(20,"I"), new Ingredient(21,"didn't"), new Ingredient(22,"say")];
-        // this.displayIngredients();
+        this.recipeService.fetchIngredients(this.recipeId).subscribe(ingredients => this.ingredients = ingredients, error => console.log(`Error: ${error}`), () => this.displayIngredients());
     }
     displayIngredients() {
         let ingIter = 0;
@@ -1272,11 +1354,10 @@ let IngredientListComponent = class IngredientListComponent {
     createCol(colIng) {
         let rowDiv = document.createElement('div');
         rowDiv.setAttribute("class", "col-md-3 h-100");
-        rowDiv.setAttribute("style", "border: 2px solid orange; border-radius: 5px");
         let entryList = document.createElement("ul");
         colIng.forEach(element => {
             let elementEntry = document.createElement("li");
-            elementEntry.innerHTML = element.name;
+            elementEntry.innerHTML = element.usedBy[0].quantity + " " + element.usedBy[0].units + " " + element.ingredient;
             entryList.appendChild(elementEntry);
         });
         rowDiv.appendChild(entryList);
@@ -1308,7 +1389,7 @@ IngredientListComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "body {\r\n    background: #007bff;\r\n    background: -webkit-gradient(linear, left top, right top, from(#0062E6), to(#33AEFF));\r\n    background: linear-gradient(to right, #0062E6, #33AEFF);\r\n  }\r\n  \r\n  .card-signin {\r\n    border: 0;\r\n    border-radius: 1rem;\r\n    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);\r\n  }\r\n  \r\n  .card-signin .card-title {\r\n    margin-bottom: 2rem;\r\n    font-weight: 300;\r\n    font-size: 1.5rem;\r\n  }\r\n  \r\n  .card-signin .card-body {\r\n    padding: 2rem;\r\n  }\r\n  \r\n  .form-signin {\r\n    width: 100%;\r\n  }\r\n  \r\n  .form-signin .btn {\r\n    font-size: 80%;\r\n    border-radius: 5rem;\r\n    letter-spacing: .1rem;\r\n    font-weight: bold;\r\n    padding: 1rem;\r\n    -webkit-transition: all 0.2s;\r\n    transition: all 0.2s;\r\n  }\r\n  \r\n  .form-label-group {\r\n    position: relative;\r\n    margin-bottom: 1rem;\r\n  }\r\n  \r\n  .form-label-group input {\r\n    height: auto;\r\n    border-radius: 2rem;\r\n  }\r\n  \r\n  .form-label-group>input,\r\n  .form-label-group>label {\r\n    padding: var(--input-padding-y) var(--input-padding-x);\r\n  }\r\n  \r\n  .form-label-group>label {\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    display: block;\r\n    width: 100%;\r\n    margin-bottom: 0;\r\n    /* Override default `<label>` margin */\r\n    line-height: 1.5;\r\n    color: #495057;\r\n    border: 1px solid transparent;\r\n    border-radius: .25rem;\r\n    -webkit-transition: all .1s ease-in-out;\r\n    transition: all .1s ease-in-out;\r\n  }\r\n  \r\n  .form-label-group input::-webkit-input-placeholder {\r\n    color: transparent;\r\n  }\r\n  \r\n  .form-label-group input::-ms-input-placeholder {\r\n    color: transparent;\r\n  }\r\n  \r\n  .form-label-group input::-moz-placeholder {\r\n    color: transparent;\r\n  }\r\n  \r\n  .form-label-group input::placeholder {\r\n    color: transparent;\r\n  }\r\n  \r\n  .form-label-group input:not(:placeholder-shown) {\r\n    padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));\r\n    padding-bottom: calc(var(--input-padding-y) / 3);\r\n  }\r\n  \r\n  .form-label-group input:not(:placeholder-shown)~label {\r\n    padding-top: calc(var(--input-padding-y) / 3);\r\n    padding-bottom: calc(var(--input-padding-y) / 3);\r\n    font-size: 12px;\r\n    color: #777;\r\n  }\r\n  \r\n  .btn-google {\r\n    color: white;\r\n    background-color: #ea4335;\r\n  }\r\n  \r\n  .btn-facebook {\r\n    color: white;\r\n    background-color: #3b5998;\r\n  }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbG9naW4vbG9naW4uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLG1CQUFtQjtJQUNuQixxRkFBdUQ7SUFBdkQsdURBQXVEO0VBQ3pEOztFQUVBO0lBQ0UsU0FBUztJQUNULG1CQUFtQjtJQUNuQiw4Q0FBOEM7RUFDaEQ7O0VBRUE7SUFDRSxtQkFBbUI7SUFDbkIsZ0JBQWdCO0lBQ2hCLGlCQUFpQjtFQUNuQjs7RUFFQTtJQUNFLGFBQWE7RUFDZjs7RUFFQTtJQUNFLFdBQVc7RUFDYjs7RUFFQTtJQUNFLGNBQWM7SUFDZCxtQkFBbUI7SUFDbkIscUJBQXFCO0lBQ3JCLGlCQUFpQjtJQUNqQixhQUFhO0lBQ2IsNEJBQW9CO0lBQXBCLG9CQUFvQjtFQUN0Qjs7RUFFQTtJQUNFLGtCQUFrQjtJQUNsQixtQkFBbUI7RUFDckI7O0VBRUE7SUFDRSxZQUFZO0lBQ1osbUJBQW1CO0VBQ3JCOztFQUVBOztJQUVFLHNEQUFzRDtFQUN4RDs7RUFFQTtJQUNFLGtCQUFrQjtJQUNsQixNQUFNO0lBQ04sT0FBTztJQUNQLGNBQWM7SUFDZCxXQUFXO0lBQ1gsZ0JBQWdCO0lBQ2hCLHNDQUFzQztJQUN0QyxnQkFBZ0I7SUFDaEIsY0FBYztJQUNkLDZCQUE2QjtJQUM3QixxQkFBcUI7SUFDckIsdUNBQStCO0lBQS9CLCtCQUErQjtFQUNqQzs7RUFFQTtJQUNFLGtCQUFrQjtFQUNwQjs7RUFNQTtJQUNFLGtCQUFrQjtFQUNwQjs7RUFFQTtJQUNFLGtCQUFrQjtFQUNwQjs7RUFFQTtJQUNFLGtCQUFrQjtFQUNwQjs7RUFFQTtJQUNFLDRFQUE0RTtJQUM1RSxnREFBZ0Q7RUFDbEQ7O0VBRUE7SUFDRSw2Q0FBNkM7SUFDN0MsZ0RBQWdEO0lBQ2hELGVBQWU7SUFDZixXQUFXO0VBQ2I7O0VBRUE7SUFDRSxZQUFZO0lBQ1oseUJBQXlCO0VBQzNCOztFQUVBO0lBQ0UsWUFBWTtJQUNaLHlCQUF5QjtFQUMzQiIsImZpbGUiOiJzcmMvYXBwL2xvZ2luL2xvZ2luLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJib2R5IHtcclxuICAgIGJhY2tncm91bmQ6ICMwMDdiZmY7XHJcbiAgICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQodG8gcmlnaHQsICMwMDYyRTYsICMzM0FFRkYpO1xyXG4gIH1cclxuICBcclxuICAuY2FyZC1zaWduaW4ge1xyXG4gICAgYm9yZGVyOiAwO1xyXG4gICAgYm9yZGVyLXJhZGl1czogMXJlbTtcclxuICAgIGJveC1zaGFkb3c6IDAgMC41cmVtIDFyZW0gMCByZ2JhKDAsIDAsIDAsIDAuMSk7XHJcbiAgfVxyXG4gIFxyXG4gIC5jYXJkLXNpZ25pbiAuY2FyZC10aXRsZSB7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAycmVtO1xyXG4gICAgZm9udC13ZWlnaHQ6IDMwMDtcclxuICAgIGZvbnQtc2l6ZTogMS41cmVtO1xyXG4gIH1cclxuICBcclxuICAuY2FyZC1zaWduaW4gLmNhcmQtYm9keSB7XHJcbiAgICBwYWRkaW5nOiAycmVtO1xyXG4gIH1cclxuICBcclxuICAuZm9ybS1zaWduaW4ge1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgfVxyXG4gIFxyXG4gIC5mb3JtLXNpZ25pbiAuYnRuIHtcclxuICAgIGZvbnQtc2l6ZTogODAlO1xyXG4gICAgYm9yZGVyLXJhZGl1czogNXJlbTtcclxuICAgIGxldHRlci1zcGFjaW5nOiAuMXJlbTtcclxuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG4gICAgcGFkZGluZzogMXJlbTtcclxuICAgIHRyYW5zaXRpb246IGFsbCAwLjJzO1xyXG4gIH1cclxuICBcclxuICAuZm9ybS1sYWJlbC1ncm91cCB7XHJcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAxcmVtO1xyXG4gIH1cclxuICBcclxuICAuZm9ybS1sYWJlbC1ncm91cCBpbnB1dCB7XHJcbiAgICBoZWlnaHQ6IGF1dG87XHJcbiAgICBib3JkZXItcmFkaXVzOiAycmVtO1xyXG4gIH1cclxuICBcclxuICAuZm9ybS1sYWJlbC1ncm91cD5pbnB1dCxcclxuICAuZm9ybS1sYWJlbC1ncm91cD5sYWJlbCB7XHJcbiAgICBwYWRkaW5nOiB2YXIoLS1pbnB1dC1wYWRkaW5nLXkpIHZhcigtLWlucHV0LXBhZGRpbmcteCk7XHJcbiAgfVxyXG4gIFxyXG4gIC5mb3JtLWxhYmVsLWdyb3VwPmxhYmVsIHtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIHRvcDogMDtcclxuICAgIGxlZnQ6IDA7XHJcbiAgICBkaXNwbGF5OiBibG9jaztcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgbWFyZ2luLWJvdHRvbTogMDtcclxuICAgIC8qIE92ZXJyaWRlIGRlZmF1bHQgYDxsYWJlbD5gIG1hcmdpbiAqL1xyXG4gICAgbGluZS1oZWlnaHQ6IDEuNTtcclxuICAgIGNvbG9yOiAjNDk1MDU3O1xyXG4gICAgYm9yZGVyOiAxcHggc29saWQgdHJhbnNwYXJlbnQ7XHJcbiAgICBib3JkZXItcmFkaXVzOiAuMjVyZW07XHJcbiAgICB0cmFuc2l0aW9uOiBhbGwgLjFzIGVhc2UtaW4tb3V0O1xyXG4gIH1cclxuICBcclxuICAuZm9ybS1sYWJlbC1ncm91cCBpbnB1dDo6LXdlYmtpdC1pbnB1dC1wbGFjZWhvbGRlciB7XHJcbiAgICBjb2xvcjogdHJhbnNwYXJlbnQ7XHJcbiAgfVxyXG4gIFxyXG4gIC5mb3JtLWxhYmVsLWdyb3VwIGlucHV0Oi1tcy1pbnB1dC1wbGFjZWhvbGRlciB7XHJcbiAgICBjb2xvcjogdHJhbnNwYXJlbnQ7XHJcbiAgfVxyXG4gIFxyXG4gIC5mb3JtLWxhYmVsLWdyb3VwIGlucHV0OjotbXMtaW5wdXQtcGxhY2Vob2xkZXIge1xyXG4gICAgY29sb3I6IHRyYW5zcGFyZW50O1xyXG4gIH1cclxuICBcclxuICAuZm9ybS1sYWJlbC1ncm91cCBpbnB1dDo6LW1vei1wbGFjZWhvbGRlciB7XHJcbiAgICBjb2xvcjogdHJhbnNwYXJlbnQ7XHJcbiAgfVxyXG4gIFxyXG4gIC5mb3JtLWxhYmVsLWdyb3VwIGlucHV0OjpwbGFjZWhvbGRlciB7XHJcbiAgICBjb2xvcjogdHJhbnNwYXJlbnQ7XHJcbiAgfVxyXG4gIFxyXG4gIC5mb3JtLWxhYmVsLWdyb3VwIGlucHV0Om5vdCg6cGxhY2Vob2xkZXItc2hvd24pIHtcclxuICAgIHBhZGRpbmctdG9wOiBjYWxjKHZhcigtLWlucHV0LXBhZGRpbmcteSkgKyB2YXIoLS1pbnB1dC1wYWRkaW5nLXkpICogKDIgLyAzKSk7XHJcbiAgICBwYWRkaW5nLWJvdHRvbTogY2FsYyh2YXIoLS1pbnB1dC1wYWRkaW5nLXkpIC8gMyk7XHJcbiAgfVxyXG4gIFxyXG4gIC5mb3JtLWxhYmVsLWdyb3VwIGlucHV0Om5vdCg6cGxhY2Vob2xkZXItc2hvd24pfmxhYmVsIHtcclxuICAgIHBhZGRpbmctdG9wOiBjYWxjKHZhcigtLWlucHV0LXBhZGRpbmcteSkgLyAzKTtcclxuICAgIHBhZGRpbmctYm90dG9tOiBjYWxjKHZhcigtLWlucHV0LXBhZGRpbmcteSkgLyAzKTtcclxuICAgIGZvbnQtc2l6ZTogMTJweDtcclxuICAgIGNvbG9yOiAjNzc3O1xyXG4gIH1cclxuICBcclxuICAuYnRuLWdvb2dsZSB7XHJcbiAgICBjb2xvcjogd2hpdGU7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZWE0MzM1O1xyXG4gIH1cclxuICBcclxuICAuYnRuLWZhY2Vib29rIHtcclxuICAgIGNvbG9yOiB3aGl0ZTtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICMzYjU5OTg7XHJcbiAgfSJdfQ== */"
+module.exports = "body {\r\n    background: #007bff;\r\n    background: -webkit-gradient(linear, left top, right top, from(#0062E6), to(#33AEFF));\r\n    background: linear-gradient(to right, #0062E6, #33AEFF);\r\n}\r\n\r\n.card-signin {\r\n  border: 0;\r\n  border-radius: 1rem;\r\n  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);\r\n}\r\n\r\n.card-signin .card-title {\r\n  margin-bottom: 2rem;\r\n  font-weight: 300;\r\n  font-size: 1.5rem;\r\n}\r\n\r\n.card-signin .card-body {\r\n  padding: 2rem;\r\n}\r\n\r\n.form-signin {\r\n  width: 100%;\r\n}\r\n\r\n.form-signin .btn {\r\n  font-size: 80%;\r\n  border-radius: 5rem;\r\n  letter-spacing: .1rem;\r\n  font-weight: bold;\r\n  padding: 1rem;\r\n  -webkit-transition: all 0.2s;\r\n  transition: all 0.2s;\r\n}\r\n\r\n.form-label-group {\r\n  position: relative;\r\n  margin-bottom: 1rem;\r\n}\r\n\r\n.form-label-group input {\r\n  height: auto;\r\n  border-radius: 2rem;\r\n}\r\n\r\n.form-label-group>input,\r\n.form-label-group>label {\r\n  padding: var(--input-padding-y) var(--input-padding-x);\r\n}\r\n\r\n.form-label-group>label {\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  display: block;\r\n  width: 100%;\r\n  margin-bottom: 0;\r\n  /* Override default `<label>` margin */\r\n  line-height: 1.5;\r\n  color: #495057;\r\n  border: 1px solid transparent;\r\n  border-radius: .25rem;\r\n  -webkit-transition: all .1s ease-in-out;\r\n  transition: all .1s ease-in-out;\r\n}\r\n  \r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbG9naW4vbG9naW4uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLG1CQUFtQjtJQUNuQixxRkFBdUQ7SUFBdkQsdURBQXVEO0FBQzNEOztBQUVBO0VBQ0UsU0FBUztFQUNULG1CQUFtQjtFQUNuQiw4Q0FBOEM7QUFDaEQ7O0FBRUE7RUFDRSxtQkFBbUI7RUFDbkIsZ0JBQWdCO0VBQ2hCLGlCQUFpQjtBQUNuQjs7QUFFQTtFQUNFLGFBQWE7QUFDZjs7QUFFQTtFQUNFLFdBQVc7QUFDYjs7QUFFQTtFQUNFLGNBQWM7RUFDZCxtQkFBbUI7RUFDbkIscUJBQXFCO0VBQ3JCLGlCQUFpQjtFQUNqQixhQUFhO0VBQ2IsNEJBQW9CO0VBQXBCLG9CQUFvQjtBQUN0Qjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixtQkFBbUI7QUFDckI7O0FBRUE7RUFDRSxZQUFZO0VBQ1osbUJBQW1CO0FBQ3JCOztBQUVBOztFQUVFLHNEQUFzRDtBQUN4RDs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixNQUFNO0VBQ04sT0FBTztFQUNQLGNBQWM7RUFDZCxXQUFXO0VBQ1gsZ0JBQWdCO0VBQ2hCLHNDQUFzQztFQUN0QyxnQkFBZ0I7RUFDaEIsY0FBYztFQUNkLDZCQUE2QjtFQUM3QixxQkFBcUI7RUFDckIsdUNBQStCO0VBQS9CLCtCQUErQjtBQUNqQyIsImZpbGUiOiJzcmMvYXBwL2xvZ2luL2xvZ2luLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJib2R5IHtcclxuICAgIGJhY2tncm91bmQ6ICMwMDdiZmY7XHJcbiAgICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQodG8gcmlnaHQsICMwMDYyRTYsICMzM0FFRkYpO1xyXG59XHJcblxyXG4uY2FyZC1zaWduaW4ge1xyXG4gIGJvcmRlcjogMDtcclxuICBib3JkZXItcmFkaXVzOiAxcmVtO1xyXG4gIGJveC1zaGFkb3c6IDAgMC41cmVtIDFyZW0gMCByZ2JhKDAsIDAsIDAsIDAuMSk7XHJcbn1cclxuXHJcbi5jYXJkLXNpZ25pbiAuY2FyZC10aXRsZSB7XHJcbiAgbWFyZ2luLWJvdHRvbTogMnJlbTtcclxuICBmb250LXdlaWdodDogMzAwO1xyXG4gIGZvbnQtc2l6ZTogMS41cmVtO1xyXG59XHJcblxyXG4uY2FyZC1zaWduaW4gLmNhcmQtYm9keSB7XHJcbiAgcGFkZGluZzogMnJlbTtcclxufVxyXG5cclxuLmZvcm0tc2lnbmluIHtcclxuICB3aWR0aDogMTAwJTtcclxufVxyXG5cclxuLmZvcm0tc2lnbmluIC5idG4ge1xyXG4gIGZvbnQtc2l6ZTogODAlO1xyXG4gIGJvcmRlci1yYWRpdXM6IDVyZW07XHJcbiAgbGV0dGVyLXNwYWNpbmc6IC4xcmVtO1xyXG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG4gIHBhZGRpbmc6IDFyZW07XHJcbiAgdHJhbnNpdGlvbjogYWxsIDAuMnM7XHJcbn1cclxuXHJcbi5mb3JtLWxhYmVsLWdyb3VwIHtcclxuICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgbWFyZ2luLWJvdHRvbTogMXJlbTtcclxufVxyXG5cclxuLmZvcm0tbGFiZWwtZ3JvdXAgaW5wdXQge1xyXG4gIGhlaWdodDogYXV0bztcclxuICBib3JkZXItcmFkaXVzOiAycmVtO1xyXG59XHJcblxyXG4uZm9ybS1sYWJlbC1ncm91cD5pbnB1dCxcclxuLmZvcm0tbGFiZWwtZ3JvdXA+bGFiZWwge1xyXG4gIHBhZGRpbmc6IHZhcigtLWlucHV0LXBhZGRpbmcteSkgdmFyKC0taW5wdXQtcGFkZGluZy14KTtcclxufVxyXG5cclxuLmZvcm0tbGFiZWwtZ3JvdXA+bGFiZWwge1xyXG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICB0b3A6IDA7XHJcbiAgbGVmdDogMDtcclxuICBkaXNwbGF5OiBibG9jaztcclxuICB3aWR0aDogMTAwJTtcclxuICBtYXJnaW4tYm90dG9tOiAwO1xyXG4gIC8qIE92ZXJyaWRlIGRlZmF1bHQgYDxsYWJlbD5gIG1hcmdpbiAqL1xyXG4gIGxpbmUtaGVpZ2h0OiAxLjU7XHJcbiAgY29sb3I6ICM0OTUwNTc7XHJcbiAgYm9yZGVyOiAxcHggc29saWQgdHJhbnNwYXJlbnQ7XHJcbiAgYm9yZGVyLXJhZGl1czogLjI1cmVtO1xyXG4gIHRyYW5zaXRpb246IGFsbCAuMXMgZWFzZS1pbi1vdXQ7XHJcbn1cclxuICBcclxuIl19 */"
 
 /***/ }),
 
@@ -1324,13 +1405,60 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginComponent", function() { return LoginComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+
+
 
 
 let LoginComponent = class LoginComponent {
-    constructor() { }
+    constructor(
+    // private formBuilder: FormBuilder,
+    // private route: ActivatedRoute,
+    // private router: Router,
+    // private authenticationService: AuthenticationService
+    http, router) {
+        this.http = http;
+        this.router = router;
+        // loginForm: FormGroup;
+        this.url = 'http://localhost:9595';
+        this.username = '';
+        this.password = '';
+    }
+    ;
+    //get f() { return this.loginForm.controls; }
     ngOnInit() {
+        // this.loginForm = new FormGroup({
+        //   username: new FormControl("username"),
+        //   password: new FormControl("password")
+        // });
+    }
+    onSubmit() {
+        //this.http.post<User>("hi","hey");
+        // this.username = (<HTMLInputElement>document.getElementById("username")).value;
+        // this.password = (<HTMLInputElement>document.getElementById("password")).value;
+        this.http.post(`${this.url}/api/v1/user/login?user=${this.username}`, {}).subscribe(user => this.user = user);
+        console.log('before the first check on the user object');
+        console.log(this.user);
+        if (this.user) {
+            console.log("passed the truthy User check");
+            if (this.password === this.user.password) {
+                let id = this.user.userId.toString();
+                sessionStorage.setItem("username", this.user.username);
+                sessionStorage.setItem("userId", id);
+                sessionStorage.setItem("fname", this.user.fname);
+                sessionStorage.setItem("lname", this.user.lname);
+                this.router.navigate([`/main`]);
+            }
+        }
+    }
+    storeUser() {
     }
 };
+LoginComponent.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }
+];
 LoginComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-login',
@@ -1408,15 +1536,9 @@ class User {
     // userPref: UserPref[];
     // userHist: UserHistory[];
     // user_data: UserData[];
-    constructor(username, password) {
-        this.username = username;
-        this.password = password;
+    constructor() {
     }
 }
-User.ctorParameters = () => [
-    { type: String },
-    { type: String }
-];
 
 
 /***/ }),
@@ -1449,6 +1571,9 @@ __webpack_require__.r(__webpack_exports__);
 let NavComponent = class NavComponent {
     constructor() { }
     ngOnInit() {
+    }
+    logout() {
+        sessionStorage.clear();
     }
 };
 NavComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -1570,15 +1695,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RecipeViewComponent", function() { return RecipeViewComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _services_recipe_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/recipe.service */ "./src/app/services/recipe.service.ts");
+
 
 
 let RecipeViewComponent = class RecipeViewComponent {
-    constructor() {
+    constructor(recipeService) {
+        this.recipeService = recipeService;
         this.recipeId = 1;
     }
     ngOnInit() {
+        try {
+            let tmpInt = parseInt(localStorage.getItem('selectedRecipe'));
+            this.recipeId = tmpInt;
+            console.log("read recipe as " + tmpInt);
+        }
+        catch (error) {
+            console.log('Failed to get current recipe');
+        }
+        this.recipeService.fetchRecipe(this.recipeId).subscribe(recipe => this.recipe = recipe, error => console.log(`Error: ${error}`), () => this.displayRecipe());
+    }
+    displayRecipe() {
+        document.getElementById('directionElement').innerHTML = this.recipe.directions;
+        document.getElementById('recipeTitleElement').innerHTML = this.recipe.name;
     }
 };
+RecipeViewComponent.ctorParameters = () => [
+    { type: _services_recipe_service__WEBPACK_IMPORTED_MODULE_2__["RecipeService"] }
+];
 RecipeViewComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-recipe-view',
@@ -1598,7 +1742,7 @@ RecipeViewComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "td{\r\n    text-align: center;\r\n    padding: 10px;\r\n    border: 2px solid black;\r\n}\r\n.btn {\r\n    margin-top: 10px;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcmVnaXN0ZXIvcmVnaXN0ZXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGtCQUFrQjtJQUNsQixhQUFhO0lBQ2IsdUJBQXVCO0FBQzNCO0FBQ0E7SUFDSSxnQkFBZ0I7QUFDcEIiLCJmaWxlIjoic3JjL2FwcC9yZWdpc3Rlci9yZWdpc3Rlci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsidGR7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBwYWRkaW5nOiAxMHB4O1xyXG4gICAgYm9yZGVyOiAycHggc29saWQgYmxhY2s7XHJcbn1cclxuLmJ0biB7XHJcbiAgICBtYXJnaW4tdG9wOiAxMHB4O1xyXG59Il19 */"
+module.exports = "td{\r\n    text-align: center;\r\n    padding: 10px;\r\n    border: 2px solid black;\r\n}\r\n.btn {\r\n    margin-top: 10px;\r\n}\r\nspan {\r\n    font-family: 'Cinzel Decorative', cursive;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcmVnaXN0ZXIvcmVnaXN0ZXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGtCQUFrQjtJQUNsQixhQUFhO0lBQ2IsdUJBQXVCO0FBQzNCO0FBQ0E7SUFDSSxnQkFBZ0I7QUFDcEI7QUFDQTtJQUNJLHlDQUF5QztBQUM3QyIsImZpbGUiOiJzcmMvYXBwL3JlZ2lzdGVyL3JlZ2lzdGVyLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJ0ZHtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIHBhZGRpbmc6IDEwcHg7XHJcbiAgICBib3JkZXI6IDJweCBzb2xpZCBibGFjaztcclxufVxyXG4uYnRuIHtcclxuICAgIG1hcmdpbi10b3A6IDEwcHg7XHJcbn1cclxuc3BhbiB7XHJcbiAgICBmb250LWZhbWlseTogJ0NpbnplbCBEZWNvcmF0aXZlJywgY3Vyc2l2ZTtcclxufSJdfQ== */"
 
 /***/ }),
 
@@ -1614,13 +1758,51 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RegisterComponent", function() { return RegisterComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _models_user_model__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../models/user.model */ "./src/app/models/user.model.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
+
+
 
 
 let RegisterComponent = class RegisterComponent {
-    constructor() { }
+    constructor(http, router) {
+        this.http = http;
+        this.router = router;
+        this.username = '';
+        this.fname = '';
+        this.lname = '';
+        this.password = '';
+        this.passwordConfirm = '';
+        this.url = 'http://localhost:9595';
+    }
     ngOnInit() {
     }
+    onSubmit() {
+        console.log("hit method");
+        if (this.password === this.passwordConfirm) {
+            console.log("passed if");
+            const httpOptions = {
+                headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
+                    'Content-Type': 'application/json'
+                })
+            };
+            this.user = new _models_user_model__WEBPACK_IMPORTED_MODULE_3__["User"]();
+            //this.user.userId=11111111;
+            this.user.username = this.username;
+            this.user.fname = this.fname;
+            this.user.lname = this.lname;
+            this.user.password = this.password;
+            this.http.post(`${this.url}/api/v1/user/user`, JSON.stringify(this.user), httpOptions).subscribe(user => this.user = user);
+            this.router.navigate([`/login`]);
+        }
+    }
 };
+RegisterComponent.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] }
+];
 RegisterComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-register',
@@ -1740,15 +1922,49 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SearchComponent", function() { return SearchComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _services_recipe_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/recipe.service */ "./src/app/services/recipe.service.ts");
+
 
 
 let SearchComponent = class SearchComponent {
-    constructor() {
-        this.ids = ["Search", "Filter"];
+    constructor(recipeService) {
+        this.recipeService = recipeService;
     }
     ngOnInit() {
+        console.log("Hi");
+        this.recipeService.fetchAllRecipes().subscribe(recipes => this.resultRecipes = recipes, error => console.log(`Error: ${error}`), () => this.displayRecipeResults());
+        console.log("hey");
+    }
+    displayRecipeResults() {
+        this.resultRecipes.forEach((recipe) => {
+            console.log("hello");
+            //Create elements
+            let recipeRow = document.createElement('tr');
+            let rowAnchor = document.createElement('a');
+            let recipeName = document.createElement('td');
+            //Add routerLink to anchor
+            rowAnchor.setAttribute('routerLink', 'recipe');
+            //Populate and format of td
+            //rowAnchor.innerHTML = recipe.name;
+            recipeName.innerHTML = recipe.name;
+            //Add td to row with routerLink anchor
+            //recipeName.appendChild(rowAnchor);
+            recipeRow.appendChild(recipeName);
+            //rowAnchor.appendChild(recipeName);
+            //recipeRow.appendChild(rowAnchor);
+            //Add onclick to set recipe
+            recipeRow.onclick = () => { this.setRecipeInStorage(recipe); };
+            //Add recipeRow to table
+            document.getElementById('resultSet').appendChild(recipeRow);
+        });
+    }
+    setRecipeInStorage(recipe) {
+        localStorage.setItem('selectedRecipe', recipe.recipeId.toString());
     }
 };
+SearchComponent.ctorParameters = () => [
+    { type: _services_recipe_service__WEBPACK_IMPORTED_MODULE_2__["RecipeService"] }
+];
 SearchComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-search',
@@ -1849,6 +2065,49 @@ ApiRecipeService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/services/auth-guard.service.ts":
+/*!************************************************!*\
+  !*** ./src/app/services/auth-guard.service.ts ***!
+  \************************************************/
+/*! exports provided: AuthenticationService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthenticationService", function() { return AuthenticationService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+
+
+
+
+let AuthenticationService = class AuthenticationService {
+    constructor(http) {
+        this.http = http;
+        this.currentUserSubject = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"](JSON.parse(localStorage.getItem('currentUser')));
+        this.currentUser = this.currentUserSubject.asObservable();
+    }
+    get currentUserValue() {
+        return this.currentUserSubject.value;
+    }
+    login(username, password) {
+    }
+    logout() {
+    }
+};
+AuthenticationService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
+];
+AuthenticationService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({ providedIn: 'root' })
+], AuthenticationService);
+
+
+
+/***/ }),
+
 /***/ "./src/app/services/recipe.service.ts":
 /*!********************************************!*\
   !*** ./src/app/services/recipe.service.ts ***!
@@ -1872,15 +2131,18 @@ __webpack_require__.r(__webpack_exports__);
 let RecipeService = class RecipeService {
     constructor(http) {
         this.http = http;
-        this.uriBase = "https://cors-anywhere.herokuapp.com/http://localhost:9595/api/v1/mealcomposition/"; //"http://localhost:9595/api/v1/mealcomposition";
+        this.uriBase = "http://localhost:9595/api/v1/";
     }
     //TODO set get path based on id passed
     fetchRecipe(id) {
-        return this.http.get('').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
+        return this.http.get(this.uriBase + 'recipe/view/' + id).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
+    }
+    fetchAllRecipes() {
+        return this.http.get(this.uriBase + 'recipe/view/all').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
     }
     //TODO set path based on recipeId passed. Server should return as array of ingredients
     fetchIngredients(recipeId) {
-        return this.http.get(this.uriBase + '/meal/1').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
+        return this.http.get(this.uriBase + 'ingredients/meal/' + recipeId).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
     }
     handleError(error) {
         return rxjs__WEBPACK_IMPORTED_MODULE_2__["Observable"].throw(error.statusText);
@@ -1911,40 +2173,39 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserService", function() { return UserService; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _models_user_model__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../models/user.model */ "./src/app/models/user.model.ts");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
-
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
 
 
 
 
 
 let UserService = class UserService {
+    //url: string = 'http://3.130.255.174:9595';
     constructor(http) {
         this.http = http;
-        //url: string = 'https://localhost:4200';
-        this.url = 'https://localhost:9595';
+        //url: string = 'http://localhost:4200';
+        this.url = 'http://localhost:9595';
     }
     fetchUser(id) {
-        return this.http.get(`${this.url}/api/v1/user/${id}`).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(this.handleError));
+        return this.http.get(`${this.url}/api/v1/user/${id}`).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
     }
-    checkLogin(username, password) {
-        return this.http.post(`${this.url}/api/v1/user/login`, JSON.stringify(new _models_user_model__WEBPACK_IMPORTED_MODULE_2__["User"](username, password))).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(this.handleError));
-    }
+    // public checkLogin(username: string, password: string): Observable<User>{
+    //     return this.http.post<User>(`${this.url}/api/v1/user/login`,JSON.stringify(new User(username,password))).pipe(catchError(this.handleError));
+    // }
     getPreferences(id) {
-        return this.http.get(`${this.url}/api/v1/preferences/preferences/${id}`).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(this.handleError));
+        return this.http.get(`${this.url}/api/v1/preferences/preferences/${id}`).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
     }
     getHistory(id) {
-        return this.http.get(`${this.url}/api/v1/history/user/${id}/favorited`).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(this.handleError));
+        return this.http.get(`${this.url}/api/v1/history/user/${id}/favorited`).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
     }
     handleError(error) {
-        return rxjs__WEBPACK_IMPORTED_MODULE_3__["Observable"].throw(error.statusText);
+        return rxjs__WEBPACK_IMPORTED_MODULE_2__["Observable"].throw(error.statusText);
     }
 };
 UserService.ctorParameters = () => [
-    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"] }
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] }
 ];
 UserService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
@@ -1963,7 +2224,7 @@ UserService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3N1Z2dlc3RlZC1yZWNpcGUvc3VnZ2VzdGVkLXJlY2lwZS5jb21wb25lbnQuY3NzIn0= */"
+module.exports = ".row {\r\n    margin: 15px;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc3VnZ2VzdGVkLXJlY2lwZS9zdWdnZXN0ZWQtcmVjaXBlLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxZQUFZO0FBQ2hCIiwiZmlsZSI6InNyYy9hcHAvc3VnZ2VzdGVkLXJlY2lwZS9zdWdnZXN0ZWQtcmVjaXBlLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIucm93IHtcclxuICAgIG1hcmdpbjogMTVweDtcclxufSJdfQ== */"
 
 /***/ }),
 
@@ -1993,6 +2254,9 @@ let SuggestedRecipeComponent = class SuggestedRecipeComponent {
     getApiRecipeInfo() {
         this.apiRecipe.fetchMeal().subscribe(recipe => this.recipe = recipe, error => console.log(`Error: ${error}`));
         console.log(this.recipe);
+    }
+    refresh() {
+        this.getApiRecipeInfo();
     }
 };
 SuggestedRecipeComponent.ctorParameters = () => [
